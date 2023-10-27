@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <style>
+        #test {
+            width:500px;
+            height: 500px;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="test">
+        <input type="text" name="daterange" value="10/27/2023 - 11/8/2023" />
+    </div>
+
+    <script>
+    $('input[name="daterange"]').daterangepicker({
+        opens: 'center',
+        ranges: {
+        '오늘': [moment(), moment()],
+        '어제': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+        '7일전': [moment().subtract(6, 'days'), moment()],
+        '30일전': [moment().subtract(29, 'days'), moment()],
+        '이번달': [moment().startOf('month'), moment().endOf('month')],
+        '저번달': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+    },
+    "alwaysShowCalendars": true,
+
+    "minYear": 1000,
+    "maxYear": 9999,
+    "locale": {
+        "format": 'YYYY-MM-DD',
+        "separator": " ~ ",
+        "applyLabel": "확인",
+        "cancelLabel": "취소",
+        "fromLabel": "From",
+        "toLabel": "To",
+        "customRangeLabel": "Custom",
+        "weekLabel": "주",
+        "daysOfWeek": [
+                "일",
+                "월",
+                "화",
+                "수",
+                "목",
+                "금",
+                "토"
+        ],
+        "monthNames": [
+                "1월",
+                "2월",
+                "3월",
+                "4월",
+                "5월",
+                "6월",
+                "7월",
+                "8월",
+                "9월",
+                "10월",
+                "11월",
+                "12월"
+        ],
+        "firstDay": 1
+    },
+}, function(start, end, label) {
+  console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+
+});
+
+
+    </script>
+</body>
+</html>
