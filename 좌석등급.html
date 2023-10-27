@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>좌석등급</title>
     <style>
+        /* 상단 네비 바 */
         div{
             margin: 0;
             padding: 0;
@@ -17,6 +18,7 @@
             height: 85px;
             background-color: #c6f2fe;
             position: fixed;
+            float: left;
         }
 
         .flight-nav{
@@ -26,9 +28,7 @@
             margin: 2%;
             position: fixed;
             border-radius: 10px 10px;
-            box-shadow: 0 8px 4px -4px gray;
-
-            
+            box-shadow: 0 8px 4px -4px gray;            
         }
 
         .flight-code{
@@ -68,9 +68,58 @@
             font-size: 15px;
             text-align: center;
         }
+
+        /* 가는편 */
+        .dep-nav{
+            position: absolute;
+            margin: 30px;
+            top: 120px;
+        }
+
+        .dep-nav-text{
+            color: #002F87;
+        }
+
+        .dep-nav-box{
+            position: absolute;
+            margin: 30px;
+            top: 150px;
+            width: 90%;
+            height: 85px;
+            background-color: white;
+            margin: 2%;
+            position: fixed;
+            border: 1px solid lightgray;
+            border-radius: 10px 10px;
+            display: flex;
+        }
+
+        .dep-nav-box-btn{
+            width: 30%;
+            border: 0;
+            background-color: transparent;
+            font-size: 15px
+        }
+
+        /* .dep-nav-seat{
+            position: absolute;
+            margin: 30px;
+            top: 30px;
+            width: 90%;
+            height: 85px;
+            background-color: white;
+            margin: 2%;
+            position: fixed;
+            border: 1px solid lightgray;
+            border-radius: 10px 10px;
+            display: flex;
+        } */
+
+        
     </style>
 </head>
 <body>
+    <!-- 상단네비바 -->
     <div class="flight-nav-bgd"></div>
     <div class="flight-nav">
         <div class="flight-code">
@@ -95,6 +144,32 @@
         
         <button class="flight-inner-nav flight-search">항공편검색</button>
     </div>
+
+    <!-- 가는 편  -->
+    <div class="dep-nav">
+        <span style="font-weight: bold;" class="dep-nav-text">가는 편</span>
+        <span class="dep-nav-text">출발지 ~ 공항</span>
+        <span class="dep-nav-text"><i class="fa-solid fa-arrow-right"></i></span>
+        <span class="dep-nav-text">도착지 ~ 공항</span>
+    </div>
+
+    <div class="dep-nav-box">
+        <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(월)</span><br><span class="dep-btn-price">000,000원</span></button>
+        <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(화)</span><br><span class="dep-btn-price">000,000원</span></button>
+        <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(수)</span><br><span class="dep-btn-price">000,000원</span></button>
+        <button class="dep-nav-box-btn" style="color: #002F87; font-weight: bold;" ><span class="dep-btn-date">XX(목)</span><br><span class="dep-btn-price">000,000원</span></button>
+        <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(금)</span><br><span class="dep-btn-price">000,000원</span></button>
+        <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(토)</span><br><span class="dep-btn-price">000,000원</span></button>
+        <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(일)</span><br><span class="dep-btn-price">000,000원</span></button>
+    </div>
+
+    <div class="dep-nav-seat">
+        <div class="dep-nav-seat dep-seat">일반석</div>
+        <div class="dep-nav-seat dep-seat">프레스티지석</div>
+        <div class="dep-nav-seat dep-seat">일등석</div>
+
+    </div>
+
     <script></script>
 </body>
 </html>
