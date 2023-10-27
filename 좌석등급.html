@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,18 @@
     <title>좌석등급</title>
     <style>
         /* 상단 네비 바 */
-        div{
+        body {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        .flight-nav-bgd{
+        .nav {
+            width: 100%;
+            height: 100px;
+        }
+
+        .flight-nav-bgd {
             width: 100%;
             height: 85px;
             background-color: #c6f2fe;
@@ -21,17 +27,18 @@
             float: left;
         }
 
-        .flight-nav{
+        .flight-nav {
             width: 90%;
             height: 85px;
             background-color: white;
             margin: 2%;
+            margin-left: 60px;
             position: fixed;
             border-radius: 10px 10px;
-            box-shadow: 0 8px 4px -4px gray;            
+            box-shadow: 0 8px 4px -4px gray;
         }
 
-        .flight-code{
+        .flight-code {
             width: 240px;
             height: 50px;
             margin-left: 20px;
@@ -39,23 +46,23 @@
             display: inline-block;
         }
 
-        .flight-go-code{
+        .flight-go-code {
             display: inline-block;
             margin: 0.8rem;
             font-size: 20px;
             font-weight: bold;
         }
 
-        .slash{
+        .slash {
             font-size: 20px;
         }
 
-        .flight-inner-nav{
+        .flight-inner-nav {
             display: inline-block;
             margin: 0.8rem;
         }
 
-        .flight-search{
+        .flight-search {
             width: 100px;
             height: 40px;
             border: 1px solid #143F90;
@@ -69,107 +76,252 @@
             text-align: center;
         }
 
-        /* 가는편 */
-        .dep-nav{
-            position: absolute;
+        /* 가는편 네비 */
+
+        .content-nav {
+            width: 100%;
+            height: 300px;
+        }
+
+        .dep-nav {
             margin: 30px;
             top: 120px;
         }
 
-        .dep-nav-text{
+        .dep-nav-text {
             color: #002F87;
         }
 
-        .dep-nav-box{
-            position: absolute;
-            margin: 30px;
+        .dep-nav-box {
             top: 150px;
             width: 90%;
             height: 85px;
             background-color: white;
-            margin: 2%;
-            position: fixed;
+            margin: 2% auto;
             border: 1px solid lightgray;
             border-radius: 10px 10px;
             display: flex;
+            justify-content: space-around;
         }
 
-        .dep-nav-box-btn{
-            width: 30%;
+        .dep-nav-box-btn {
             border: 0;
             background-color: transparent;
-            font-size: 15px
+            font-size: 15px;
+            justify-content: space-around;
+            align-items: center;
         }
 
-        /* .dep-nav-seat{
-            position: absolute;
-            margin: 30px;
-            top: 30px;
+        .dep-nav-seat {
+            top: 150px;
             width: 90%;
             height: 85px;
             background-color: white;
-            margin: 2%;
-            position: fixed;
+            margin: 2% auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .dep-seat {
+            height: 30px;
             border: 1px solid lightgray;
             border-radius: 10px 10px;
-            display: flex;
-        } */
+            margin: 1%;
+            align-items: center;
+        }
 
+        #best-seat {
+            border: 0;
+            background-color: #C6F2FE;
+            font-weight: bold;
+        }
+
+        select{
+            margin-left: 15px;
+            border: 1px solid lightgray ;
+            border-radius: 10px 10px;
+            height: 30px;
+        }
+
+        /* 가는 편 본문 */
+        .content{
+            width: 100%;
+            height: 950px;
+            /* background-color: aquamarine; */
+        }
+
+        .flight{
+            width: 90%;
+            height: 200px;
+            margin: 10px auto;
+            border: 1px solid lightgray ;
+            border-radius: 10px 10px;
+            display: flex;
+        }
+
+        .flight-info{
+            flex:2;
+            background-color: antiquewhite;
+        }
+
+        .seat-info{
+            flex:3
+        }
+
+        /* 하단 */
+        .footer{
+            width: 100%;
+            height: 60px;
+            box-shadow: 0 -4px 4px -4px gray;
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .payment-box{
+            width: 500px;
+            height: 100%;
+            margin-left: 500px;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 5px;
+        }
         
+        .change-krw{
+            background-color: transparent;
+            border: 1px solid lightgray;
+            border-radius: 0.7rem;
+            height: 30px;
+            color: #002F87;
+            font-weight: bold;
+        }
+
+        .howmuch{
+            font-size: 30px;
+            font-weight: bold;
+            color: #002F87;
+        }
+
+        .won{
+            font-weight: bold;
+            color: #002F87;
+        }
+
+        .next-btn{
+            width: 200px;
+            height: 50px;
+    
+            background-color: #002F87;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 1rem;
+        }
+
     </style>
 </head>
+
 <body>
     <!-- 상단네비바 -->
-    <div class="flight-nav-bgd"></div>
-    <div class="flight-nav">
-        <div class="flight-code">
-            <span class="flight-go-code">출발지</span>
-            <i class="fa-solid fa-rotate-right flight-go-code"></i>
-            <span class="flight-go-code">도착지</span>
+    <div class="nav">
+        <div class="flight-nav-bgd"></div>
+        <div class="flight-nav">
+            <div class="flight-code">
+                <span class="flight-go-code">출발지</span>
+                <i class="fa-solid fa-rotate-right flight-go-code"></i>
+                <span class="flight-go-code">도착지</span>
+            </div>
+
+            <span class="slash">|</span>
+
+            <div class="flight-inner-nav flight-schedule">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>20XX년 XX월 XX일 (X) ~ 20XX년 XX월 XX일 (X)</span>
+            </div>
+
+            <span class="slash">|</span>
+
+            <div class="flight-inner-nav flight-person">
+                <i class="fa-solid fa-person"></i>
+                <span>성인 1명</span>
+            </div>
+
+            <button class="flight-inner-nav flight-search">항공편검색</button>
+        </div>
+    </div>
+    <!-- 가는 편 네비 -->
+    <div class="content-nav">
+        <div class="dep-nav">
+            <span style="font-weight: bold;" class="dep-nav-text">가는 편</span>
+            <span class="dep-nav-text">출발지 ~ 공항</span>
+            <span class="dep-nav-text"><i class="fa-solid fa-arrow-right"></i></span>
+            <span class="dep-nav-text">도착지 ~ 공항</span>
         </div>
 
-        <span class="slash">|</span>
-
-        <div class="flight-inner-nav flight-schedule">
-            <i class="fa-solid fa-calendar-days"></i>
-            <span>20XX년 XX월 XX일 (X) ~ 20XX년 XX월 XX일 (X)</span>
+        <div class="dep-nav-box">
+            <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(월)</span><br><span
+                    class="dep-btn-price">000,000원</span></button>
+            <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(화)</span><br><span
+                    class="dep-btn-price">000,000원</span></button>
+            <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(수)</span><br><span
+                    class="dep-btn-price">000,000원</span></button>
+            <button class="dep-nav-box-btn" style="font-weight: bold;"><span class="dep-btn-date">XX(목)</span><br><span
+                    class="dep-btn-price" style="color: #3F6AE8;">000,000원</span></button>
+            <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(금)</span><br><span
+                    class="dep-btn-price">000,000원</span></button>
+            <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(토)</span><br><span
+                    class="dep-btn-price">000,000원</span></button>
+            <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(일)</span><br><span
+                    class="dep-btn-price">000,000원</span></button>
         </div>
-        
-        <span class="slash">|</span>
 
-        <div class="flight-inner-nav flight-person">
-            <i class="fa-solid fa-person"></i>
-            <span>성인 1명</span>
+        <div class="dep-nav-seat">
+            <div class="dep-nav-seat dep-seat">일반석</div>
+            <div class="dep-nav-seat dep-seat" id="best-seat">프레스티지석</div>
+            <div class="dep-nav-seat dep-seat">일등석</div>
         </div>
-        
-        <button class="flight-inner-nav flight-search">항공편검색</button>
+
+        <select class="form-select" aria-label="Default select example">
+            <option selected>추천순 정렬</option>
+            <option value="1"> 추천 순</option>
+            <option value="2">출발 시간 순</option>
+            <option value="3">도착 시간 순</option>
+        </select>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>직항 및 경유</option>
+            <option value="1">전체</option>
+            <option value="2">직항</option>
+            <option value="3">경유</option>
+        </select>
     </div>
 
-    <!-- 가는 편  -->
-    <div class="dep-nav">
-        <span style="font-weight: bold;" class="dep-nav-text">가는 편</span>
-        <span class="dep-nav-text">출발지 ~ 공항</span>
-        <span class="dep-nav-text"><i class="fa-solid fa-arrow-right"></i></span>
-        <span class="dep-nav-text">도착지 ~ 공항</span>
+    <!-- 가는 편 본문 -->
+    <div class="content">
+        <div class="flight">
+            <div class="flight-info"></div>
+            <div class="seat-info"></div>
+        </div>
+        <div class="flight"></div>
+        <div class="flight"></div>
+        <div class="flight"></div>
+    </div>
+    
+
+    <!-- 하단 -->
+    <div class="footer">
+        <div class="payment-box">
+            <span>총액</span>
+            <button class="change-krw"><i class="fa-solid fa-sack-dollar"></i>통화 KRW</button>
+            <span><span class="howmuch">000,000</span><span class="won">원</span></span>
+            <button class="next-btn">다음 여정</button>
+        </div>
     </div>
 
-    <div class="dep-nav-box">
-        <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(월)</span><br><span class="dep-btn-price">000,000원</span></button>
-        <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(화)</span><br><span class="dep-btn-price">000,000원</span></button>
-        <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(수)</span><br><span class="dep-btn-price">000,000원</span></button>
-        <button class="dep-nav-box-btn" style="color: #002F87; font-weight: bold;" ><span class="dep-btn-date">XX(목)</span><br><span class="dep-btn-price">000,000원</span></button>
-        <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(금)</span><br><span class="dep-btn-price">000,000원</span></button>
-        <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(토)</span><br><span class="dep-btn-price">000,000원</span></button>
-        <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(일)</span><br><span class="dep-btn-price">000,000원</span></button>
-    </div>
 
-    <div class="dep-nav-seat">
-        <div class="dep-nav-seat dep-seat">일반석</div>
-        <div class="dep-nav-seat dep-seat">프레스티지석</div>
-        <div class="dep-nav-seat dep-seat">일등석</div>
-
-    </div>
 
     <script></script>
 </body>
+
 </html>
