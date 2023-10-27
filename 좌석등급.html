@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .flight-nav-bgd{
+            width: 100%;
+            height: 85px;
+            background-color: #C5F1FE;
+            position: fixed;
+        }
+
+        .flight-nav{
+            width: 90%;
+            height: 85px;
+            background-color: white;
+            margin: 2%;
+            position: fixed;
+            border-radius: 10px 10px;
+            box-shadow: 0 8px 4px -4px gray;
+
+            
+        }
+
+        .flight-code{
+            width: 240px;
+            height: 50px;
+            margin-left: 20px;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        .flight-go-code{
+            display: inline-block;
+            margin: 0.8rem;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .slash{
+            font-size: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="flight-nav-bgd"></div>
+    <div class="flight-nav">
+        <div class="flight-code">
+            <span class="flight-go-code">출발지</span>
+            <i class="fa-solid fa-rotate-right flight-go-code"></i>
+            <span class="flight-go-code">도착지</span>
+
+        <span class="slash">|</span>
+        </div>
+    </div>
+    <script></script>
+</body>
+</html>
