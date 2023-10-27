@@ -9,31 +9,60 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<!-- 구글폰트 -->
     <style>
         #test {
-            width:500px;
+            width:1000px;
             height: 500px;
             margin:0 auto;
+            background-color: white;
+            margin-top: 50px;
+        }
+        .calendar {
+            text-align: center;
+        }
+        .title {
+            width: 100%;
+            height: 75px;
+            background-color: white;
+        }
+        .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+        cursor: pointer;
+        }
+        .ft_size{
+            width: 50%;
+            font-size: medium;
+            display: block;
+        }
+        .cls {
+            text-align: right;
+            position: relative;
+            margin-top: auto;
+            display: block;
         }
     </style>
 </head>
 <body>
 
     <div id="test">
-        <input type="text" name="daterange" value="10/27/2023 - 11/8/2023" />
+        <div class="title"><span class="ft_size">날짜 선택</span><div class="cls"><span class="material-symbols-outlined">close</span></div>
+            <input type="radio" name="rdtrip">왕복
+            <input type="radio" name="rdtrip">편도
+        </div>
+        <div class="calendar"><input type="text" name="daterange" value="10/27/2023 - 11/8/2023" /></div>
+        
     </div>
 
     <script>
     $('input[name="daterange"]').daterangepicker({
         opens: 'center',
-        ranges: {
-        '오늘': [moment(), moment()],
-        '어제': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-        '7일전': [moment().subtract(6, 'days'), moment()],
-        '30일전': [moment().subtract(29, 'days'), moment()],
-        '이번달': [moment().startOf('month'), moment().endOf('month')],
-        '저번달': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-    },
+        
     "alwaysShowCalendars": true,
 
     "minYear": 1000,
@@ -48,27 +77,10 @@
         "customRangeLabel": "Custom",
         "weekLabel": "주",
         "daysOfWeek": [
-                "일",
-                "월",
-                "화",
-                "수",
-                "목",
-                "금",
-                "토"
+                "일","월","화","수","목","금","토"
         ],
         "monthNames": [
-                "1월",
-                "2월",
-                "3월",
-                "4월",
-                "5월",
-                "6월",
-                "7월",
-                "8월",
-                "9월",
-                "10월",
-                "11월",
-                "12월"
+                "1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"
         ],
         "firstDay": 1
     },
