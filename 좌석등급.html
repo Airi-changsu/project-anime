@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>Document</title>
+    <title>좌석등급</title>
     <style>
         div{
             margin: 0;
@@ -15,7 +15,7 @@
         .flight-nav-bgd{
             width: 100%;
             height: 85px;
-            background-color: #C5F1FE;
+            background-color: #c6f2fe;
             position: fixed;
         }
 
@@ -50,7 +50,24 @@
             font-size: 20px;
         }
 
+        .flight-inner-nav{
+            display: inline-block;
+            margin: 0.8rem;
+        }
 
+        .flight-search{
+            width: 100px;
+            height: 40px;
+            border: 1px solid #143F90;
+            border-radius: 10px 10px;
+            display: inline-block;
+            position: absolute;
+            top: 0.7rem;
+            right: 2rem;
+
+            font-size: 15px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -60,9 +77,23 @@
             <span class="flight-go-code">출발지</span>
             <i class="fa-solid fa-rotate-right flight-go-code"></i>
             <span class="flight-go-code">도착지</span>
+        </div>
 
         <span class="slash">|</span>
+
+        <div class="flight-inner-nav flight-schedule">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span>20XX년 XX월 XX일 (X) ~ 20XX년 XX월 XX일 (X)</span>
         </div>
+        
+        <span class="slash">|</span>
+
+        <div class="flight-inner-nav flight-person">
+            <i class="fa-solid fa-person"></i>
+            <span>1명</span>
+        </div>
+        
+        <button class="flight-inner-nav flight-search">항공편검색</button>
     </div>
     <script></script>
 </body>
