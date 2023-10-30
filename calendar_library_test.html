@@ -18,9 +18,12 @@
             margin:0 auto;
             background-color: white;
             margin-top: 50px;
+            border: 1px solid black;
         }
         .calendar {
             text-align: center;
+            margin-top: 200px;
+            background-color: skyblue;
         }
         .title {
             width: 100%;
@@ -37,7 +40,7 @@
         }
         .ft_size{
             width: 50%;
-            font-size: medium;
+            font-size: 2.0rem;
             display: block;
         }
         .cls {
@@ -46,19 +49,28 @@
             margin-top: auto;
             display: block;
         }
+        .clsbt {
+            width: 50%;
+            height: 100px;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
-
+    <form></form>
     <div id="test">
-        <div class="title"><span class="ft_size">날짜 선택</span><div class="cls"><span class="material-symbols-outlined">close</span></div>
+        <div class="title"><span class="ft_size" style="float: left;">날짜 선택</span><div class="cls clsbt"><span class="material-symbols-outlined" onclick="location.href=''//이전페이지링크 " style="float: right; font-size: 3.0rem;">close</span></div>
             <input type="radio" name="rdtrip">왕복
             <input type="radio" name="rdtrip">편도
+            
         </div>
         <div class="calendar"><input type="text" name="daterange" value="10/27/2023 - 11/8/2023" /></div>
         
     </div>
 
+    <button type="button" onclick="location.href='승객정보.html' " style="float : right;">확인</button>
+    
+</form>
     <script>
     $('input[name="daterange"]').daterangepicker({
         opens: 'center',
@@ -86,7 +98,6 @@
     },
 }, function(start, end, label) {
   console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
-
 });
 
 
