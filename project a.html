@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         nav{
-            font-size: 12pt;
+            font-size: 13pt;
             font-family: 'PT Sans', Arial, Sans-serif;
             position: relative;
         }
@@ -46,6 +46,7 @@
             padding: 0;
             background-color: #c6f2fe;
             text-align: center;
+            color: #000;
           }
           li{
             /*position: relative;*/
@@ -110,6 +111,31 @@
           pointer-events: auto;
           }
 
+          .move-back {
+            width:100px;
+            height:100px;
+            animation-name: move-back-ani;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            position: relative;
+        }
+
+        @keyframes move-back-ani {
+            0% {
+                right: -100%;
+                /* margin-left:0px; */
+            }
+            100% {
+                right:100%;
+                /* margin-left:100%; */
+            }
+        }
+
+        .container2 {
+          height: 500px;
+          weight: 1000px;
+        }
+
 
         </style>
 </head>
@@ -130,6 +156,9 @@
         </nav>
         </div>
 
+        <div class="container2">
+        <div class="move-back"><img src="../project-anime/여행 1.jpg" width="1000px"height="500px"/></div>
+        </div>
         
 
       </body>
