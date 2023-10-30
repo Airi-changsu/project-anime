@@ -120,7 +120,7 @@
         opens: 'center',
         
     "alwaysShowCalendars": true,
-
+    
     minDate: moment(),
     "maxYear": 9999,
     "locale": {
@@ -157,38 +157,34 @@ $(document).ready(function() {
 // 왕복 캘린더
 $('input[name="daterange2"]').daterangepicker({
         opens: 'center',
-        singleDatePicker: true, // Allow only single date selection
         
-        
-    startDate: moment(),   // 초기 날짜를 현재 날짜로 설정
-        minDate: moment(),     // 최소 날짜를 현재 날짜로 설정
-        maxDate: 9999,     // 최대 날짜를 현재 날짜로 설정
-        showDropdowns: true,   // 월 및 연도 드롭다운 표시
-        autoApply: true,       // 날짜 선택 시 선택 적용
-        locale: {
-            format: 'YYYY-MM-DD',
-            separator: " ~ ",
-            applyLabel: "확인",
-            cancelLabel: "취소",
-            fromLabel: "From",
-            toLabel: "To",
-            customRangeLabel: "Custom",
-            weekLabel: "주",
-            daysOfWeek: [
-                
-               
-"일","월","화","수","목","금","토"
-            ],
-            monthNames: [
-                "1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"
-            ],
-            firstDay: 1
-        },
+        singleDatePicker: true,
+    "alwaysShowCalendars": true,
     
-    }, function(start, end, label) {
-        console.log('New date range selected: ' + start.format('YYYY-MM-DD'));
-    });
 
+    minDate: moment(),
+    "maxYear": 9999,
+    "locale": {
+        "format": 'YYYY-MM-DD',
+        "separator": " ~ ",
+        "applyLabel": "확인",
+        "cancelLabel": "취소",
+        "fromLabel": "From",
+        "toLabel": "To",
+        "customRangeLabel": "Custom",
+        "weekLabel": "주",
+        "daysOfWeek": [
+                "일","월","화","수","목","금","토"
+        ],
+        "monthNames": [
+                "1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"
+        ],
+        "firstDay": 1
+    },
+    
+}, function(start, end, label) {
+  console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+});
     $(document).ready(function() {
         $('input[name="rdtrip"]').change(function() {
             if($(this).val() == "편도") {
@@ -198,6 +194,7 @@ $('input[name="daterange2"]').daterangepicker({
             }
         });
     });
+    // 편도 캘린더
     </script>
 </body>
 </html>
