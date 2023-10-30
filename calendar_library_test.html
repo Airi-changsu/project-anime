@@ -87,6 +87,10 @@
             border: 2px solid royalblue;
             margin: 300px 0;
         }
+        #clrbt:disabled {
+            background-color: lightgray;
+            cursor: not-allowed;
+        }
         @import url("https://font.elice.io/css?family=Elice+DX+Neolli");
         
         html, body { font-family: "Elice DX Neolli", sans-serif; }
@@ -107,13 +111,14 @@
         </div>
         <div class="calendar"><input type="text" name="daterange"  /></div>
         <div class="calendar2"><input type="text" name="daterange2" /></div>
-        <button class ="clrbt" onclick="location.href='승객정보.html' ">확인</button>
+        <button id="clrbt" class="clrbt" disabled onclick="location.href='승객정보.html' ">확인</button>
     </div>
 
     
     
 </form>
     <script>
+    
     $('input[name="daterange"]').daterangepicker({
 
         
@@ -126,7 +131,7 @@
     "locale": {
         "format": 'YYYY-MM-DD',
         "separator": " ~ ",
-        "applyLabel": "확인",
+        "applyLabel": "선택",
         "cancelLabel": "취소",
         "fromLabel": "From",
         "toLabel": "To",
@@ -139,10 +144,12 @@
                 "1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"
         ],
         "firstDay": 1
+        
     },
     
 }, function(start, end, label) {
   console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+  $('#clrbt').prop('disabled', false);
 });
 
 $(document).ready(function() {
@@ -152,6 +159,7 @@ $(document).ready(function() {
             } else {
                 $('.calendar').hide();
             }
+            $('#clrbt').prop('disabled', true);
         });
     });
 // 왕복 캘린더
@@ -167,7 +175,7 @@ $('input[name="daterange2"]').daterangepicker({
     "locale": {
         "format": 'YYYY-MM-DD',
         "separator": " ~ ",
-        "applyLabel": "확인",
+        "applyLabel": "선택",
         "cancelLabel": "취소",
         "fromLabel": "From",
         "toLabel": "To",
@@ -184,6 +192,7 @@ $('input[name="daterange2"]').daterangepicker({
     
 }, function(start, end, label) {
   console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+  $('#clrbt').prop('disabled', false);
 });
     $(document).ready(function() {
         $('input[name="rdtrip"]').change(function() {
