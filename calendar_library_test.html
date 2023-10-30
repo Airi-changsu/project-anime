@@ -8,9 +8,11 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-
+<!-- 부트스트랩 -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <!-- 구글폰트 -->
+<link href="https://font.elice.io/css?family=Elice+DX+Neolli" rel="stylesheet">
+<!-- 텍스트폰트 -->
     <style>
         #test {
             width:1000px;
@@ -18,12 +20,17 @@
             margin:0 auto;
             background-color: white;
             margin-top: 50px;
-            border: 1px solid black;
+            
         }
         .calendar {
             text-align: center;
-            margin-top: 200px;
-            background-color: skyblue;
+            margin-top: 100px;
+            display: none;
+        }
+        .calendar2 {
+            text-align: center;
+            margin-top: 100px;
+            
         }
         .title {
             width: 100%;
@@ -42,42 +49,79 @@
             width: 50%;
             font-size: 2.0rem;
             display: block;
+            margin-top: 30px;
         }
         .cls {
             text-align: right;
             position: relative;
-            margin-top: auto;
+            margin-top: 30px;
             display: block;
         }
         .clsbt {
             width: 50%;
-            height: 100px;
             display: inline-block;
         }
+        .line {
+            width: 100%;
+            border: 1px solid gray;
+        }
+        .rdo {
+            margin-top: 20px;
+        }
+        .rdo2{ 
+            margin-left: 20px;
+        }
+        .clrbt {
+            width: 150px;
+            height: 50px;
+            float: right;
+            margin-top: 300px;
+            background-color: lightgray;
+            font-size: 1.2rem;
+            border-radius: 15px 15px 15px 15px / 15px 15px 15px 15px;
+            font-family: "Elice DX Neolli", sans-serif;
+            cursor: pointer;
+            border: none;
+        }
+        .clrbt:hover{
+            border: 2px solid royalblue;
+            margin: 300px 0;
+        }
+        @import url("https://font.elice.io/css?family=Elice+DX+Neolli");
+        
+        html, body { font-family: "Elice DX Neolli", sans-serif; }
+
+    
     </style>
 </head>
 <body>
     <form></form>
     <div id="test">
         <div class="title"><span class="ft_size" style="float: left;">날짜 선택</span><div class="cls clsbt"><span class="material-symbols-outlined" onclick="location.href=''//이전페이지링크 " style="float: right; font-size: 3.0rem;">close</span></div>
-            <input type="radio" name="rdtrip">왕복
-            <input type="radio" name="rdtrip">편도
+        <div class="line"></div>
+            <!-- <input class ="rdo" type="radio" name="rdtrip">왕복 
+            <input class ="rdo2" type="radio" name="rdtrip">편도 -->
+            <input class="rdo" type="radio" name="rdtrip" value="왕복">왕복 
+            <input class="rdo2" type="radio" name="rdtrip" value="편도">편도
             
         </div>
-        <div class="calendar"><input type="text" name="daterange" value="10/27/2023 - 11/8/2023" /></div>
-        
+        <div class="calendar"><input type="text" name="daterange"  /></div>
+        <div class="calendar2"><input type="text" name="daterange2" /></div>
+        <button class ="clrbt" onclick="location.href='승객정보.html' ">확인</button>
     </div>
 
-    <button type="button" onclick="location.href='승객정보.html' " style="float : right;">확인</button>
+    
     
 </form>
     <script>
     $('input[name="daterange"]').daterangepicker({
+
+        
         opens: 'center',
         
     "alwaysShowCalendars": true,
 
-    "minYear": 1000,
+    minDate: moment(),
     "maxYear": 9999,
     "locale": {
         "format": 'YYYY-MM-DD',
@@ -96,11 +140,64 @@
         ],
         "firstDay": 1
     },
+    
 }, function(start, end, label) {
   console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
 });
 
+$(document).ready(function() {
+        $('input[name="rdtrip"]').change(function() {
+            if($(this).val() == "왕복") {
+                $('.calendar').show();
+            } else {
+                $('.calendar').hide();
+            }
+        });
+    });
+// 왕복 캘린더
+$('input[name="daterange2"]').daterangepicker({
+        opens: 'center',
+        singleDatePicker: true, // Allow only single date selection
+        
+        
+    startDate: moment(),   // 초기 날짜를 현재 날짜로 설정
+        minDate: moment(),     // 최소 날짜를 현재 날짜로 설정
+        maxDate: 9999,     // 최대 날짜를 현재 날짜로 설정
+        showDropdowns: true,   // 월 및 연도 드롭다운 표시
+        autoApply: true,       // 날짜 선택 시 선택 적용
+        locale: {
+            format: 'YYYY-MM-DD',
+            separator: " ~ ",
+            applyLabel: "확인",
+            cancelLabel: "취소",
+            fromLabel: "From",
+            toLabel: "To",
+            customRangeLabel: "Custom",
+            weekLabel: "주",
+            daysOfWeek: [
+                
+               
+"일","월","화","수","목","금","토"
+            ],
+            monthNames: [
+                "1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"
+            ],
+            firstDay: 1
+        },
+    
+    }, function(start, end, label) {
+        console.log('New date range selected: ' + start.format('YYYY-MM-DD'));
+    });
 
+    $(document).ready(function() {
+        $('input[name="rdtrip"]').change(function() {
+            if($(this).val() == "편도") {
+                $('.calendar2').show();
+            } else {
+                $('.calendar2').hide();
+            }
+        });
+    });
     </script>
 </body>
 </html>
