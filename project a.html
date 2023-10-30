@@ -110,41 +110,24 @@
           transform: translate(-50%, -50%);
           pointer-events: auto;
           }
+          
 
-          .move-back {
-            width:100px;
-            height:100px;
-            animation-name: move-back-ani;
-            animation-duration: 10s;
-            animation-iteration-count: infinite;
-            position: relative;
+        .container {
+            width: 100%;
+            height: 0;
+            display: flex;
         }
-
-        @keyframes move-back-ani {
-            0% {
-                right: -100%;
-                /* margin-left:0px; */
-            }
-            100% {
-                right:100%;
-                /* margin-left:100%; */
-            }
-        }
-
-        .container2 {
-          height: 500px;
-          weight: 1000px;
-        }
-
+    
 
         </style>
 </head>
 <body>
-    <body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" style="background-color:#F6F6F6">
+  
+  <body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" style="background-color:#F6F6F6">
         <div class="menu">
           <nav class="clearfix">
             <ul class="clearfix">
-              <div class="container"><img src="../project-anime/대한항공로고.png"></div>
+              <div class="container"><img src="../project-anime/images/대한항공로고.png"></div>
               <li><a href="http://www._____.com/About">예약</a></li> <!--""<-여기 부분에 URL 작성하면 됨-->
               <li><a href="http://www._____.com/About">공항</a></li>
               <li><a href="http://www._____.com/Project">기내</a></li>
@@ -156,10 +139,16 @@
         </nav>
         </div>
 
-        <div class="container2">
-        <div class="move-back"><img src="../project-anime/여행 1.jpg" width="1000px"height="500px"/></div>
+        <div class="container">
+        <div><img src="../project-anime/images/여행 1.jpg" width="1000px" height="500px"/></div>
+        <div><img src="../project-anime/images/여행 2.jpg" width="1000px" height="500px"/></div>
+        <div><img src="../project-anime/images/여행 3.jpg" width="1000px" height="500px"/></div>
+        <div><img src="../project-anime/images/여행 4.jpg" width="1000px" height="500px"/></div>
+        <div><img src="../project-anime/images/여행 5.jpg" width="1000px" height="500px"/></div>
         </div>
         
+
+
 
       </body>
 </body>
