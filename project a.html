@@ -52,7 +52,7 @@
             display: inline-block;
           }
           li a{
-            color: #e40c66;
+            color: #0a0005;
             text-align: center;
             padding: 14.5px 16px;
             text-decoration: none;
@@ -81,24 +81,34 @@
           transform: translate(-50%, -50%);
           }
 
-          .util__link-inner.-login {
-    width: 5%;
-    min-width: 4.4rem;
-    border: 0;
-    outline: 0;
-    display: block;
-    font-size: 1.1rem;
-    font-weight: 600;
-    position: absolute;
-    color: #fff;
-    border-radius: 1.5rem;
-    text-decoration: none;
-    cursor: pointer;
-    background: #00256c;
-    word-break: break-word;
-    align-items: end;
+        .util__link-inner.-login {
+          width: 85%;
+          min-width: 4.4rem;
+          margin: 0 0.2rem 0 0;
+          border: 0;
+          outline: 0;
+          display: inline-flexbox;
+          font-size: 1.1rem;
+          font-weight: 700;
+          line-height: 1.7rem;
+          padding: 0.3rem 1rem 0.4rem;
+          color: #fff;
+          border-radius: 1.5rem;
+          text-decoration: none;
+          cursor: pointer;
+          background: #00256c;
+          word-break: break-word;
           }
 
+        .util__item-area {
+          position: absolute;
+          width: 100px;
+          /* height: 100%; */
+          top: 25px;
+          left: 90%;
+          transform: translate(-50%, -50%);
+          pointer-events: auto;
+          }
 
 
         </style>
@@ -109,16 +119,19 @@
           <nav class="clearfix">
             <ul class="clearfix">
               <div class="container"><img src="../project-anime/대한항공로고.png"></div>
-              <li><a href="http://127.0.0.1:5500/git/project-anime/login.html">예약</a></li> <!--""<-여기 부분에 URL 작성하면 됨-->
+              <li><a href="http://www._____.com/About">예약</a></li> <!--""<-여기 부분에 URL 작성하면 됨-->
               <li><a href="http://www._____.com/About">공항</a></li>
               <li><a href="http://www._____.com/Project">기내</a></li>
               <li><a href="http://www._____.com/Travel">스카이패스</a></li>
               <li><a href="http://www._____.com/Contact">호텔</a></li>
-              <div class="util__item-area"><a class="util__link-inner -login" href="../project-anime/login.html">로그인</a></div>
-          </ul>
+              <li><div class="util__item-area"><a class="util__link-inner -login" href="http://127.0.0.1:5500/git/project-anime/login.html">Log in</a></div></li>
+            </ul>
           <a id="pull" href="#"></a>
         </nav>
         </div>
+
+        
+
       </body>
 </body>
 </html>
