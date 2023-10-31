@@ -7,7 +7,127 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>좌석등급</title>
     <style>
+
+        /* by 창수 */
+        nav {
+            font-size: 13pt;
+            font-family: 'PT Sans', Arial, Sans-serif;
+            /* position: relative; */
+        }
+
+        nav ul {
+            padding: 0;
+            margin: 0 auto;
+            width: auto;
+        }
+
+        nav a {
+            line-height: 50px;
+            height: 50px;
+        }
+
+        nav li a {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        nav li:last-child a {
+            border-right: 0;
+        }
+
+        nav a:hover,
+        nav a:active {}
+
+        nav a#pull {
+            display: none;
+        }
+
+        html {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        ul {
+            /*list-style-type: none;*/
+            margin: 0;
+            padding: 0;
+            background-color: #c6f2fe;
+            text-align: center;
+            color: #000;
+        }
+
+        li {
+            /*position: relative;*/
+            display: inline-block;
+        }
+
+        li a {
+            color: #0a0005;
+            text-align: center;
+            padding: 14.5px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            /*color: #597812;*/
+            color: #FFD400;
+            font-weight: normal;
+        }
+
+        .menu {
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            max-width: 100%;
+            background-position: center;
+            background-size: cover;
+            background-color: #c6f2fe;
+            color: white;
+            position: fixed;
+            z-index: 1000;
+        }
+
+        .container>img {
+            position: absolute;
+            width: 20%;
+            /* height: 100%; */
+            top: 25px;
+            left: 10%;
+            transform: translate(-50%, -50%);
+        }
+
+        .util__link-inner.-login {
+            width: 85%;
+            min-width: 4.4rem;
+            margin: 0 0.2rem 0 0;
+            border: 0;
+            outline: 0;
+            display: inline-flexbox;
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.7rem;
+            padding: 0.3rem 1rem 0.4rem;
+            color: #fff;
+            border-radius: 1.5rem;
+            text-decoration: none;
+            cursor: pointer;
+            background: #00256c;
+            word-break: break-word;
+        }
+
+        .util__item-area {
+            position: absolute;
+            width: 100px;
+            /* height: 100%; */
+            top: 25px;
+            left: 90%;
+            transform: translate(-50%, -50%);
+            pointer-events: auto;
+        }
         /* 상단 네비 바 */
+
         body {
             margin: 0;
             padding: 0;
@@ -21,10 +141,11 @@
 
         .flight-nav-bgd {
             width: 100%;
-            height: 85px;
+            height: 135px;
             background-color: #c6f2fe;
             position: fixed;
-            float: left;
+            z-index: 90;
+
         }
 
         .flight-nav {
@@ -34,8 +155,10 @@
             margin: 2%;
             margin-left: 60px;
             position: fixed;
+            top: 50px;
             border-radius: 10px 10px;
-            box-shadow: 0 8px 4px -4px gray;
+            box-shadow: -1px 5px 9px gray;
+            z-index: 99;
         }
 
         .flight-code {
@@ -81,15 +204,14 @@
         .content-nav {
             width: 100%;
             height: 300px;
+            position: relative;
+            top: 50px;
+            /* z-index: -99; */
         }
 
         .dep-nav {
             margin: 30px;
             top: 120px;
-        }
-
-        .dep-nav-text {
-            color: #002F87;
         }
 
         .dep-nav-box {
@@ -112,6 +234,11 @@
             align-items: center;
         }
 
+        .dep-box-change{
+            font-weight: bold;
+            color: #3F6AE8;
+        }
+
         .dep-nav-seat {
             top: 150px;
             width: 90%;
@@ -130,78 +257,185 @@
             align-items: center;
         }
 
-        #best-seat {
+        .choice-seat-change {
             border: 0;
             background-color: #C6F2FE;
             font-weight: bold;
         }
 
-        select{
-            margin-left: 15px;
-            border: 1px solid lightgray ;
-            border-radius: 10px 10px;
+        .form-select {
+            margin-left: 20px;
             height: 30px;
+            border: 1px solid lightgray;
+            border-radius: 10px 10px;
         }
 
         /* 가는 편 본문 */
-        .content{
+        .content {
             width: 100%;
             height: 950px;
-            /* background-color: aquamarine; */
+            position: relative;
+            top: 50px;
+            /* z-index: -99; */
         }
 
-        .flight{
+        /* 뱅기편 */
+        .flight {
             width: 90%;
             height: 200px;
             margin: 10px auto;
-            border: 1px solid lightgray ;
+            border: 1px solid lightgray;
             border-radius: 10px 10px;
             display: flex;
         }
 
-        .flight-info{
-            flex:1;
+        .flight-info {
+            width: 30%;
             border-right: 1px solid lightgray;
-            margin-top: 30px;
+            background-color: transparent;
+        }
+
+        .dep-time {
+            width: 100%;
+            height: 30px;
             display: flex;
-            align-items: normal;
             justify-content: space-evenly;
+
+            position: relative;
+            top: 30px;
+            z-index: -99;
+
         }
 
-        .seat-info{
-            flex:4;
-        }
-
-        .dep-time{
-            /* margin-top: 30px; */
+        .time {
             font-size: 20px;
-            
+            font-weight: bold;
         }
-        
 
+        .howlong {
+            width: 100%;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            font-size: 12px;
+
+            position: relative;
+            top: 30px;
+            z-index: -99;
+
+        }
+
+        .whatflight {
+            width: 100%;
+            height: 20px;
+            display: flex;
+            justify-content: space-evenly;
+
+            position: relative;
+            top: 30px;
+            z-index: -99;
+
+        }
+
+        .flight-number {
+            width: 100%;
+            height: 30px;
+            position: relative;
+            top: 80px;
+            z-index: -99;
+
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .info {
+            border: 1px solid lightgray;
+            border-radius: 10px 10px;
+        }
+
+        /* 좌석편 */
+
+        .all-seat-info {
+            width: 70%;
+            height: 100%;
+            display: flex;
+        }
+
+        .choice {
+            background-color: #C6F2FE;
+            border: 1px solid #002F87;
+            box-shadow: 0 0 6px 0;
+        }
+
+        .seat-info {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .whichclass {
+            height: 30px;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .howmuch-seat {
+            height: 100%;
+            font-size: 25px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+
+        .howmuch-seat-won {
+            font-size: 12px;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+        }
+
+        /* 정보편 */
+
+        .howmanyseat{
+            font-size: 12px;
+            color: red;
+            margin-top: 50px;
+        }
+
+        .change-info {
+            width: 50%;
+            height: 100%;
+            font-size: 12px;
+            text-align: center;
+        }
 
         /* 하단 */
-        .footer{
+
+        .footer {
             width: 100%;
             height: 60px;
             background-color: white;
-            box-shadow: 0 -4px 4px -4px gray;
+            box-shadow: -1px -5px 12px -4px gray;
             position: fixed;
             bottom: 0;
             display: flex;
             justify-content: flex-end;
         }
 
-        .payment-box{
+        .payment-box {
             width: 500px;
             height: 100%;
             margin-left: 500px;
-            justify-content: space-around;
+            display: flex;
+            justify-content: space-evenly;
             align-items: center;
-            margin-top: 5px;
         }
-        
-        .change-krw{
+
+        .change-krw {
             background-color: transparent;
             border: 1px solid lightgray;
             border-radius: 0.7rem;
@@ -210,21 +444,22 @@
             font-weight: bold;
         }
 
-        .howmuch{
+        .howmuch {
             font-size: 30px;
             font-weight: bold;
             color: #002F87;
         }
 
-        .won{
+        .won {
             font-weight: bold;
             color: #002F87;
         }
 
-        .next-btn{
-            width: 200px;
+        .next-btn {
+            width: 180px;
             height: 50px;
-    
+
+
             background-color: #002F87;
             color: white;
             font-size: 20px;
@@ -233,17 +468,40 @@
             border-radius: 1rem;
         }
 
+        
     </style>
 </head>
 
 <body>
+    <!-- 메인네비바 by 창수 -->
+    <body-LCS id="LCS" bottommargin="0" leftmargin="0" rightmargin="0" style="background-color:#F6F6F6">
+        <div class="menu">
+            <nav class="clearfix">
+                <ul class="clearfix">
+                    <div class="container"><img src="../project-anime/images/대한항공로고.png"></div>
+                    <li><a href="http://127.0.0.1:5500/git/project-anime/login.html">예약</a></li>
+                    <!--여기 부분에 URL 작성하면 됨-->
+                    <li><a href="http://www._____.com/About">공항</a></li>
+                    <li><a href="http://www._____.com/Project">기내</a></li>
+                    <li><a href="http://www._____.com/Travel">스카이패스</a></li>
+                    <li><a href="http://www._____.com/Contact">호텔</a></li>
+                    <li>
+                        <div class="util__item-area"><a class="util__link-inner -login"
+                                href="http://127.0.0.1:5500/git/project-anime/login.html">Log in</a></div>
+                    </li>
+                </ul>
+                <a id="pull" href="#"></a>
+            </nav>
+        </div>
+    </body-LCS>
+
     <!-- 상단네비바 -->
     <div class="nav">
         <div class="flight-nav-bgd"></div>
         <div class="flight-nav">
             <div class="flight-code">
                 <span class="flight-go-code">출발지</span>
-                <i class="fa-solid fa-rotate-right flight-go-code"></i>
+                <i class="fa-solid fa-rotate-right flight-go-code" style="cursor: pointer;"></i>
                 <span class="flight-go-code">도착지</span>
             </div>
 
@@ -261,7 +519,7 @@
                 <span>성인 1명</span>
             </div>
 
-            <button class="flight-inner-nav flight-search">항공편검색</button>
+            <button class="flight-inner-nav flight-search" style="cursor: pointer;">항공편검색</button>
         </div>
     </div>
     <!-- 가는 편 네비 -->
@@ -280,8 +538,8 @@
                     class="dep-btn-price">000,000원</span></button>
             <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(수)</span><br><span
                     class="dep-btn-price">000,000원</span></button>
-            <button class="dep-nav-box-btn" style="font-weight: bold;"><span class="dep-btn-date">XX(목)</span><br><span
-                    class="dep-btn-price" style="color: #3F6AE8;">000,000원</span></button>
+            <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(목)</span><br><span
+                    class="dep-btn-price">000,000원</span></button>
             <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(금)</span><br><span
                     class="dep-btn-price">000,000원</span></button>
             <button class="dep-nav-box-btn"><span class="dep-btn-date">XX(토)</span><br><span
@@ -292,11 +550,11 @@
 
         <div class="dep-nav-seat">
             <div class="dep-nav-seat dep-seat">일반석</div>
-            <div class="dep-nav-seat dep-seat" id="best-seat">프레스티지석</div>
+            <div class="dep-nav-seat dep-seat">프레스티지석</div>
             <div class="dep-nav-seat dep-seat">일등석</div>
         </div>
 
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" aria-label="Default select example"> <!-- 박스 다시 만들기-->
             <option selected>추천순 정렬</option>
             <option value="1"> 추천 순</option>
             <option value="2">출발 시간 순</option>
@@ -319,23 +577,150 @@
                     <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
                     <span class="time">14:00</span>
                 </div>
+                <div class="howlong">4시간</div>
+                <div class="whatflight" style="font-weight: bold;">
+                    <span>ICN</span><span></span>
+                    <span>AFF</span>
+                </div>
+                <div class="flight-number">
+                    <span><i class="fa-solid fa-jet-fighter"></i> FKE112</span>
+                    <button class="info">상세보기</button>
+                </div>
             </div>
-            <div class="seat-info"></div>
+
+            <div class="all-seat-info">
+                <div class="seat-info">
+                    <div class="flight-seat">
+                        <div class="whichclass">프레스티지석</div>
+                        <span class="howmuch-seat">690,100
+                            <p class="howmuch-seat-won">원</p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="change-info">
+                    <br><br>
+                    <p class="howmanyseat">13석</p>
+                    <!-- <p><i class="fa-solid fa-rotate"></i> 변경 가능</p>
+                    <p><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
+                    <p><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
+                    <p><i class="fa-solid fa-m"></i>13750 마일 적립</p> -->
+                </div>
+            </div>
         </div>
         <div class="flight">
-            <div class="flight-info"></div>
-            <div class="seat-info"></div>
+            <div class="flight-info">
+                <div class="dep-time">
+                    <span class="time">10:00</span>
+                    <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    <span class="time">14:00</span>
+                </div>
+                <div class="howlong">4시간</div>
+                <div class="whatflight" style="font-weight: bold;">
+                    <span>ICN</span><span></span>
+                    <span>AFF</span>
+                </div>
+                <div class="flight-number">
+                    <span><i class="fa-solid fa-jet-fighter"></i> FKE112</span>
+                    <button class="info">상세보기</button>
+                </div>
+            </div>
+            <div class="all-seat-info">
+                <div class="seat-info">
+                    <div class="flight-seat">
+                        <div class="whichclass">프레스티지석</div>
+                        <span class="howmuch-seat">690,100
+                            <p class="howmuch-seat-won">원</p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="change-info">
+                    <br><br>
+                    <p class="howmanyseat">26석</p>
+
+                    <!-- <p><i class="fa-solid fa-rotate"></i> 변경 가능</p>
+                    <p><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
+                    <p><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
+                    <p><i class="fa-solid fa-m"></i>13750 마일 적립</p> -->
+                </div>
+            </div>
         </div>
         <div class="flight">
-            <div class="flight-info"></div>
-            <div class="seat-info"></div>
+            <div class="flight-info">
+                <div class="dep-time">
+                    <span class="time">10:00</span>
+                    <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    <span class="time">14:00</span>
+                </div>
+                <div class="howlong">4시간</div>
+                <div class="whatflight" style="font-weight: bold;">
+                    <span>ICN</span><span></span>
+                    <span>AFF</span>
+                </div>
+                <div class="flight-number">
+                    <span><i class="fa-solid fa-jet-fighter"></i> FKE112</span>
+                    <button class="info">상세보기</button>
+                </div>
+            </div>
+            <div class="all-seat-info ">
+                <div class="seat-info">
+                    <div class="flight-seat">
+                        <div class="whichclass">프레스티지석</div>
+                        <span class="howmuch-seat">690,100
+                            <p class="howmuch-seat-won">원</p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="change-info">
+                    <br><br>
+                    <p class="howmanyseat">8석</p>
+                    <!-- <p><i class="fa-solid fa-rotate"></i> 변경 가능</p>
+                    <p><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
+                    <p><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
+                    <p><i class="fa-solid fa-m"></i>13750 마일 적립</p> -->
+                </div>
+            </div>
         </div>
         <div class="flight">
-            <div class="flight-info"></div>
-            <div class="seat-info"></div>
+            <div class="flight-info">
+                <div class="dep-time">
+                    <span class="time">10:00</span>
+                    <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    <span class="time">14:00</span>
+                </div>
+                <div class="howlong">4시간</div>
+                <div class="whatflight" style="font-weight: bold;">
+                    <span>ICN</span><span></span>
+                    <span>AFF</span>
+                </div>
+                <div class="flight-number">
+                    <span><i class="fa-solid fa-jet-fighter"></i> FKE112</span>
+                    <button class="info">상세보기</button>
+                </div>
+            </div>
+            <div class="all-seat-info">
+                <div class="seat-info">
+                    <div class="flight-seat">
+                        <div class="whichclass">프레스티지석</div>
+                        <span class="howmuch-seat">690,100
+                            <p class="howmuch-seat-won">원</p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="change-info">
+                    <br><br>
+                    <p class="howmanyseat">6석</p>
+                    <!-- <p><i class="fa-solid fa-rotate"></i> 변경 가능</p>
+                    <p><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
+                    <p><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
+                    <p><i class="fa-solid fa-m"></i>13750 마일 적립</p> -->
+                </div>
+            </div>
         </div>
     </div>
-    
 
     <!-- 하단 -->
     <div class="footer">
@@ -343,13 +728,43 @@
             <span>총액</span>
             <button class="change-krw"><i class="fa-solid fa-sack-dollar"></i>통화 KRW</button>
             <span><span class="howmuch">000,000</span><span class="won">원</span></span>
-            <button class="next-btn">다음 여정</button>
+            <button class="next-btn" style="cursor: pointer;">다음 여정</button>
         </div>
     </div>
 
 
 
-    <script></script>
+
+    <script>
+        const date_btn = document.querySelectorAll(".dep-nav-box-btn");
+        date_btn.forEach(
+            (item)=>{
+                item.addEventListener("click", function(e){
+                    console.log(e);
+                    this.classList.toggle('dep-box-change');
+                });
+            }
+        )
+            
+        const seat_btn = document.querySelectorAll(".dep-seat");
+        seat_btn.forEach(
+            (item)=>{
+                item.addEventListener("click", function(){
+                    this.classList.toggle('choice-seat-change');
+                });
+            }
+        )
+
+        const seat_info_btn = document.querySelectorAll('.all-seat-info');
+        seat_info_btn.forEach(
+            (item)=>{
+                item.addEventListener("click", function(){
+                    this.classList.toggle('choice');
+                });
+            }
+        )
+        
+    </script>
 </body>
 
 </html>
