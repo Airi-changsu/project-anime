@@ -24,7 +24,8 @@
             height: 85px;
             background-color: #c6f2fe;
             position: fixed;
-            float: left;
+            z-index: 99;
+
         }
 
         .flight-nav {
@@ -35,7 +36,8 @@
             margin-left: 60px;
             position: fixed;
             border-radius: 10px 10px;
-            box-shadow: 0 8px 4px -4px gray;
+            box-shadow: -1px 5px 9px gray;
+            z-index: 99;
         }
 
         .flight-code {
@@ -136,72 +138,168 @@
             font-weight: bold;
         }
 
-        select{
+        select {
             margin-left: 15px;
-            border: 1px solid lightgray ;
+            border: 1px solid lightgray;
             border-radius: 10px 10px;
             height: 30px;
         }
 
         /* 가는 편 본문 */
-        .content{
+        .content {
             width: 100%;
             height: 950px;
-            /* background-color: aquamarine; */
         }
 
-        .flight{
+        /* 뱅기편 */
+        .flight {
             width: 90%;
             height: 200px;
             margin: 10px auto;
-            border: 1px solid lightgray ;
+            border: 1px solid lightgray;
             border-radius: 10px 10px;
             display: flex;
         }
 
-        .flight-info{
-            flex:1;
+        .flight-info {
+            width: 30%;
             border-right: 1px solid lightgray;
-            margin-top: 30px;
+            background-color: transparent;
+        }
+
+        .dep-time {
+            width: 100%;
+            height: 30px;
             display: flex;
-            align-items: normal;
             justify-content: space-evenly;
+
+            position: relative;
+            top: 30px;
         }
 
-        .seat-info{
-            flex:4;
-        }
-
-        .dep-time{
-            /* margin-top: 30px; */
+        .time {
             font-size: 20px;
-            
+            font-weight: bold;
         }
-        
+
+        .howlong {
+            width: 100%;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            font-size: 12px;
+
+            position: relative;
+            top: 30px;
+        }
+
+        .whatflight {
+            width: 100%;
+            height: 20px;
+            display: flex;
+            justify-content: space-evenly;
+
+            position: relative;
+            top: 30px;
+        }
+
+        .flight-number {
+            width: 100%;
+            height: 30px;
+            position: relative;
+            top: 80px;
+            display: flex;
+            justify-content: space-around;
+
+            position: relative;
+        }
+
+        .info {
+            border: 1px solid lightgray;
+            border-radius: 10px 10px;
+        }
+
+        /* 좌석편 */
+
+        .all-seat-info {
+            width: 70%;
+            height: 100%;
+            display: flex;
+        }
+
+        .choice{
+            background-color: #C6F2FE;
+            border: 1px solid #002F87;
+            box-shadow: 0 0 6px 0;
+        }
+
+        .seat-info {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .whichclass {
+            height: 30px;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .howmuch-seat {
+            height: 100%;
+            font-size: 25px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+
+        .howmuch-seat-won {
+            font-size: 12px;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+        }
+
+        /* 정보편 */
+
+        .change-info {
+            width: 50%;
+            height: 100%;
+            font-size: 12px;
+            text-align: center;
+
+        }
+
+
+
 
 
         /* 하단 */
-        .footer{
+        .footer {
             width: 100%;
             height: 60px;
             background-color: white;
-            box-shadow: 0 -4px 4px -4px gray;
+            box-shadow: -1px -5px 12px -4px gray;
             position: fixed;
             bottom: 0;
             display: flex;
             justify-content: flex-end;
         }
 
-        .payment-box{
+        .payment-box {
             width: 500px;
             height: 100%;
             margin-left: 500px;
-            justify-content: space-around;
+            display: flex;
+            justify-content: space-evenly;
             align-items: center;
-            margin-top: 5px;
         }
-        
-        .change-krw{
+
+        .change-krw {
             background-color: transparent;
             border: 1px solid lightgray;
             border-radius: 0.7rem;
@@ -210,21 +308,22 @@
             font-weight: bold;
         }
 
-        .howmuch{
+        .howmuch {
             font-size: 30px;
             font-weight: bold;
             color: #002F87;
         }
 
-        .won{
+        .won {
             font-weight: bold;
             color: #002F87;
         }
 
-        .next-btn{
-            width: 200px;
+        .next-btn {
+            width: 180px;
             height: 50px;
-    
+
+
             background-color: #002F87;
             color: white;
             font-size: 20px;
@@ -232,7 +331,6 @@
             text-align: center;
             border-radius: 1rem;
         }
-
     </style>
 </head>
 
@@ -296,7 +394,7 @@
             <div class="dep-nav-seat dep-seat">일등석</div>
         </div>
 
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" aria-label="Default select example"> <!-- 박스 다시 만들기-->
             <option selected>추천순 정렬</option>
             <option value="1"> 추천 순</option>
             <option value="2">출발 시간 순</option>
@@ -319,23 +417,143 @@
                     <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
                     <span class="time">14:00</span>
                 </div>
+                <div class="howlong">4시간</div>
+                <div class="whatflight" style="font-weight: bold;">
+                    <span>ICN</span><span></span>
+                    <span>AFF</span>
+                </div>
+                <div class="flight-number">
+                    <span><i class="fa-solid fa-jet-fighter"></i> FKE112</span>
+                    <button class="info">상세보기</button>
+                </div>
             </div>
-            <div class="seat-info"></div>
+
+            <div class="all-seat-info">
+                <div class="seat-info">
+                    <div class="flight-seat">
+                        <div class="whichclass">프레스티지석</div>
+                        <span class="howmuch-seat">690,100
+                            <p class="howmuch-seat-won">원</p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="change-info">
+                    <br><br>
+                    <p><i class="fa-solid fa-rotate"></i> 변경 가능</p>
+                    <p><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
+                    <p><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
+                    <p><i class="fa-solid fa-m"></i>13750 마일 적립</p>
+                </div>
+            </div>
         </div>
         <div class="flight">
-            <div class="flight-info"></div>
-            <div class="seat-info"></div>
-        </div>
+            <div class="flight-info">
+                <div class="dep-time">
+                    <span class="time">10:00</span>
+                    <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    <span class="time">14:00</span>
+                </div>
+                <div class="howlong">4시간</div>
+                <div class="whatflight" style="font-weight: bold;">
+                    <span>ICN</span><span></span>
+                    <span>AFF</span>
+                </div>
+                <div class="flight-number">
+                    <span><i class="fa-solid fa-jet-fighter"></i> FKE112</span>
+                    <button class="info">상세보기</button>
+                </div>
+            </div>
+            <div class="all-seat-info choice">
+                <div class="seat-info">
+                    <div class="flight-seat">
+                        <div class="whichclass">프레스티지석</div>
+                        <span class="howmuch-seat">690,100
+                            <p class="howmuch-seat-won">원</p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="change-info">
+                    <br><br>
+                    <p><i class="fa-solid fa-rotate"></i> 변경 가능</p>
+                    <p><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
+                    <p><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
+                    <p><i class="fa-solid fa-m"></i>13750 마일 적립</p>
+                </div>
+            </div>        </div>
         <div class="flight">
-            <div class="flight-info"></div>
-            <div class="seat-info"></div>
-        </div>
+            <div class="flight-info">
+                <div class="dep-time">
+                    <span class="time">10:00</span>
+                    <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    <span class="time">14:00</span>
+                </div>
+                <div class="howlong">4시간</div>
+                <div class="whatflight" style="font-weight: bold;">
+                    <span>ICN</span><span></span>
+                    <span>AFF</span>
+                </div>
+                <div class="flight-number">
+                    <span><i class="fa-solid fa-jet-fighter"></i> FKE112</span>
+                    <button class="info">상세보기</button>
+                </div>
+            </div>
+            <div class="all-seat-info ">
+                <div class="seat-info">
+                    <div class="flight-seat">
+                        <div class="whichclass">프레스티지석</div>
+                        <span class="howmuch-seat">690,100
+                            <p class="howmuch-seat-won">원</p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="change-info">
+                    <br><br>
+                    <p><i class="fa-solid fa-rotate"></i> 변경 가능</p>
+                    <p><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
+                    <p><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
+                    <p><i class="fa-solid fa-m"></i>13750 마일 적립</p>
+                </div>
+            </div>        </div>
         <div class="flight">
-            <div class="flight-info"></div>
-            <div class="seat-info"></div>
-        </div>
+            <div class="flight-info">
+                <div class="dep-time">
+                    <span class="time">10:00</span>
+                    <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    <span class="time">14:00</span>
+                </div>
+                <div class="howlong">4시간</div>
+                <div class="whatflight" style="font-weight: bold;">
+                    <span>ICN</span><span></span>
+                    <span>AFF</span>
+                </div>
+                <div class="flight-number">
+                    <span><i class="fa-solid fa-jet-fighter"></i> FKE112</span>
+                    <button class="info">상세보기</button>
+                </div>
+            </div>
+            <div class="all-seat-info">
+                <div class="seat-info">
+                    <div class="flight-seat">
+                        <div class="whichclass">프레스티지석</div>
+                        <span class="howmuch-seat">690,100
+                            <p class="howmuch-seat-won">원</p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="change-info">
+                    <br><br>
+                    <p><i class="fa-solid fa-rotate"></i> 변경 가능</p>
+                    <p><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
+                    <p><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
+                    <p><i class="fa-solid fa-m"></i>13750 마일 적립</p>
+                </div>
+            </div>        </div>
     </div>
-    
+
 
     <!-- 하단 -->
     <div class="footer">
