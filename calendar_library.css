@@ -48,7 +48,14 @@ cursor: pointer;
 }
 .line {
     width: 100%;
-    border: 1px solid gray;
+    border: 1px solid #d9dbe1;
+}
+
+.line2 {
+  width: 100%;
+  border: 1px solid #d9dbe1;
+  margin : 0 auto;
+  margin-top: 325px;
 }
 .rdo {
     margin-top: 20px;
@@ -60,7 +67,7 @@ cursor: pointer;
     width: 150px;
     height: 50px;
     float: right;
-    margin-top: 350px;
+    margin-top: 10px;
     background-color: #bcbcbc;
     font-size: 1.2rem;
     border-radius: 15px 15px 15px 15px / 15px 15px 15px 15px;
@@ -80,6 +87,21 @@ cursor: pointer;
     background-color: lightgray;
     cursor: not-allowed;
 }
+.calendar-table th:nth-child(7) {
+  color: red;
+}
+
+.calendar-table td:nth-child(7) {
+  color: red;
+}
+/* .calendar-table th:nth-child(1) { order: 1; }
+.calendar-table th:nth-child(2) { order: 2; }
+.calendar-table th:nth-child(3) { order: 3; }
+.calendar-table th:nth-child(4) { order: 4; }
+.calendar-table th:nth-child(5) { order: 5; }
+.calendar-table th:nth-child(6) { order: 6; }
+.calendar-table th:nth-child(7) { order: 7; } */
+
 @import url("https://font.elice.io/css?family=Elice+DX+Neolli");
 
 html, body { font-family: "Elice DX Neolli", sans-serif; }
