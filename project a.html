@@ -3,195 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        nav{
-            font-size: 13pt;
-            font-family: 'PT Sans', Arial, Sans-serif;
-            position: relative;
-        }
-        nav ul{
-            padding: 0;
-            margin: 0 auto;
-            width: auto;
-        }
-        nav li{
-        }
-        nav a{
-            line-height: 50px;
-          height: 50px;
-        }
-        nav li a{
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-        }
-        nav li:last-child a{
-            border-right: 0;
-            }
-        nav a:hover, nav a:active{
-        }
-        nav a#pull{
-            display: none;
-        }
-          html {
-          -webkit-touch-callout:none;
-          -webkit-user-select:none;
-          -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
-          }
-    
-          ul{
-            /*list-style-type: none;*/
-            margin: 0;
-            padding: 0;
-            background-color: #c6f2fe;
-            text-align: center;
-            color: #000;
-          }
-          li{
-            /*position: relative;*/
-            display: inline-block;
-          }
-          li a{
-            color: #0a0005;
-            text-align: center;
-            padding: 14.5px 16px;
-            text-decoration: none;
-          }
-          li a:hover{
-            /*color: #597812;*/
-            color: #FFD400;
-            font-weight:normal;
-          }
-          .menu {
-          width: 5000px;
-          height: 50px;
-          text-align: center;
-          max-width: 100%;
-          background-position: center;
-          background-size: cover;
-          background-color: #c6f2fe;color: white;
-          position: absolute;z-index: 1;
-        }
-        .container > img {
-          position: absolute;
-          width: 20%;
-          /* height: 100%; */
-          top: 25px;
-          left: 10%;
-          transform: translate(-50%, -50%);
-          }
-
-        .util__link-inner.-login {
-          width: 85%;
-          min-width: 4.4rem;
-          margin: 0 0.2rem 0 0;
-          border: 0;
-          outline: 0;
-          display: inline-flexbox;
-          font-size: 1.1rem;
-          font-weight: 700;
-          line-height: 1.7rem;
-          padding: 0.3rem 1rem 0.4rem;
-          color: #fff;
-          border-radius: 1.5rem;
-          text-decoration: none;
-          cursor: pointer;
-          background: #00256c;
-          word-break: break-word;
-          }
-
-        .util__item-area {
-          position: absolute;
-          width: 100px;
-          /* height: 100%; */
-          top: 25px;
-          left: 90%;
-          transform: translate(-50%, -50%);
-          pointer-events: auto;
-          }
-          
-
-        .container {
-            width: 100%;
-            height: 0;
-            display: flex;           
-        }
-
-        .box1 {
-          margin: 10px;
-          margin-top: 720px;
-          padding: 15px;
-          display:flex;
-          justify-content: space-around;
-        }
-
-        .box1_imgs {
-          margin: 3px;
-          padding: 20px;
-          text-align: center;
-        }
-
-        .box2 {
-          margin: 10px;
-          margin-top: 300px;
-          padding: 15px;
-          display:flex;
-          justify-content: space-around;
-        }
-
-        .box2_imgs {
-          margin: 1px;
-          padding: 7px;
-          text-align: center;
-        }
-
-        .title_area_1 {
-          width: 100%;
-          height: 75px;
-          background-color: white;
-          position: absolute;
-        }
-        .title_area_1_a {
-          margin: auto;
-          margin-top: -5%;
-          padding: 45px;
-        }
-
-        .title_area_1_b {
-          margin: auto;
-          margin-top: -6.5%;
-          padding: 45px;
-        }
-
-        .title_area_2 {
-          width: 100%;
-          height: 75px;
-          background-color: white;
-          position: absolute;
-        }
-
-        .title_area_2_a {
-          margin: auto;
-          margin-top: -5%;
-          padding: 45px;
-        }
-
-        .title_area_2_b {
-          margin: auto;
-          margin-top: -6.5%;
-          padding: 45px;
-        }
-
-        </style>
+    <title>항공권 예약 및 여행 정보 | 대한항공</title>
+    <link href="../project-anime/hompage css/nav.css" rel="stylesheet" type="text/css" />
+    <link href="../project-anime/hompage css/boxes.css" rel="stylesheet" type="text/css" />
+    <link href="../project-anime/hompage css/titles.css" rel="stylesheet" type="text/css" />
 </head>
+<link rel="shortcut icon" type="image/x-icon" href="../project-anime/images/아이콘.ico"/>
 <body>
-  
+
   <body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" style="background-color:white">
         <div class="menu">
           <nav class="clearfix">
             <ul class="clearfix">
-              <div class="container"><img src="../project-anime/images/대한항공로고.png"></div>
+              <div class="container-Logo"><img src="../project-anime/images/대한항공로고.png"></div>
               <li><a href="http://127.0.0.1:5500/git/project-anime/login.html">예약</a></li> <!--""<-여기 부분에 URL 작성하면 됨-->
               <li><a href="http://www._____.com/About">공항</a></li>
               <li><a href="http://www._____.com/Project">기내</a></li>
@@ -203,18 +27,11 @@
         </nav>
         </div>
 
-      
 
-        <div class="container">
+        <div class="box0">
           <div><img src="../project-anime/images/여행 1.jpg" width="1000px" height="500px"/></div>
-          <div><img src="../project-anime/images/여행 2.jpg" width="1000px" height="500px"/></div>
-          <div><img src="../project-anime/images/여행 3.jpg" width="1000px" height="500px"/></div>
-          <div><img src="../project-anime/images/여행 4.jpg" width="1000px" height="500px"/></div>
-          <div><img src="../project-anime/images/여행 5.jpg" width="1000px" height="500px"/></div>
         </div>
 
- 
-        
         <div class="box1">
             <div class="title_area_1">
               <h1 class="title_area_1_a">최저가</h1>

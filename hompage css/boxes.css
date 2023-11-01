@@ -1,0 +1,34 @@
+.box0 {
+    width: 100%;
+    height: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box1 {
+    margin: 10px;
+    margin-top: 720px;
+    padding: 15px;
+    display:flex;
+    justify-content: space-around;
+}
+
+.box1_imgs {
+    margin: 3px;
+    padding: 20px;
+    text-align: center;
+}
+
+.box2 {
+    margin: 10px;
+    margin-top: 300px;
+    padding: 15px;
+    display:flex;
+    justify-content: space-around;
+}
+
+.box2_imgs {
+    margin: 1px;
+    padding: 7px;
+    text-align: center;
+}
