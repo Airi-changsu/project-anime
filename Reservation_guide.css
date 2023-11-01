@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 .container_page{
-    width: 1000px;
+    width: 1150px;
+    height: 1300px;
     margin: 0 auto;
     
 }
@@ -45,7 +46,7 @@
     border: 1px solid #d9dbe1;
     border-radius: 10px 10px 10px 10px /  10px 10px 10px 10px;
     text-align: center;
-    margin-left: 5%;
+    
 }
 
 .cls_seat {
@@ -103,24 +104,21 @@ nav a#pull{
     color: #000;
     border-bottom: 1px solid #d9dbe1;
   }
-  li{
+  .titleli{
     /*position: relative;*/
     display: inline-block;
+    
   }
-  li:hover{
+  .titleli:hover{
     border-bottom: 3px solid #00256c;
   }
-  li a{
+  .titleli a{
     color: #0a0005;
     text-align: center;
     padding: 14.5px 16px;
     text-decoration: none;
   }
-  li a:hover{
-    /*color: #597812;*/
-    /* color: #FFD400; */
-    font-weight:normal;
-  }
+  
   .menu {
   width: 5000px;
   height: 50px;
@@ -183,7 +181,7 @@ nav a#pull{
   'wght' 400,
   'GRAD' 0,
   'opsz' 24;
-  margin-top: 10px;
+  
 }
 
 body {
@@ -205,7 +203,6 @@ html {
     width: 100%;
     height: 100px;
     margin-top: 25px;
-    margin-left: 50px;
     font-size: 1.2rem;
 }
 .guide2 {
@@ -217,6 +214,9 @@ html {
 
 *[class]._center {
     text-align: center !important;
+}
+*[class]._left {
+    border-left: 1px solid #dee0e2;
 }
 
 thead {
@@ -248,7 +248,6 @@ thead {
     table-layout: fixed;
     border-collapse: collapse;
     border-spacing: 0;
-    
     empty-cells: show;
 }
 
@@ -275,6 +274,11 @@ th {
     border-bottom: 1px solid #dee0e2;
     
 }
+.table {
+    margin: 1.2rem 0;
+    border-top: 1px solid #00256c;
+    border-bottom: 1px solid #dee0e2;
+}
 
 .footnote {
     display: inline-block;
@@ -292,3 +296,33 @@ th {
     text-decoration-line:none;
     font-size: 1.7rem;
 }
+/* a:link {
+    color: #0064de;
+    text-decoration: none;
+} */
+#ref2-1 {
+    cursor: pointer;
+}
+
+.footer {
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f3f4f8;
+    align-items: center;
+}
+.footer_tb {
+    width: 70%;
+    height: 80%;
+    text-align: center;
+    border-right: 1px solid #dee0e2;
+    float: left;
+}
+.footer_box{
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+
+
