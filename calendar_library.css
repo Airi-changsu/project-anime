@@ -104,7 +104,7 @@ cursor: pointer;
 
 @import url("https://font.elice.io/css?family=Elice+DX+Neolli");
 
-html, body { font-family: "Elice DX Neolli", sans-serif; }
+html, body , li { font-family: "Elice DX Neolli", sans-serif; }
 
 @media only screen and (max-width:1000px){
     #test, div{
@@ -566,7 +566,7 @@ html, body { font-family: "Elice DX Neolli", sans-serif; }
             /*list-style-type: none;*/
             margin: 0;
             padding: 0;
-            background-color: #c6f2fe;
+            background-color: #ffff;
             text-align: center;
             color: #000;
           }
@@ -582,8 +582,9 @@ html, body { font-family: "Elice DX Neolli", sans-serif; }
         }
         li a:hover{
             /*color: #597812;*/
-            color: #FFD400;
+            /* color: #FFD400; */
             font-weight:normal;
+            border-bottom: 2px solid #014a94;
         }
         .menu {
         width: 5000px;
@@ -593,7 +594,7 @@ html, body { font-family: "Elice DX Neolli", sans-serif; }
         background-position: center;
         background-size: cover;
         background-color: #c6f2fe;color: white;
-        
+        border-bottom: 1px solid #d9dbe1;
         }
 
         nav{
