@@ -303,7 +303,7 @@
 
         .air-transportation-fee {
             margin-left: 30px;
-            margin-top: 20px;
+            margin-top: 15px;
             font-size: 16px;
             display: inline-block;
         }
@@ -320,6 +320,12 @@
             color: blue;
         }
 
+        #money-icon{
+            color: #00256c;
+            font-size: 11px;
+            border-bottom: 1px solid navy;
+        }
+
 
         /* 여기부터 승객정보 */
 
@@ -328,21 +334,20 @@
             margin: 1.5rem;
             font-size: 20px;
             font-weight: bold;
-            margin: ;
         }
 
         #essential {
             display: inline-block;
-            margin: 0.5rem;
+            margin-left: 1.5rem;
             font-size: 15px;
-
         }
 
         #change-info {
             display: block;
-            margin-top: 0;
-            margin-left: 1rem;
+            margin: 13px 0 0 ;
+            padding: 15px 50px;
             font-size: 17px;
+            margin-top: 5px;
         }
 
         .remark-positive {
@@ -351,12 +356,21 @@
 
         }
 
+
+#accordionExample{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
         input[type=text] {
             width: 100%;
             height: 35px;
             font-size: 20px;
             border: none;
             border-bottom: 1.5px solid #143F90;
+            padding: 20px;
         }
 
         input[type=date] {
@@ -365,6 +379,7 @@
             font-size: 20px;
             border: none;
             border-bottom: 1.5px solid #143F90;
+            padding: 20px;
         }
 
         input[type=email] {
@@ -373,6 +388,7 @@
             font-size: 20px;
             border: none;
             border-bottom: 1.5px solid #143F90;
+            padding: 20px;
         }
 
         .submit {
@@ -380,6 +396,7 @@
             height: 45px;
             background-color: #c6f2fe;
             border: none;
+            padding: 10px;
         }
 
         .material-symbols-outlined {
@@ -417,7 +434,12 @@
             border: 0.7px solid #143F90;
         }
 
-
+        #check-and-agree{
+            display: block;
+            margin: 1.5rem;
+            font-size: 20px;
+            font-weight: bold;
+        }
 
         .check {
             display: block;
@@ -425,7 +447,30 @@
             width: 100%;
             height: auto;
             border-radius: 20px;
-            font-size: 15px;
+            font-size: 12px;
+        }
+
+        .check p {
+            margin-left: 20;}
+
+        .inner-margintop-change{
+            margin-top: 0px;
+        }
+
+        .inner-marginbottom-change{
+            margin-bottom: 5px;
+        }
+
+        .check-agree {
+            font-size: 20px;
+            width: 70px;
+            height: 30px;
+            color: #555;
+            border: 1px solid #767676;
+            position: relative;
+            text-align: center;
+            border-radius: 20px;
+            margin: 10px;
         }
 
         /* .testbox-container {
@@ -435,15 +480,20 @@
             right: 0;
             bottom: 0;
             position: absolute;
-            background-color: black;
+            background-color: rgba(0, 0, 0, 0.6); 
             z-index: 99;
+            display: flex;
+            overflow: clip;
         }
 
         .testbox { 
-            width: 400px;
-            height: 300px;
+            width: 60%;
+            height: 50%;
             background-color: darkkhaki;
+            margin: auto;
+            align-items: center;
         } */
+
     </style>
 
     <link rel="stylesheet"
@@ -454,9 +504,15 @@
 
 <body>
     <!-- 쌤  -->
-    <div class="testbox-container">
-        <div class="testbox"></div>
-    </div>
+    <!-- <div class="testbox-container">
+        <div class="testbox">
+            <h5 class="travel-info"> 여정 정보 </h5>
+            <span class="detail-onclick"><strong>GMP</strong> 서울 / 김포 -> <strong>INC</strong> 인천  &nbsp;&nbsp;&nbsp;&nbsp; <strong> 총 1시간 5분 여정 </strong> </span>
+            <div class="plane-num">
+                <div class="plane-umber-name"><strong>KE1806</strong>A324-neo</div>
+            </div>
+        </div>
+    </div> -->
 
 
     <!-- 창수님꺼 -->
@@ -480,6 +536,7 @@
                 <a id="pull" href="#"></a>
             </nav>
         </div>
+    </body>
 
         <!-- 여기까지 창수님 밑은 미미 -->
 
@@ -555,11 +612,10 @@
                             &nbsp; &nbsp; &nbsp; 00000원 </span></li>
                     <li> <span class="fee-list"> 세금, 수수료 및 기타요금 &nbsp; &nbsp; 00000원 </span></li>
 
-                    <li> <span class="fee-line"> ---------------------------- </span> </li>
-
-
-                    <li><span class="air-transportation-fee"><strong> 총액 </strong> &nbsp;&nbsp;&nbsp; <span
-                                class="total-price-blue">000000원</span> </span>
+                    <li> <span class="fee-line"> ------------------------- </span> </li>
+                    <li><span class="air-transportation-fee"><strong> 총액 </strong> &nbsp;&nbsp;&nbsp; 
+                        <span class="total-price-blue">000000원</span> </span>
+                            <div id="money-icon"> <i class="fa-solid fa-sack-dollar" >변경 및 환불 규정</i></div>
                     </li>
                 </ul>
             </div>
@@ -571,6 +627,7 @@
         <!-- 이 밑으로 승객정보 -->
 
         <h5 id="passenger-info">승객 정보</h5>
+
         <p id="essential">[*는 필수 입력 사항입니다]</p>
         <p id="change-info"> 예약 후 성명은 <em class="remark-positive">불가</em>하오니 탑승 시 제시할 <em class="remark-positive">신분증에
                 기제된
@@ -697,7 +754,7 @@
             </div>
 
 
-
+<!-- 여기 밑으로 좌석배정이랑 확인 및 동의   -->
 
             <span class="material-symbols-outlined">
                 <br>
@@ -705,14 +762,15 @@
                 <p>좌석배정</p>
             </span>
 
-            <h5>확인 및 동의</h5>
+            <h5 id="check-and-agree">확인 및 동의</h5>
+
             <div class="check">
                 <button class="check-agree">동의</button>
-                <p>[필수]<em class="remark-positive">운송약관</em>, 운임규정, <em class="remark-positive"> 수하물 규정</em>을 확인하였으며 이에
+                <p>[필수]<span class="remark-positive">운송약관</span>, 운임규정, <em class="remark-positive"> 수하물 규정</em>을 확인하였으며 이에
                     동의합니다.</p>
-                <p>대한항공 항공권을 구매하시는 것은 본 항공사와 운송계약 체결에 동의하는 것으로 운임규정은 항공권 변경, 취소 등에 따른 수수료와 사전좌석배정, 좌석승급 등 구매하는 항공권 운임에
+                <p class="inner-marginbottom-change">대한항공 항공권을 구매하시는 것은 본 항공사와 운송계약 체결에 동의하는 것으로 운임규정은 항공권 변경, 취소 등에 따른 수수료와 사전좌석배정, 좌석승급 등 구매하는 항공권 운임에
                     적용되는 세부 조건을 기재하고 있으며, 운송 약관은 운송 계약 체결에 따른 계약 조건을 명시합니다.</p>
-                <p>대한항공은 '항공교통이용자 보호기준'에 따라 <em class="remark-positive">항공교통이용자 서비스 계획</em>을 게시합니다.</p>
+                <p class="inner-margintop-change">대한항공은 '항공교통이용자 보호기준'에 따라 <span class="remark-positive">항공교통이용자 서비스 계획</span>을 게시합니다.</p>
             </div>
 
             <div class="check">
