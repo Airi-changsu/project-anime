@@ -317,8 +317,12 @@ th {
     height: 80%;
     text-align: center;
     border-right: 1px solid #dee0e2;
+    float: left;
 }
 .footer_box{
     width: 30%;
+    height: 100%;
+    float: left;
 }
+
 
