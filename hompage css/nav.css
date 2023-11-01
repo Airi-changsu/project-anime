@@ -38,7 +38,7 @@ ul{
     /*list-style-type: none;*/
     margin: 0;
     padding: 0;
-    background-color: #c6f2fe;
+    background-color: white;
     text-align: center;
     color: #000;
 }
@@ -68,7 +68,7 @@ li a:hover{
     max-width: 100%;
     background-position: center;
     background-size: cover;
-    background-color: #c6f2fe;color: white;
+    background-color: white;color: white;
     position: absolute;z-index: 1;
 }
 
