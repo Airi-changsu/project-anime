@@ -307,7 +307,7 @@ th {
 .footer {
     width: 100%;
     height: 250px;
-    margin: 0 auto;
+    padding: 1.6rem;
     text-align: center;
     background-color: #f3f4f8;
     align-items: center;
@@ -323,6 +323,56 @@ th {
     width: 30%;
     height: 100%;
     float: left;
+    
+}
+.im_link {
+    width: 120px;
+    height: 35px;
+    display: inline-block;
+}
+.ft_th {
+    padding: 1rem;
+}
+.ft_pd {
+    padding: 0.4rem;
+}
+.im_link3 {
+    padding: 1.5rem;
+}
+.ft_contact{
+    width: 50%;
+    height: 80px;
+    background-color: white;
+    float: left;
+}
+.contact_item{
+    padding-left: 50px;
+    padding-top: 20px;
+    font-size: 1.2rem;
+    color: #00256c;
+    display: inline-block;
+}
+.ft_contact2{
+    width: 50%;
+    height: 120px;
+    background-color: white;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    
+}
+.ft_img1{
+    width: 70px;
+    height: 42px;
+    background-size: contain;
+}
+.ft_img2{
+    width: 70px;
+    height: 70px;
+    background-size: contain;
 }
 
+@import url("https://font.elice.io/css?family=Elice+DX+Neolli");
 
+html, body , li ,table ,option ,select,button{ font-family: "Elice DX Neolli", sans-serif; }
