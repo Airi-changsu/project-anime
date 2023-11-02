@@ -24,7 +24,7 @@
     cursor: pointer;
 }
 .title1:hover {
-    border: 2px solid #5686e6;
+    border: 1px solid #5686e6;
 }
 .title2 {
     width: 50%;
@@ -38,6 +38,7 @@
 .title2:hover {
     border: 2px solid #5686e6;
 }
+
 .titbc{
     background-color: #00256c;
     color: #ffffff;
@@ -49,6 +50,7 @@
     border: 1px solid #d9dbe1;
     border-radius: 10px 10px 10px 10px /  10px 10px 10px 10px;
     text-align: center;
+    
 }
 .ot_bt{
     width: 120px;
@@ -113,7 +115,7 @@ nav a#pull{
   -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
   }
 
-  ul{
+  .menu ul{
     /*list-style-type: none;*/
     margin: 0;
     padding: 0;
@@ -242,7 +244,6 @@ thead {
     vertical-align: middle;
 }
 .thead__th {
-    width: 575px;
     padding: 1.6rem;
     border-bottom: 1px solid #dee0e2;
     background-color: #f8f9fc;
@@ -269,18 +270,13 @@ thead {
     border-spacing: 0;
     empty-cells: show;
 }
-.prs_table table {
+.ft_container_box table {
     table-layout: fixed;
     border-collapse: collapse;
     border-spacing: 0;
     empty-cells: show;
 }
-.fc_table table {
-    table-layout: fixed;
-    border-collapse: collapse;
-    border-spacing: 0;
-    empty-cells: show;
-}
+
 .thead__th+.thead__th {
     border-left: 1px solid #dee0e2;
 }
@@ -297,31 +293,12 @@ th {
     background-color: #f8f9fc ;
     width: 400px;
 }
-.tb_page1{
-    height: 800px;
-}
-.tb_page2{
-    height: 800px;
-}
-.tb_page3{
-    height: 800px;
-}
+
 .nm_table{
     margin: 1.4rem 0;
     border-top: 1px solid #00256c;
     border-bottom: 1px solid #dee0e2;
     
-}
-.prs_table{
-    margin: 1.4rem 0;
-    border-top: 1px solid #00256c;
-    border-bottom: 1px solid #dee0e2;
-    
-}
-.fc_table{
-    margin: 1.4rem 0;
-    border-top: 1px solid #00256c;
-    border-bottom: 1px solid #dee0e2;
 }
 .table {
     margin: 1.2rem 0;
@@ -420,6 +397,28 @@ th {
     width: 70px;
     height: 70px;
     background-size: contain;
+}
+.ft_container_box {
+    width: 92%;
+    height: 600px;
+    margin-left: 50px;
+    margin-top: 90px;
+    border-collapse: collapse;
+}
+.ft_wn_box {
+    width: 92%;
+    height: 150px;
+    margin-left: 50px;
+    margin-top: 40px;
+    background-color: #f8f9fc;
+}
+.ft_ctn_wid1{
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.ft_ctn_wid{
+    padding-top: 20px;
+    padding-left: 40px;
 }
 
 @import url("https://font.elice.io/css?family=Elice+DX+Neolli");
