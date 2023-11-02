@@ -320,7 +320,7 @@
             color: blue;
         }
 
-        #money-icon{
+        #money-icon {
             color: #00256c;
             font-size: 11px;
             border-bottom: 1px solid navy;
@@ -344,7 +344,7 @@
 
         #change-info {
             display: block;
-            margin: 13px 0 0 ;
+            margin: 13px 0 0;
             padding: 15px 50px;
             font-size: 17px;
             margin-top: 5px;
@@ -357,12 +357,12 @@
         }
 
 
-#accordionExample{
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-}
+        #accordionExample {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+        }
 
         input[type=text] {
             width: 100%;
@@ -400,17 +400,19 @@
         }
 
         .material-symbols-outlined {
-            width: 100%;
+            width: 90%;
             height: 100px;
             border: none;
             text-align: center;
-            margin: 0 auto;
+            margin: 0;
             font-size: 48px;
             color: #143F90;
+            margin-left: 60px
         }
 
         .material-symbols-outlined:hover {
             border: 1px solid #143F90;
+            border-radius: 20px;
         }
 
         select {
@@ -434,7 +436,7 @@
             border: 0.7px solid #143F90;
         }
 
-        #check-and-agree{
+        #check-and-agree {
             display: block;
             margin: 1.5rem;
             font-size: 20px;
@@ -444,20 +446,21 @@
         .check {
             display: block;
             border: 1px solid gray;
-            width: 100%;
+            width: 90%;
             height: auto;
             border-radius: 20px;
-            font-size: 12px;
+            font-size: 15px;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
         }
 
-        .check p {
-            margin-left: 20;}
-
-        .inner-margintop-change{
+        .inner-margintop-change {
             margin-top: 0px;
         }
 
-        .inner-marginbottom-change{
+        .inner-marginbottom-change {
             margin-bottom: 5px;
         }
 
@@ -472,6 +475,117 @@
             border-radius: 20px;
             margin: 10px;
         }
+
+        /* .check-agree:visited {
+            background-color: skyblue;
+        } */
+    
+    .document-box{
+            display: block;
+            border: 1px solid gray;
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+            font-size: 15px;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+    }
+
+
+        .document-info {
+            font-weight: bold;
+        }
+
+
+        #shyli {
+            list-style-type: none;
+        }
+
+        #document {
+            position: fixed;
+            left: -9999px;
+        }
+
+        .document-info-click {
+            cursor: pointer;
+            color: blue;
+        }
+
+        .document-info-body {
+            display: none;
+            list-style: none;
+            width: 100%;
+            background-color: white;
+            text-align: left;
+        }
+
+        #document:checked~.document-info-body {
+            display: block;
+            margin: 10px;
+            margin-right: 16px;
+        }
+
+        #payment{
+            display: block;
+            margin: 1.5rem;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .payment-method{
+            display: block;
+            border: 1px solid gray;
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+            font-size: 15px;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+        }
+
+        .coupon-discount{
+            display: block;
+            border: 1px solid gray;
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+            font-size: 15px;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+        }
+
+        .giftcard{
+            display: block;
+            border: 1px solid gray;
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+            font-size: 15px;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+        }
+
+        .payment-card{
+            display: block;
+            border: 1px solid gray;
+            width: 90%;
+            height: 500px;
+            border-radius: 10px;
+            font-size: 15px;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+        }
+
 
         /* .testbox-container {
             범위 전체 가운데 
@@ -493,7 +607,6 @@
             margin: auto;
             align-items: center;
         } */
-
     </style>
 
     <link rel="stylesheet"
@@ -538,254 +651,279 @@
         </div>
     </body>
 
-        <!-- 여기까지 창수님 밑은 미미 -->
+    <!-- 여기까지 창수님 밑은 미미 -->
 
-        <div class="flight-nav-bgd"></div>
-        <div class="flight-nav">
-            <div class="flight-code">
-                <span class="flight-go-code">출발지</span>
-                <i class="fa-solid fa-rotate-right flight-go-code"></i>
-                <span class="flight-go-code">도착지</span>
-            </div>
-
-            <span class="slash">|</span>
-
-            <div class="flight-inner-nav flight-schedule">
-                <i class="fa-solid fa-calendar-days"></i>
-                <span>20XX년 XX월 XX일 (X) ~ 20XX년 XX월 XX일 (X)</span>
-            </div>
-
-            <span class="slash">|</span>
-
-            <div class="flight-inner-nav flight-person">
-                <i class="fa-solid fa-person"></i>
-                <span>1명</span>
-            </div>
-
-            <button class="flight-inner-nav flight-search">항공편검색</button>
+    <div class="flight-nav-bgd"></div>
+    <div class="flight-nav">
+        <div class="flight-code">
+            <span class="flight-go-code">출발지</span>
+            <i class="fa-solid fa-rotate-right flight-go-code"></i>
+            <span class="flight-go-code">도착지</span>
         </div>
 
-        <br><br><br><br><br>
+        <span class="slash">|</span>
 
-        <!-- 여기까지 미미가 한 상단 -->
+        <div class="flight-inner-nav flight-schedule">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span>20XX년 XX월 XX일 (X) ~ 20XX년 XX월 XX일 (X)</span>
+        </div>
 
-        <!-- 내 상단 -->
+        <span class="slash">|</span>
 
-        <i class="fa-solid fa-cart-shopping" id="cart-icon"> 저장 </i>
-        <i class="fa-solid fa-share" id="share-icon"> 공유 </i>
+        <div class="flight-inner-nav flight-person">
+            <i class="fa-solid fa-person"></i>
+            <span>1명</span>
+        </div>
+
+        <button class="flight-inner-nav flight-search">항공편검색</button>
+    </div>
+
+    <br><br><br><br><br>
+
+    <!-- 여기까지 미미가 한 상단 -->
+
+    <!-- 내 상단 -->
+
+    <i class="fa-solid fa-cart-shopping" id="cart-icon"> 저장 </i>
+    <i class="fa-solid fa-share" id="share-icon"> 공유 </i>
 
 
 
-        <h5 class="travel-info">여정 정보</h5>
-        <div class="trip-info-container">
+    <h5 class="travel-info">여정 정보</h5>
+    <div class="trip-info-container">
+        <div class="container-inner">
+            <div class="trip-info-go">
+                <div class="trip-to-go"><strong>가는 편</strong></div>
+                <div class="trip-to-go-body">
+                    <span><strong>GMP</strong> 서울 / 김포 -> <strong>INC</strong> 인천</span>
+                    <div class="trip-to-go-date">2023년 xx월 xx일 (화) 00:00 - 00:00 &nbsp; &nbsp;
+                        <strong>KE125</strong> 일반석(L)
+                    </div>
+                </div>
+                <div class="trip-to-go-details-box"><button class="trip-to-go-details-btn">상세 보기</button></div>
+            </div>
+
             <div class="container-inner">
-                <div class="trip-info-go">
-                    <div class="trip-to-go"><strong>가는 편</strong></div>
+                <div class="trip-info-come">
+                    <div class="trip-to-go"><strong>오는 편</strong></div>
                     <div class="trip-to-go-body">
                         <span><strong>GMP</strong> 서울 / 김포 -> <strong>INC</strong> 인천</span>
                         <div class="trip-to-go-date">2023년 xx월 xx일 (화) 00:00 - 00:00 &nbsp; &nbsp;
-                            <strong>KE125</strong> 일반석(L)</div>
+                            <strong>KE125</strong> 일반석(L)
+                        </div>
                     </div>
                     <div class="trip-to-go-details-box"><button class="trip-to-go-details-btn">상세 보기</button></div>
                 </div>
-
-                <div class="container-inner">
-                    <div class="trip-info-come">
-                        <div class="trip-to-go"><strong>오는 편</strong></div>
-                        <div class="trip-to-go-body">
-                            <span><strong>GMP</strong> 서울 / 김포 -> <strong>INC</strong> 인천</span>
-                            <div class="trip-to-go-date">2023년 xx월 xx일 (화) 00:00 - 00:00 &nbsp; &nbsp;
-                                <strong>KE125</strong> 일반석(L)</div>
-                        </div>
-                        <div class="trip-to-go-details-box"><button class="trip-to-go-details-btn">상세 보기</button></div>
-                    </div>
-                </div>
             </div>
-
-
-            <div class="total-price">
-                <span class="air-transportation-fee"><strong>항공 운송료</strong></span>
-                <ul class="total-price-ul">
-                    <li> <span class="fee-list"> 운임 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 00000원 </span></li>
-                    <li> <span class="fee-list"> 유류할증료 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp; &nbsp; &nbsp; 00000원 </span></li>
-                    <li> <span class="fee-list"> 세금, 수수료 및 기타요금 &nbsp; &nbsp; 00000원 </span></li>
-
-                    <li> <span class="fee-line"> ------------------------- </span> </li>
-                    <li><span class="air-transportation-fee"><strong> 총액 </strong> &nbsp;&nbsp;&nbsp; 
-                        <span class="total-price-blue">000000원</span> </span>
-                            <div id="money-icon"> <i class="fa-solid fa-sack-dollar" >변경 및 환불 규정</i></div>
-                    </li>
-                </ul>
-            </div>
-
-
         </div>
 
 
-        <!-- 이 밑으로 승객정보 -->
+        <div class="total-price">
+            <span class="air-transportation-fee"><strong>항공 운송료</strong></span>
+            <ul class="total-price-ul">
+                <li> <span class="fee-list"> 운임 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 00000원 </span></li>
+                <li> <span class="fee-list"> 유류할증료 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp; &nbsp; &nbsp; 00000원 </span></li>
+                <li> <span class="fee-list"> 세금, 수수료 및 기타요금 &nbsp; &nbsp; 00000원 </span></li>
 
-        <h5 id="passenger-info">승객 정보</h5>
+                <li> <span class="fee-line"> ------------------------- </span> </li>
+                <li><span class="air-transportation-fee"><strong> 총액 </strong> &nbsp;&nbsp;&nbsp;
+                        <span class="total-price-blue">000000원</span> </span>
+                    <div id="money-icon"> <i class="fa-solid fa-sack-dollar">변경 및 환불 규정</i></div>
+                </li>
+            </ul>
+        </div>
 
-        <p id="essential">[*는 필수 입력 사항입니다]</p>
-        <p id="change-info"> 예약 후 성명은 <em class="remark-positive">불가</em>하오니 탑승 시 제시할 <em class="remark-positive">신분증에
-                기제된
-                성명과 언어</em>가 정확히 일치하는지 확인하시기 바랍니다. <br> 발음상 변화가 없는 단순 영문 성명 철자변경의 경우 로그인한 본인에 한해 <em
-                class="remark-positive">변경하기</em>를 이용하시기 바랍니다.</p>
 
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="dkzheldjs">
-                        승객명
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <form>
-                            <div class="form-box">승객 성*
-                                <input type="text" placeholder="예) 김 또는 KIM">
-                            </div>
-                            <div class="form-box">승객 이름*
-                                <input type="text" placeholder="예) 대한 또는 DAEHAN">
-                            </div>
-                            <div class="form-box">국적*
-                                <input type="text" placeholder="예) 대한민국">
-                            </div>
-                            <div class="form-box">생년월일(YYYY.MM.DD)*
-                                <input type="date" placeholder="생년월일" onfocus="this.showPicker()">
-                            </div>
+    </div>
 
-                            <div class="form-box">성별*
-                                <select name="sex">
-                                    <option value="" disabled selected>선택</option>
-                                    <option value="">남자</option>
-                                    <option value="">여자</option>
-                                </select>
-                            </div>
-                            <div class="form-box">적립항공사*
-                                <select name="saving">
-                                    <option value="" selected>대한항공</option>
-                                    <option value="">아시아나항공</option>
-                                    <option value="">델타항공</option>
-                                    <option value="">케냐항공</option>
-                                    <option value="">체코항공</option>
-                                </select>
-                            </div>
-                            <div class="form-box">가는 여정의 개인 할인
-                                <select name="personal-discount">
-                                    <option value="" selected>선택</option>
-                                    <option value="">장애인</option>
-                                    <option value="">장애인의 동반 보호자 1인</option>
-                                    <option value="">기초생활수급자</option>
-                                </select>
-                            </div>
-                            <div class="form-box">오는 여정의 개인 할인
-                                <select name="personal-discount">
-                                    <option value="" selected>선택</option>
-                                    <option value="">장애인</option>
-                                    <option value="">장애인의 동반 보호자 1인</option>
-                                    <option value="">기초생활수급자</option>
-                                </select>
-                            </div>
-                            <div class="form-box">회원번호*
-                                <input type="text" placeholder="항공사 회원번호를 입력하여 주십시오.">
-                            </div>
-                            <label for="agree1" class="form-box">
-                                <input type="checkbox" id="agree1">국적정보를 회원정보에 업데이트 하는 것을 동의합니다.
-                            </label>
 
-                            <input type="submit" value="확인" class="submit">
+    <!-- 이 밑으로 승객정보 -->
 
-                        </form>
-                    </div>
+    <h5 id="passenger-info">승객 정보</h5>
+
+    <p id="essential">[*는 필수 입력 사항입니다]</p>
+    <p id="change-info"> 예약 후 성명은 <em class="remark-positive">불가</em>하오니 탑승 시 제시할 <em class="remark-positive">신분증에
+            기제된
+            성명과 언어</em>가 정확히 일치하는지 확인하시기 바랍니다. <br> 발음상 변화가 없는 단순 영문 성명 철자변경의 경우 로그인한 본인에 한해 <em
+            class="remark-positive">변경하기</em>를 이용하시기 바랍니다.</p>
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne" class="dkzheldjs">
+                    승객명
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form>
+                        <div class="form-box">승객 성*
+                            <input type="text" placeholder="예) 김 또는 KIM">
+                        </div>
+                        <div class="form-box">승객 이름*
+                            <input type="text" placeholder="예) 대한 또는 DAEHAN">
+                        </div>
+                        <div class="form-box">국적*
+                            <input type="text" placeholder="예) 대한민국">
+                        </div>
+                        <div class="form-box">생년월일(YYYY.MM.DD)*
+                            <input type="date" placeholder="생년월일" onfocus="this.showPicker()">
+                        </div>
+
+                        <div class="form-box">성별*
+                            <select name="sex">
+                                <option value="" disabled selected>선택</option>
+                                <option value="">남자</option>
+                                <option value="">여자</option>
+                            </select>
+                        </div>
+                        <div class="form-box">적립항공사*
+                            <select name="saving">
+                                <option value="" selected>대한항공</option>
+                                <option value="">아시아나항공</option>
+                                <option value="">델타항공</option>
+                                <option value="">케냐항공</option>
+                                <option value="">체코항공</option>
+                            </select>
+                        </div>
+                        <div class="form-box">가는 여정의 개인 할인
+                            <select name="personal-discount">
+                                <option value="" selected>선택</option>
+                                <option value="">장애인</option>
+                                <option value="">장애인의 동반 보호자 1인</option>
+                                <option value="">기초생활수급자</option>
+                            </select>
+                        </div>
+                        <div class="form-box">오는 여정의 개인 할인
+                            <select name="personal-discount">
+                                <option value="" selected>선택</option>
+                                <option value="">장애인</option>
+                                <option value="">장애인의 동반 보호자 1인</option>
+                                <option value="">기초생활수급자</option>
+                            </select>
+                        </div>
+                        <div class="form-box">회원번호*
+                            <input type="text" placeholder="항공사 회원번호를 입력하여 주십시오.">
+                        </div>
+                        <label for="agree1" class="form-box">
+                            <input type="checkbox" id="agree1">국적정보를 회원정보에 업데이트 하는 것을 동의합니다.
+                        </label>
+
+                        <input type="submit" value="확인" class="submit">
+
+                    </form>
                 </div>
             </div>
+        </div>
 
 
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        연락처 정보
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <form>
-                            <div class="form-box">연락처*
-                                <select name="personal-discount">
-                                    <option value="" disabled selected>선택</option>
-                                    <option value="">휴대폰</option>
-                                    <option value="">집</option>
-                                    <option value="">회사</option>
-                                </select>
-                            </div>
-                            <div class="form-box">국가번호*
-                                <input type="text" placeholder="국가번호">
-                            </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    연락처 정보
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form>
+                        <div class="form-box">연락처*
+                            <select name="personal-discount">
+                                <option value="" disabled selected>선택</option>
+                                <option value="">휴대폰</option>
+                                <option value="">집</option>
+                                <option value="">회사</option>
+                            </select>
+                        </div>
+                        <div class="form-box">국가번호*
+                            <input type="text" placeholder="국가번호">
+                        </div>
 
-                            <div class="form-box">전화번호*
-                                <input type="text" placeholder="전화번호">
-                            </div>
-                            <div class="form-box">이메일*
-                                <input type="email" placeholder="email">
-                            </div>
-                            <div class="form-box">언어 선택*
-                                <select name="personal-discount">
-                                    <option value="" selected>한국어</option>
-                                    <option value="">영어</option>
-                                    <option value="">일본어</option>
-                                    <option value="">중국어</option>
-                                </select>
-                            </div>
+                        <div class="form-box">전화번호*
+                            <input type="text" placeholder="전화번호">
+                        </div>
+                        <div class="form-box">이메일*
+                            <input type="email" placeholder="email">
+                        </div>
+                        <div class="form-box">언어 선택*
+                            <select name="personal-discount">
+                                <option value="" selected>한국어</option>
+                                <option value="">영어</option>
+                                <option value="">일본어</option>
+                                <option value="">중국어</option>
+                            </select>
+                        </div>
 
-                            <label for="agree2" class="form-box">
-                                <input type="checkbox" id="agree2">상기의 휴대전화 번호와 이메일 주소를 나의 회원 정보에 업데이트 하는 것을 동의합니다.
-                            </label>
+                        <label for="agree2" class="form-box">
+                            <input type="checkbox" id="agree2">상기의 휴대전화 번호와 이메일 주소를 나의 회원 정보에 업데이트 하는 것을 동의합니다.
+                        </label>
 
-                            <input type="submit" value="확인" class="submit">
-                        </form>
+                        <input type="submit" value="확인" class="submit">
+                    </form>
 
-                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- 여기 밑으로 좌석배정이랑 확인 및 동의   -->
+
+    <span class="material-symbols-outlined">
+        <br>
+        airline_seat_recline_normal
+        <p>좌석배정</p>
+    </span>
+
+    <h5 id="check-and-agree">확인 및 동의</h5>
+
+    <div class="check">
+        <button class="check-agree">동의</button>
+        <p>[필수]<span class="remark-positive">운송약관</span>, 운임규정, <em class="remark-positive"> 수하물 규정</em>을 확인하였으며 이에
+            동의합니다.</p>
+        <p class="inner-marginbottom-change">대한항공 항공권을 구매하시는 것은 본 항공사와 운송계약 체결에 동의하는 것으로 운임규정은 항공권 변경, 취소 등에 따른 수수료와
+            사전좌석배정, 좌석승급 등 구매하는 항공권 운임에
+            적용되는 세부 조건을 기재하고 있으며, 운송 약관은 운송 계약 체결에 따른 계약 조건을 명시합니다.</p>
+        <p class="inner-margintop-change">대한항공은 '항공교통이용자 보호기준'에 따라 <span class="remark-positive">항공교통이용자 서비스 계획</span>을
+            게시합니다.</p>
+    </div>
+
+    <div class="check">
+        <button class="check-agree">동의</button>
+        <p>[필수] 위험품 안내를 확인하였습니다.
+        <p>고객 안전을 위하여 항공기 내부로 반입이 금지된 폭발성, 인화성, 유독성 물질 및 무기로 사용될 수 있는 품목에 대한 안내 사항 입니다..</p>
+    </div>
+
+    <div class="document-box">
+        <input type="checkbox" id="document">
+        <label for="document" class="document-info-click" onclick="">항공보안법 관련 안내사항 <i class="fa-solid fa-chevron-down"></i>
+        </label>
+        <ul class="document-info-body">
+        <li><span>항공보안법 규정에 따라 성인, 소아, 유아 전 승객의 신원확인을 위해 신분증명서와 탑승권 확인이 필요하오니 소지 여부를 반드시 재확인하여 주시기 바랍니다. <br> 모든 신분증 및 여행서류는
+            탑승자의 책임 하에 준비되어야 합니다.</span></li>
+    </ul>
+    </div>
+
+    <h5 id="payment">결제</h5>
+
+    <div class="payment-method"> 결제방식
+        <input type="checkbox">
+    </div>
+
+    <div class="coupon-discount">쿠폰/할인권</div>
+
+    <div class="giftcard">기프트카드</div>
+
+    <div class="payment-card">결제수단</div>
 
 
-<!-- 여기 밑으로 좌석배정이랑 확인 및 동의   -->
 
-            <span class="material-symbols-outlined">
-                <br>
-                airline_seat_recline_normal
-                <p>좌석배정</p>
-            </span>
-
-            <h5 id="check-and-agree">확인 및 동의</h5>
-
-            <div class="check">
-                <button class="check-agree">동의</button>
-                <p>[필수]<span class="remark-positive">운송약관</span>, 운임규정, <em class="remark-positive"> 수하물 규정</em>을 확인하였으며 이에
-                    동의합니다.</p>
-                <p class="inner-marginbottom-change">대한항공 항공권을 구매하시는 것은 본 항공사와 운송계약 체결에 동의하는 것으로 운임규정은 항공권 변경, 취소 등에 따른 수수료와 사전좌석배정, 좌석승급 등 구매하는 항공권 운임에
-                    적용되는 세부 조건을 기재하고 있으며, 운송 약관은 운송 계약 체결에 따른 계약 조건을 명시합니다.</p>
-                <p class="inner-margintop-change">대한항공은 '항공교통이용자 보호기준'에 따라 <span class="remark-positive">항공교통이용자 서비스 계획</span>을 게시합니다.</p>
-            </div>
-
-            <div class="check">
-                <button class="check-agree">동의</button>
-                <p>[필수] 위험품 안내를 확인하였습니다.
-                <p>고객 안전을 위하여 항공기 내부로 반입이 금지된 폭발성, 인화성, 유독성 물질 및 무기로 사용될 수 있는 품목에 대한 안내 사항 입니다..</p>
-            </div>
-
-
-
-
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-                crossorigin="anonymous"></script>
-
-    </body>
+</body>
 
 </html>
