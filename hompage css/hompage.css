@@ -39,3 +39,41 @@
 .arrow-button:hover {
     background-color: #00568C; 
 }
+
+.center {
+    display: flex;
+    justify-content: space-around;
+}
+
+.title {
+    position: absolute; 
+    top: 740px; 
+    left: 90px; 
+}
+
+.center img {
+    width: 272px;
+    height: 390px;
+    display: block; 
+    margin: 0 auto; 
+    margin-top: 290px; 
+}
+
+.Last {
+    display: flex;
+    justify-content: space-around;
+}
+
+.title_L {
+    position: absolute; 
+    top: 1440px; 
+    left: 90px; 
+}
+
+.Last img {
+    width: 400px;
+    height: 335px;
+    display: block; 
+    margin: 0 auto; 
+    margin-top: 310px; 
+}
