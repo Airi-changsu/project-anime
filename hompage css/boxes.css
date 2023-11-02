@@ -1,4 +1,6 @@
-.box0 {
+.box {
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 0;
     display: flex;
@@ -73,3 +75,53 @@
     background-color: rgb(231, 228, 228);
 }
 
+/* ------------------------------------- */
+
+.contain_er {
+    margin: 0;
+    padding: 0;
+}
+
+.container_photo_list {
+    margin: 0;
+    padding: 0;
+}
+
+.top_photo {
+    margin: 0;
+    padding: 0;
+}
+
+.move_box {
+    margin: 0;
+    padding: 0;
+}
+
+.move_box > img {
+    position : absolute;
+    top: 100px;
+    left: 200px;
+}
+
+.swiper_box {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.swip_left {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 290px;
+    left: 14%;
+}
+
+.swip_right {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 290px;
+    right: 12%;
+}
