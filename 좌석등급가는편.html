@@ -247,7 +247,7 @@
             left: 150px;
         }
 
-        .search-form-arv{
+        .search-form-arv {
             width: 500px;
             height: 25px;
             position: relative;
@@ -276,12 +276,12 @@
             display: flex;
         }
 
-        .flight-box-dep{
+        .flight-box-dep {
             width: 50%;
             height: 100%;
         }
 
-        .flight-box-arv{
+        .flight-box-arv {
             width: 50%;
             height: 100%;
         }
@@ -426,7 +426,6 @@
 
             position: relative;
             top: 30px;
-            /* z-index: -99; */
 
         }
 
@@ -438,7 +437,6 @@
 
             position: relative;
             top: 30px;
-            /* z-index: -99; */
 
         }
 
@@ -447,7 +445,6 @@
             height: 30px;
             position: relative;
             top: 80px;
-            z-index: -99;
 
             display: flex;
             justify-content: space-around;
@@ -456,6 +453,28 @@
         .info {
             border: 1px solid lightgray;
             border-radius: 10px 10px;
+            cursor: pointer;
+        }
+
+        /* 상세보기 팝업*/
+        .modal-info {
+            position: absolute;
+            display: none;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            z-index: 90;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-info-close-btn{
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 3px;
+            left: 96%;
         }
 
         /* 좌석편 */
@@ -744,13 +763,13 @@
                 </div>
                 <div class="flight-number">
                     <span><i class="fa-solid fa-jet-fighter"></i> FKE112</span>
-                    <button class="info">상세보기</button>
+                    <button class="info info-btn">상세보기</button>
                 </div>
             </div>
 
             <div class="all-seat-info">
                 <div class="seat-info">
-                    <div class="flight-seat flight-seat-1" onclick="change_txt">
+                    <div class="flight-seat">
                         <div class="whichclass">프레스티지석</div>
                         <span class="howmuch-seat">690,100
                             <p class="howmuch-seat-won">원</p>
@@ -781,7 +800,7 @@
                 </div>
                 <div class="flight-number">
                     <span><i class="fa-solid fa-jet-fighter"></i> FKE112</span>
-                    <button class="info">상세보기</button>
+                    <button class="info info-btn">상세보기</button>
                 </div>
             </div>
             <div class="all-seat-info">
@@ -795,7 +814,7 @@
                 </div>
 
                 <div class="change-info">
-                    <p class="howmanyseat" onclick="change_txt">26석</p>
+                    <p class="howmanyseat">26석</p>
                     <p class=inform><i class="fa-solid fa-rotate"></i> 변경 가능</p>
                     <p class=inform><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
                     <p class=inform><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
@@ -817,11 +836,11 @@
                 </div>
                 <div class="flight-number">
                     <span><i class="fa-solid fa-jet-fighter"></i> FKE112</span>
-                    <button class="info">상세보기</button>
+                    <button class="info info-btn">상세보기</button>
                 </div>
             </div>
             <div class="all-seat-info ">
-                <div class="seat-info" onclick="change_txt">
+                <div class="seat-info">
                     <div class="flight-seat">
                         <div class="whichclass">프레스티지석</div>
                         <span class="howmuch-seat">7770,100
@@ -831,7 +850,7 @@
                 </div>
 
                 <div class="change-info">
-                    <p class="howmanyseat" onclick="change_txt()">8석</p>
+                    <p class="howmanyseat">8석</p>
                     <p class=inform><i class="fa-solid fa-rotate"></i> 변경 가능</p>
                     <p class=inform><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
                     <p class=inform><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
@@ -853,7 +872,7 @@
                 </div>
                 <div class="flight-number">
                     <span><i class="fa-solid fa-jet-fighter"></i> FKE112</span>
-                    <button class="info">상세보기</button>
+                    <button class="info info-btn">상세보기</button>
                 </div>
             </div>
             <div class="all-seat-info">
@@ -867,7 +886,7 @@
                 </div>
 
                 <div class="change-info">
-                    <p class="howmanyseat" onclick="change_txt">6석</p>
+                    <p class="howmanyseat">6석</p>
                     <p class=inform><i class="fa-solid fa-rotate"></i> 변경 가능</p>
                     <p class=inform><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
                     <p class=inform><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
@@ -876,6 +895,24 @@
             </div>
         </div>
     </div>
+
+    <!-- 상세보기 팝업 -->
+    <div class="modal modal-info">
+        <div class="modal-body modal-info-body">
+            <div class="modal-title model-info">여정 정보 상세보기</div>
+            <button class="modal-info-close-btn">&times;</button>
+
+            <div class="info-flight">
+                <div class="total-flight">
+                <span class="dep-nav-text dep-nav-text-dep">출발지</span>
+                <span class="dep-nav-text"><i class="fa-solid fa-arrow-right"></i></span>
+                <span class="dep-nav-text dep-nav-text-arv">도착지</span>
+                
+            </div>
+        </div>
+
+    </div>
+
 
     <!-- 하단 -->
     <div class="footer">
@@ -924,12 +961,22 @@
             arvText.innerText = searchFlight[ 5 ].innerText;
         })
 
+        // 상세 보기 클릭
+        const info_btn = document.querySelectorAll(".info-btn");
+        const modal_info = document.querySelector(".modal-info");
+        info_btn.forEach(
+            (item) => {
+                item.addEventListener("click", function () {
+                    modal_info.style.display = "flex";
+                })
+            }
+        )
+
         // 날짜 색 변경
         const date_btn = document.querySelectorAll(".dep-nav-box-btn");
         date_btn.forEach(
             (item) => {
-                item.addEventListener("click", function (e) {
-                    console.log(e);
+                item.addEventListener("click", function () {
                     this.classList.toggle('dep-box-change');
                 });
             }
@@ -955,17 +1002,32 @@
             }
         )
 
+        // // 버튼 하나 눌렸으면 다른 거 안 되게
+        // const nav_btn = document.querySelectorAll(".dep-nav-box-btn");
+
+        // function btnDisabledCheck(){
+        //     for(var i=0;i<nav_btn.length;i++){
+        //         if(nav_btn[i].disabled == false){
+        //             nav_btn[i+1].disabled = true;
+        //         }
+        //     }
+        // }
+
         // 결제 금액 반환
         const howmuch_btn = document.querySelector('.howmuch'); //000,000
+        const change_won = document.querySelectorAll('.seat-info');
         const howmuch_seat_btn = document.querySelectorAll('.howmuch-seat'); //699,910
-        const change_won = document.querySelectorAll('.flight-seat');
 
+        howmuch_seat_btn[ 0 ].innerText;
 
-        function change_txt() {
-            howmuch_btn.innerText = howmuch_seat_btn[ 0 ].innerText;
+        for (var i = 0; i < change_won.length; i++) {
+            change_won[ i ].addEventListener("click", () => {
+                console.log("눌렷삼 ..");
+                howmuch_btn.innerText = howmuch_seat_btn[ i ].innerText;
+                console.log(howmuch_btn.innerText);
+                console.log(howmuch_seat_btn[ i ].innerText);
+            })
         }
-
-        change_won.addEventListener("click", change_txt())
 
 
 
