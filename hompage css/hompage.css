@@ -1,0 +1,41 @@
+.image-container_top {
+    text-align: center;
+    margin: 20px;
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+
+.image-container_top img {
+    width: 900px; 
+    height: 500px; 
+    margin-top: 75px; 
+}
+
+#prevButton {
+    position: absolute; 
+    left: 10%; 
+    top: 40%; 
+    transform: translateY(-50%); 
+}
+
+#nextButton {
+    position: absolute; 
+    right: 10%; 
+    top: 40%; 
+    transform: translateY(-50%); 
+}
+
+.arrow-button {
+    background-color: #0077B5; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.arrow-button:hover {
+    background-color: #00568C; 
+}
