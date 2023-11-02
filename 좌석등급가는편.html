@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>좌석등급</title>
     <style>
-
         /* by 창수 */
         nav {
             font-size: 13pt;
@@ -126,6 +125,7 @@
             transform: translate(-50%, -50%);
             pointer-events: auto;
         }
+
         /* 상단 네비 바 */
 
         body {
@@ -162,7 +162,7 @@
         }
 
         .flight-code {
-            width: 240px;
+            width: 300px;
             height: 50px;
             margin-left: 20px;
             margin-top: 1rem;
@@ -199,8 +199,99 @@
             text-align: center;
         }
 
-        /* 가는편 네비 */
+        /* 검색창 팝업 */
+        .modal {
+            position: absolute;
+            display: none;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            z-index: 90;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
 
+        .modal-body {
+            position: absolute;
+            justify-content: center;
+            background-color: white;
+            top: 200px;
+            width: 70%;
+            height: 30%;
+            border-radius: 0.7rem;
+        }
+
+        .modal-title {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            margin-right: 30px;
+            margin-top: 30px;
+            color: #00256c;
+        }
+
+        .modal-close-btn {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 3px;
+            left: 96%;
+        }
+
+        .search-form-dep {
+            width: 500px;
+            height: 25px;
+            position: relative;
+            top: 30px;
+            left: 150px;
+        }
+
+        .search-form-arv{
+            width: 500px;
+            height: 25px;
+            position: relative;
+            top: 40px;
+            left: 175px;
+        }
+
+        .search-form-btn-dep {
+            position: relative;
+            top: 30px;
+            left: 150px;
+        }
+
+        .search-form-btn-arv {
+            position: relative;
+            top: 40px;
+            left: 175px;
+        }
+
+        .flight-box {
+            width: 80%;
+            height: 200px;
+            margin: auto;
+            margin-top: 50px;
+            font-size: 15px;
+            display: flex;
+        }
+
+        .flight-box-dep{
+            width: 50%;
+            height: 100%;
+        }
+
+        .flight-box-arv{
+            width: 50%;
+            height: 100%;
+        }
+
+        .my-flight {
+            cursor: pointer;
+        }
+
+
+        /* 가는편 네비 */
         .content-nav {
             width: 100%;
             height: 300px;
@@ -232,9 +323,16 @@
             font-size: 15px;
             justify-content: space-around;
             align-items: center;
+            cursor: pointer;
+            transition: all 0.2s;
         }
 
-        .dep-box-change{
+        .dep-nav-box-btn:hover {
+            border: 1px solid #002F87;
+            box-shadow: 0 0 5px 0;
+        }
+
+        .dep-box-change {
             font-weight: bold;
             color: #3F6AE8;
         }
@@ -247,6 +345,7 @@
             margin: 2% auto;
             display: flex;
             justify-content: space-around;
+            cursor: pointer;
         }
 
         .dep-seat {
@@ -255,6 +354,11 @@
             border-radius: 10px 10px;
             margin: 1%;
             align-items: center;
+        }
+
+        .dep-seat:hover {
+            border: 1px solid #002F87;
+            box-shadow: 0 0 5px 0;
         }
 
         .choice-seat-change {
@@ -268,6 +372,7 @@
             height: 30px;
             border: 1px solid lightgray;
             border-radius: 10px 10px;
+            cursor: pointer;
         }
 
         /* 가는 편 본문 */
@@ -303,7 +408,7 @@
 
             position: relative;
             top: 30px;
-            z-index: -99;
+            /* z-index: -99; */
 
         }
 
@@ -321,7 +426,7 @@
 
             position: relative;
             top: 30px;
-            z-index: -99;
+            /* z-index: -99; */
 
         }
 
@@ -333,7 +438,7 @@
 
             position: relative;
             top: 30px;
-            z-index: -99;
+            /* z-index: -99; */
 
         }
 
@@ -359,6 +464,12 @@
             width: 70%;
             height: 100%;
             display: flex;
+            cursor: pointer;
+        }
+
+        .all-seat-info:hover {
+            border: 1px solid #002F87;
+            box-shadow: 0 0 5px 0;
         }
 
         .choice {
@@ -407,13 +518,13 @@
             align-items: center;
         }
 
-        .howmanyseat{
+        .howmanyseat {
             font-size: 12px;
             color: red;
             margin-top: 33px;
         }
 
-        .inform{
+        .inform {
             font-size: 12px;
         }
 
@@ -471,8 +582,6 @@
             text-align: center;
             border-radius: 1rem;
         }
-
-        
     </style>
 </head>
 
@@ -504,9 +613,9 @@
         <div class="flight-nav-bgd"></div>
         <div class="flight-nav">
             <div class="flight-code">
-                <span class="flight-go-code">출발지</span>
+                <span class="flight-go-code flight-dep-code">출발지</span>
                 <i class="fa-solid fa-rotate-right flight-go-code" style="cursor: pointer;"></i>
-                <span class="flight-go-code">도착지</span>
+                <span class="flight-go-code flight-arv-code">도착지</span>
             </div>
 
             <span class="slash">|</span>
@@ -526,13 +635,60 @@
             <button class="flight-inner-nav flight-search" style="cursor: pointer;">항공편검색</button>
         </div>
     </div>
+    <!-- 검색창 -->
+    <div class="modal">
+        <div class="modal-body">
+            <div class="modal-title">항공편 검색</div>
+            <button class="modal-close-btn">&times;</button>
+            <input type="search" class="search-form-dep" list="searchBox" placeholder="가는편 검색">
+            <input class="search-form-btn-dep" type="button" value="검색">
+            <input type="search" class="search-form-arv" list="searchBox" placeholder="오는편 검색">
+            <input class="search-form-btn-arv" type="button" value="검색">
+            <datalist id="searchBox">
+                <option class="searchBox-value" value="ICN 인천"></option>
+                <option class="searchBox-value" value="GMP 김포"></option>
+                <option class="searchBox-value" value="TYO 도쿄"></option>
+                <option class="searchBox-value" value="SHA 상하이"></option>
+                <option class="searchBox-value" value="HKG 홍콩"></option>
+                <option class="searchBox-value" value="NYC 뉴욕"></option>
+                <option class="searchBox-value" value="LAS 라스베이거스"></option>
+            </datalist>
+            <div class="flight-box">
+                <div class="flight-box-dep">
+                    <strong>가는편</strong>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> ICN 인천</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> GMP 김포</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> TYO 도쿄</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> SHA 상하이</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> HKG 홍콩</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> NYC 뉴욕</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> LAS 라스베이거스</p>
+                </div>
+
+                <div class="flight-box-arv">
+                    <strong>오는편</strong>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> SEA 시애틀</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> WAS 워싱턴</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> LHR 런던</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> MAD 마드리드</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> SYD 시드니</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> GUM 괌</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> DXB 두바이</p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    </div>
     <!-- 가는 편 네비 -->
     <div class="content-nav">
         <div class="dep-nav">
             <span style="font-weight: bold;" class="dep-nav-text">가는 편</span>
-            <span class="dep-nav-text">출발지 ~ 공항</span>
+            <span class="dep-nav-text dep-nav-text-dep">출발지</span>
             <span class="dep-nav-text"><i class="fa-solid fa-arrow-right"></i></span>
-            <span class="dep-nav-text">도착지 ~ 공항</span>
+            <span class="dep-nav-text dep-nav-text-arv">도착지</span>
         </div>
 
         <div class="dep-nav-box">
@@ -577,9 +733,9 @@
         <div class="flight">
             <div class="flight-info">
                 <div class="dep-time">
-                    <span class="time">10:00</span>
+                    <span class="time">1:00</span>
                     <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
-                    <span class="time">14:00</span>
+                    <span class="time">2:00</span>
                 </div>
                 <div class="howlong">4시간</div>
                 <div class="whatflight" style="font-weight: bold;">
@@ -594,7 +750,7 @@
 
             <div class="all-seat-info">
                 <div class="seat-info">
-                    <div class="flight-seat">
+                    <div class="flight-seat flight-seat-1" onclick="change_txt">
                         <div class="whichclass">프레스티지석</div>
                         <span class="howmuch-seat">690,100
                             <p class="howmuch-seat-won">원</p>
@@ -603,7 +759,7 @@
                 </div>
 
                 <div class="change-info">
-                    <p class="howmanyseat" onclick="change_txt">13석</p>
+                    <p class="howmanyseat">13석</p>
                     <p class=inform><i class="fa-solid fa-rotate"></i> 변경 가능</p>
                     <p class=inform><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
                     <p class=inform><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
@@ -614,7 +770,7 @@
         <div class="flight">
             <div class="flight-info">
                 <div class="dep-time">
-                    <span class="time">10:00</span>
+                    <span class="time">3:00</span>
                     <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
                     <span class="time">14:00</span>
                 </div>
@@ -632,7 +788,7 @@
                 <div class="seat-info">
                     <div class="flight-seat">
                         <div class="whichclass">프레스티지석</div>
-                        <span class="howmuch-seat">690,100
+                        <span class="howmuch-seat">2,100
                             <p class="howmuch-seat-won">원</p>
                         </span>
                     </div>
@@ -650,9 +806,9 @@
         <div class="flight">
             <div class="flight-info">
                 <div class="dep-time">
-                    <span class="time">10:00</span>
+                    <span class="time">15:00</span>
                     <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
-                    <span class="time">14:00</span>
+                    <span class="time">16:00</span>
                 </div>
                 <div class="howlong">4시간</div>
                 <div class="whatflight" style="font-weight: bold;">
@@ -665,17 +821,17 @@
                 </div>
             </div>
             <div class="all-seat-info ">
-                <div class="seat-info">
+                <div class="seat-info" onclick="change_txt">
                     <div class="flight-seat">
                         <div class="whichclass">프레스티지석</div>
-                        <span class="howmuch-seat">690,100
+                        <span class="howmuch-seat">7770,100
                             <p class="howmuch-seat-won">원</p>
                         </span>
                     </div>
                 </div>
 
                 <div class="change-info">
-                    <p class="howmanyseat" onclick="change_txt">8석</p>
+                    <p class="howmanyseat" onclick="change_txt()">8석</p>
                     <p class=inform><i class="fa-solid fa-rotate"></i> 변경 가능</p>
                     <p class=inform><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
                     <p class=inform><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
@@ -686,9 +842,9 @@
         <div class="flight">
             <div class="flight-info">
                 <div class="dep-time">
-                    <span class="time">10:00</span>
+                    <span class="time">17:00</span>
                     <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
-                    <span class="time">14:00</span>
+                    <span class="time">18:00</span>
                 </div>
                 <div class="howlong">4시간</div>
                 <div class="whatflight" style="font-weight: bold;">
@@ -704,7 +860,7 @@
                 <div class="seat-info">
                     <div class="flight-seat">
                         <div class="whichclass">프레스티지석</div>
-                        <span class="howmuch-seat">690,100
+                        <span class="howmuch-seat">90,100
                             <p class="howmuch-seat-won">원</p>
                         </span>
                     </div>
@@ -712,7 +868,7 @@
 
                 <div class="change-info">
                     <p class="howmanyseat" onclick="change_txt">6석</p>
-<p class=inform><i class="fa-solid fa-rotate"></i> 변경 가능</p>
+                    <p class=inform><i class="fa-solid fa-rotate"></i> 변경 가능</p>
                     <p class=inform><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
                     <p class=inform><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
                     <p class=inform><i class="fa-solid fa-m"></i>13750 마일 적립</p>
@@ -735,42 +891,85 @@
 
 
     <script>
+        // 검색창 팝업
+        const modal = document.querySelector(".modal");
+        const modalOpen = document.querySelector(".flight-search");
+        const modalClose = document.querySelector(".modal-close-btn");
+        const depCode = document.querySelector(".flight-dep-code");
+        const arvCode = document.querySelector(".flight-arv-code");
+        const searchFlight = document.querySelectorAll(".my-flight");
+        const depText = document.querySelector(".dep-nav-text-dep");
+        const arvText = document.querySelector(".dep-nav-text-arv");
+
+
+        modalOpen.addEventListener("click", () => {
+            modal.style.display = "flex";
+        })
+
+        modalClose.addEventListener("click", () => {
+            modal.style.display = "none";
+        })
+
+        const searchBoxDep = document.querySelector(".search-form-btn-dep");
+        const searchBoxArv = document.querySelector(".search-form-btn-arv");
+
+        searchBoxDep.addEventListener("click", () => {
+            depCode.innerText = searchFlight[ 0 ].innerText;
+            depText.innerText = searchFlight[ 0 ].innerText;
+        })
+
+        searchBoxArv.addEventListener("click", () => {
+            modal.style.display = 'none';
+            arvCode.innerText = searchFlight[ 5 ].innerText;
+            arvText.innerText = searchFlight[ 5 ].innerText;
+        })
+
+        // 날짜 색 변경
         const date_btn = document.querySelectorAll(".dep-nav-box-btn");
         date_btn.forEach(
-            (item)=>{
-                item.addEventListener("click", function(e){
+            (item) => {
+                item.addEventListener("click", function (e) {
                     console.log(e);
                     this.classList.toggle('dep-box-change');
                 });
             }
         )
-            
+
+        // 좌석 색 변경
         const seat_btn = document.querySelectorAll(".dep-seat");
         seat_btn.forEach(
-            (item)=>{
-                item.addEventListener("click", function(){
+            (item) => {
+                item.addEventListener("click", function () {
                     this.classList.toggle('choice-seat-change');
                 });
             }
         )
 
+        // 비행기 편 색 변경
         const seat_info_btn = document.querySelectorAll('.all-seat-info');
         seat_info_btn.forEach(
-            (item)=>{
-                item.addEventListener("click", function(){
+            (item) => {
+                item.addEventListener("click", function () {
                     this.classList.toggle('choice');
                 });
             }
         )
-        
-        const howmuch_btn = document.querySelector('.howmuch');
-        const howmuch_seat_btn = document.querySelectorAll('.howmuch-seat');
-        howmuch_btn.addEventListener('click', function(){
-            for(i=0; i<howmuch_btn.length; i++){
-                howmuch_btn.innerText = howmuch_seat_btn[i].innerText;
-            }
-        })
-        
+
+        // 결제 금액 반환
+        const howmuch_btn = document.querySelector('.howmuch'); //000,000
+        const howmuch_seat_btn = document.querySelectorAll('.howmuch-seat'); //699,910
+        const change_won = document.querySelectorAll('.flight-seat');
+
+
+        function change_txt() {
+            howmuch_btn.innerText = howmuch_seat_btn[ 0 ].innerText;
+        }
+
+        change_won.addEventListener("click", change_txt())
+
+
+
+
     </script>
 </body>
 
