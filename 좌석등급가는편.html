@@ -235,7 +235,6 @@
             width: 20px;
             height: 20px;
             position: relative;
-            top: 3px;
             left: 96%;
         }
 
@@ -247,7 +246,7 @@
             left: 150px;
         }
 
-        .search-form-arv{
+        .search-form-arv {
             width: 500px;
             height: 25px;
             position: relative;
@@ -267,21 +266,30 @@
             left: 175px;
         }
 
+        #caution{
+            position: relative;
+            top: 50px;
+            left: 300px;
+            font-size: 12px;
+            color: #00256c;
+        }
+
         .flight-box {
             width: 80%;
             height: 200px;
             margin: auto;
-            margin-top: 50px;
+            margin-top: 70px;
+            margin-left: 190px;
             font-size: 15px;
             display: flex;
         }
 
-        .flight-box-dep{
+        .flight-box-dep {
             width: 50%;
             height: 100%;
         }
 
-        .flight-box-arv{
+        .flight-box-arv {
             width: 50%;
             height: 100%;
         }
@@ -368,11 +376,14 @@
         }
 
         .form-select {
-            margin-left: 20px;
             height: 30px;
             border: 1px solid lightgray;
             border-radius: 10px 10px;
             cursor: pointer;
+        }
+
+        .form-select-1{
+            margin-left: 60px;
         }
 
         /* 가는 편 본문 */
@@ -426,7 +437,6 @@
 
             position: relative;
             top: 30px;
-            /* z-index: -99; */
 
         }
 
@@ -438,7 +448,6 @@
 
             position: relative;
             top: 30px;
-            /* z-index: -99; */
 
         }
 
@@ -447,7 +456,6 @@
             height: 30px;
             position: relative;
             top: 80px;
-            z-index: -99;
 
             display: flex;
             justify-content: space-around;
@@ -456,7 +464,142 @@
         .info {
             border: 1px solid lightgray;
             border-radius: 10px 10px;
+            cursor: pointer;
         }
+
+        /* 상세보기 팝업*/
+        .modal-info {
+            position: absolute;
+            display: none;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            z-index: 90;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-info-close-btn{
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 3px;
+            left: 96%;
+        }
+
+        .info-flight{
+            width: 90%;
+            background-color: #C6F2FE;
+            height: 80px;
+            margin: auto;
+            border-radius: 0.5rem;
+        }
+
+        .info-flight-code-what{
+            margin-left: 100px;
+            font-size: 30px;
+        }
+
+        .total-flight{
+            width: 80%;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: #00256c;
+        }
+
+        .dep-info{
+            font-size: 20px; 
+            font-weight: bold;
+        }
+
+        .arrow-info{
+            font-size: 20px; 
+            font-weight: bold;
+        }
+
+        .arv-info{
+            font-size: 20px; 
+            font-weight: bold;
+        }
+
+        .info-howlong{
+            font-weight: bold;
+        }
+
+        .info-content{
+            width: 90%;
+            height: 300px;
+            margin: auto;
+            margin-top: 20px;
+            border: 1px solid lightgray;
+            border-radius: 0.5rem;
+        }
+
+        .info-flight-code{
+            width: 100%;
+            height: 50px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+        }
+
+        .info-dep-time{
+            width: 80%;
+            margin-left:100px;
+        }
+
+        .info-arrow{
+            width: 80%;
+            margin-left:100px;
+            color: #00256c;
+            font-weight: bold;
+        }
+        .info-arv-time{
+            width: 80%;
+            margin-left:100px
+        }
+
+        .info-icon-txt{
+            position: relative;
+            z-index: 10;
+            font-size: 12px;
+            height: 10px;
+            display: flex;
+            justify-content: flex-end;
+            text-align: center;
+        }
+
+        #charge{
+            background-color: #C6F2FE;
+            box-shadow: 0 6px 5px 0 lightgray;
+            height: 70px;
+            /* opacity:0;
+            visibility: hidden; */
+        }
+/* 
+        .icon-charge:hover #charge{
+            visibility: visible;
+            opacity:1;
+        } */
+
+        #media{
+            background-color: #C6F2FE;
+            box-shadow: 0 6px 5px 0 lightgray;
+            height: 35px;
+        }
+
+        #pet{
+            background-color: #C6F2FE;
+            box-shadow: 0 6px 5px 0 lightgray;
+            height: 75px;
+        }
+
+        
 
         /* 좌석편 */
 
@@ -640,10 +783,13 @@
         <div class="modal-body">
             <div class="modal-title">항공편 검색</div>
             <button class="modal-close-btn">&times;</button>
+            
             <input type="search" class="search-form-dep" list="searchBox" placeholder="가는편 검색">
             <input class="search-form-btn-dep" type="button" value="검색">
             <input type="search" class="search-form-arv" list="searchBox" placeholder="오는편 검색">
             <input class="search-form-btn-arv" type="button" value="검색">
+            <div id="caution">가는 편 / 오는 편의 검색 버튼을 모두 눌러주세요 !</div>
+
             <datalist id="searchBox">
                 <option class="searchBox-value" value="ICN 인천"></option>
                 <option class="searchBox-value" value="GMP 김포"></option>
@@ -677,6 +823,7 @@
                 </div>
             </div>
 
+
         </div>
 
 
@@ -709,12 +856,12 @@
         </div>
 
         <div class="dep-nav-seat">
-            <div class="dep-nav-seat dep-seat">일반석</div>
-            <div class="dep-nav-seat dep-seat">프레스티지석</div>
-            <div class="dep-nav-seat dep-seat">일등석</div>
+            <div class="dep-nav-seat dep-seat seat-normal">일반석</div>
+            <div class="dep-nav-seat dep-seat seat-pre">프레스티지석</div>
+            <div class="dep-nav-seat dep-seat seat-best">일등석</div>
         </div>
 
-        <select class="form-select" aria-label="Default select example"> <!-- 박스 다시 만들기-->
+        <select class="form-select form-select-1" aria-label="Default select example"> <!-- 박스 다시 만들기-->
             <option selected>추천순 정렬</option>
             <option value="1"> 추천 순</option>
             <option value="2">출발 시간 순</option>
@@ -733,28 +880,28 @@
         <div class="flight">
             <div class="flight-info">
                 <div class="dep-time">
-                    <span class="time">1:00</span>
+                    <span class="time real-dep-time">1:00</span>
                     <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
-                    <span class="time">2:00</span>
+                    <span class="time real-arv-time">15:00</span>
                 </div>
-                <div class="howlong">4시간</div>
+                <div class="howlong">14시간</div>
                 <div class="whatflight" style="font-weight: bold;">
                     <span>ICN</span><span></span>
-                    <span>AFF</span>
+                    <span>NYC</span>
                 </div>
                 <div class="flight-number">
-                    <span><i class="fa-solid fa-jet-fighter"></i> FKE112</span>
-                    <button class="info">상세보기</button>
+                    <span><i class="fa-solid fa-jet-fighter"></i> <span class="real-flight-code">FKE112</span></span>
+                    <button class="info info-btn">상세보기</button>
                 </div>
             </div>
 
             <div class="all-seat-info">
                 <div class="seat-info">
-                    <div class="flight-seat flight-seat-1" onclick="change_txt">
+                    <div class="flight-seat">
                         <div class="whichclass">프레스티지석</div>
-                        <span class="howmuch-seat">690,100
+                        <span class="howmuch-seat">690,100</span>
                             <p class="howmuch-seat-won">원</p>
-                        </span>
+                        
                     </div>
                 </div>
 
@@ -770,32 +917,32 @@
         <div class="flight">
             <div class="flight-info">
                 <div class="dep-time">
-                    <span class="time">3:00</span>
+                    <span class="time real-dep-time">12:00</span>
                     <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
-                    <span class="time">14:00</span>
+                    <span class="time real-arv-time">02:00</span>
                 </div>
-                <div class="howlong">4시간</div>
+                <div class="howlong">14시간</div>
                 <div class="whatflight" style="font-weight: bold;">
                     <span>ICN</span><span></span>
-                    <span>AFF</span>
+                    <span>NYC</span>
                 </div>
                 <div class="flight-number">
-                    <span><i class="fa-solid fa-jet-fighter"></i> FKE112</span>
-                    <button class="info">상세보기</button>
+                    <span><i class="fa-solid fa-jet-fighter"></i><span class="real-flight-code"> AAE105</span></span>
+                    <button class="info info-btn">상세보기</button>
                 </div>
             </div>
             <div class="all-seat-info">
                 <div class="seat-info">
                     <div class="flight-seat">
                         <div class="whichclass">프레스티지석</div>
-                        <span class="howmuch-seat">2,100
+                        <span class="howmuch-seat">2,100</span>
                             <p class="howmuch-seat-won">원</p>
-                        </span>
+                        
                     </div>
                 </div>
 
                 <div class="change-info">
-                    <p class="howmanyseat" onclick="change_txt">26석</p>
+                    <p class="howmanyseat">26석</p>
                     <p class=inform><i class="fa-solid fa-rotate"></i> 변경 가능</p>
                     <p class=inform><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
                     <p class=inform><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
@@ -806,32 +953,32 @@
         <div class="flight">
             <div class="flight-info">
                 <div class="dep-time">
-                    <span class="time">15:00</span>
+                    <span class="time real-dep-time">15:00</span>
                     <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
-                    <span class="time">16:00</span>
+                    <span class="time real-arv-time">05:00</span>
                 </div>
-                <div class="howlong">4시간</div>
+                <div class="howlong">14시간</div>
                 <div class="whatflight" style="font-weight: bold;">
                     <span>ICN</span><span></span>
-                    <span>AFF</span>
+                    <span>NYC</span>
                 </div>
                 <div class="flight-number">
-                    <span><i class="fa-solid fa-jet-fighter"></i> FKE112</span>
-                    <button class="info">상세보기</button>
+                    <span><i class="fa-solid fa-jet-fighter"></i><span class="real-flight-code"> GGP090</span></span>
+                    <button class="info info-btn">상세보기</button>
                 </div>
             </div>
             <div class="all-seat-info ">
-                <div class="seat-info" onclick="change_txt">
+                <div class="seat-info">
                     <div class="flight-seat">
                         <div class="whichclass">프레스티지석</div>
-                        <span class="howmuch-seat">7770,100
+                        <span class="howmuch-seat">7770,100</span>
                             <p class="howmuch-seat-won">원</p>
-                        </span>
+                        
                     </div>
                 </div>
 
                 <div class="change-info">
-                    <p class="howmanyseat" onclick="change_txt()">8석</p>
+                    <p class="howmanyseat">8석</p>
                     <p class=inform><i class="fa-solid fa-rotate"></i> 변경 가능</p>
                     <p class=inform><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
                     <p class=inform><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
@@ -842,32 +989,32 @@
         <div class="flight">
             <div class="flight-info">
                 <div class="dep-time">
-                    <span class="time">17:00</span>
+                    <span class="time real-dep-time">07:00</span>
                     <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
-                    <span class="time">18:00</span>
+                    <span class="time real-arv-time">21:00</span>
                 </div>
-                <div class="howlong">4시간</div>
+                <div class="howlong">14시간</div>
                 <div class="whatflight" style="font-weight: bold;">
                     <span>ICN</span><span></span>
-                    <span>AFF</span>
+                    <span>NYC</span>
                 </div>
                 <div class="flight-number">
-                    <span><i class="fa-solid fa-jet-fighter"></i> FKE112</span>
-                    <button class="info">상세보기</button>
+                    <span><i class="fa-solid fa-jet-fighter"></i><span class="real-flight-code"> HYL095</span></span>
+                    <button class="info info-btn">상세보기</button>
                 </div>
             </div>
             <div class="all-seat-info">
                 <div class="seat-info">
                     <div class="flight-seat">
                         <div class="whichclass">프레스티지석</div>
-                        <span class="howmuch-seat">90,100
+                        <span class="howmuch-seat">90,100</span>
                             <p class="howmuch-seat-won">원</p>
-                        </span>
+                        
                     </div>
                 </div>
 
                 <div class="change-info">
-                    <p class="howmanyseat" onclick="change_txt">6석</p>
+                    <p class="howmanyseat">6석</p>
                     <p class=inform><i class="fa-solid fa-rotate"></i> 변경 가능</p>
                     <p class=inform><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
                     <p class=inform><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
@@ -875,6 +1022,57 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- 상세보기 팝업 -->
+    <div class="modal modal-info">
+        <div class="modal-body modal-info-body">
+            <div class="modal-title model-info">여정 정보 상세보기</div>
+            <button class="modal-info-close-btn">&times;</button>
+
+            <div class="info-flight">
+                <div class="total-flight">
+                    <div class="info-where">
+                        <span class="dep-nav-text dep-nav-text-dep dep-info">출발지</span>
+                        <span class="dep-nav-text"><i class="fa-solid fa-arrow-right arrow-info"></i></span>
+                        <span class="dep-nav-text dep-nav-text-arv arv-info">도착지</span>
+                    </div>
+                    <div class="info-howlong">
+                        <span class="info-total">총 14시간 0분 여정</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-content">
+                <div class="info-flight-code">
+                    <div class="info-flight-code-what" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        뱅기코드..~</div>
+                    <div class="info-icon">
+                        <span><i class="fa-solid fa-battery-half icon-charge" style="cursor: pointer;"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span><i class="fa-solid fa-photo-film icon-media" style="cursor: pointer;"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span><i class="fa-solid fa-dog icon-dog" style="cursor: pointer;"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+
+                <div class="info-icon-txt">
+                    <span id="charge">기내 <br>전원<br> 공급 <br>장치</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span id="media">기내 <br> 엔터테인먼트</span>&nbsp;&nbsp;
+                    <span id="pet">기내 <br>동반<br> 가능 <br>*사전 접수시</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+                
+                <div class="info-dep-time">
+                    <p class="info-dep-where" style="font-weight: bold;">출발지</p>
+                    <p class="info-dep-when">2023년 XX월 XX일 (X) <span class="real-dep-when">1:00</span> | 터미널2</p>
+                </div>
+                <div class="info-arrow"><i class="fa-solid fa-arrow-down-long"></i> 14시간 0분</div>
+                <div class="info-arv-time">
+                    <p class="info-arv-where" style="font-weight: bold;">도착지</p>
+                    <p class="info-arv-when">2023년 XX월 XX일 (X) <span class="real-arv-when">1:00</span> | 터미널4</p>
+                </div>
+
+            </div>
+
+    </div>
     </div>
 
     <!-- 하단 -->
@@ -887,56 +1085,86 @@
         </div>
     </div>
 
-
-
-
     <script>
         // 검색창 팝업
-        const modal = document.querySelector(".modal");
-        const modalOpen = document.querySelector(".flight-search");
-        const modalClose = document.querySelector(".modal-close-btn");
-        const depCode = document.querySelector(".flight-dep-code");
-        const arvCode = document.querySelector(".flight-arv-code");
-        const searchFlight = document.querySelectorAll(".my-flight");
-        const depText = document.querySelector(".dep-nav-text-dep");
-        const arvText = document.querySelector(".dep-nav-text-arv");
+        const modal = document.querySelector(".modal"); // 항공편 검색 팝업창
+        const modalOpen = document.querySelector(".flight-search"); // 검색 버튼
+        const modalClose = document.querySelector(".modal-close-btn"); // 팝업 닫는 버튼
+
+        const depCode = document.querySelector(".flight-dep-code"); // 상단바 출발지
+        const arvCode = document.querySelector(".flight-arv-code"); // 상단바 도착지
+
+        const searchFlight = document.querySelectorAll(".my-flight"); // 도시
+
+        const depText = document.querySelector(".dep-nav-text-dep"); // 가는편 출발지
+        const arvText = document.querySelector(".dep-nav-text-arv"); // 가는편 도착지
+
+        const depInfo = document.querySelector(".dep-info"); // 상세보기 출발지
+        const arvInfo = document.querySelector(".arv-info"); // 상세보기 도착지
 
 
-        modalOpen.addEventListener("click", () => {
+        modalOpen.addEventListener("click", () => { // 항공편 검색 버튼 누르면 팝업 생성
             modal.style.display = "flex";
         })
 
-        modalClose.addEventListener("click", () => {
+        modalClose.addEventListener("click", () => { // 팝업 닫기
             modal.style.display = "none";
         })
 
-        const searchBoxDep = document.querySelector(".search-form-btn-dep");
-        const searchBoxArv = document.querySelector(".search-form-btn-arv");
+        const searchBoxDep = document.querySelector(".search-form-btn-dep");  // 출발지 검색 버튼
+        const searchBoxArv = document.querySelector(".search-form-btn-arv");  // 도착지 검색 버튼
 
-        searchBoxDep.addEventListener("click", () => {
+        // 버튼 누르면 상단바 메인 출발지 + 그 밑에 작은 가는 편 + 상세보기 출발지 모두 연동
+        searchBoxDep.addEventListener("click", () => { //검색버튼 누르면 출발지 연동
             depCode.innerText = searchFlight[ 0 ].innerText;
             depText.innerText = searchFlight[ 0 ].innerText;
+            depInfo.innerText = searchFlight[ 0 ].innerText;
         })
 
-        searchBoxArv.addEventListener("click", () => {
+        searchBoxArv.addEventListener("click", () => { // 검색버튼 누르면 도착지 연동
             modal.style.display = 'none';
             arvCode.innerText = searchFlight[ 5 ].innerText;
             arvText.innerText = searchFlight[ 5 ].innerText;
+            arvInfo.innerText = searchFlight[ 5 ].innerText;
+
         })
 
-        // 날짜 색 변경
-        const date_btn = document.querySelectorAll(".dep-nav-box-btn");
+        // 상세 보기 팝업
+        const info_btn = document.querySelectorAll(".info-btn"); // 상세보기 버튼
+        const modal_info = document.querySelector(".modal-info"); // 상세보기 팝업창
+        const modal_info_close = document.querySelector(".modal-info-close-btn");
+        const flightCode = document.querySelector(".info-flight-code-what") // 상세보기 내 뱅기코드
+        const eachFlightCode = document.querySelectorAll('.real-flight-code'); // 각 뱅기코드
+        const depInfoTime = document.querySelector(".real-dep-when"); // 상세보기 출발 시간
+        const arvInfoTime = document.querySelector(".real-arv-when"); // 상세보기 도착 시간
+        const depTime = document.querySelectorAll(".real-dep-time"); // 각 출발시간
+        const arvTime = document.querySelectorAll(".real-arv-time"); // 각 도착시간
+
+        modal_info_close.addEventListener("click", ()=>{ // 버튼 누르면 팝업창 열기
+            modal_info.style.display="none";
+        })
+
+        for(let i=0; i<info_btn.length; i++){ // 상세보기 누르면 뱅기 코드랑 시간 연동되게
+            info_btn[i].addEventListener("click",()=>{
+                modal_info.style.display = "flex"
+                flightCode.innerText = eachFlightCode[i].innerText;
+                depInfoTime.innerText = depTime[i].innerText;
+                arvInfoTime.innerText = arvTime[i].innerText;
+            })
+        }
+
+        // 요일 색 변경
+        const date_btn = document.querySelectorAll(".dep-nav-box-btn"); // 요일 박스
         date_btn.forEach(
             (item) => {
-                item.addEventListener("click", function (e) {
-                    console.log(e);
+                item.addEventListener("click", function () {
                     this.classList.toggle('dep-box-change');
                 });
             }
         )
 
         // 좌석 색 변경
-        const seat_btn = document.querySelectorAll(".dep-seat");
+        const seat_btn = document.querySelectorAll(".dep-seat"); // 좌석 클래스 박스
         seat_btn.forEach(
             (item) => {
                 item.addEventListener("click", function () {
@@ -946,7 +1174,7 @@
         )
 
         // 비행기 편 색 변경
-        const seat_info_btn = document.querySelectorAll('.all-seat-info');
+        const seat_info_btn = document.querySelectorAll('.all-seat-info'); // 본문에 금액 버튼
         seat_info_btn.forEach(
             (item) => {
                 item.addEventListener("click", function () {
@@ -955,18 +1183,52 @@
             }
         )
 
+        // 비행기 클래스 누르면 좌석 클래스 변경
+        const seat_class = document.querySelectorAll('.whichclass'); // 각 본문에 적힌 클래스
+        const normal_class = document.querySelector(".seat-normal"); // 일반석
+        const pre_class = document.querySelector(".seat-pre"); // 프레스티지석
+        const best_class = document.querySelector(".seat-best"); // 우등석
+
+        normal_class.addEventListener("click",()=>{ // 일반석 버튼 누르면 전부 일반석으로 변경
+            for(let i=0; i<seat_class.length; i++){
+                seat_class[i].innerText = normal_class.innerText; 
+            }
+        })
+
+        pre_class.addEventListener("click",()=>{
+            for(let i=0; i<seat_class.length; i++){
+                seat_class[i].innerText = pre_class.innerText; 
+            }
+        })
+
+        best_class.addEventListener("click",()=>{
+            for(let i=0; i<seat_class.length; i++){
+                seat_class[i].innerText = best_class.innerText; 
+            }
+        })
+
         // 결제 금액 반환
         const howmuch_btn = document.querySelector('.howmuch'); //000,000
-        const howmuch_seat_btn = document.querySelectorAll('.howmuch-seat'); //699,910
-        const change_won = document.querySelectorAll('.flight-seat');
+        const change_won = document.querySelectorAll('.seat-info'); // 각 본문 박스
+        const howmuch_seat_btn = document.querySelectorAll('.howmuch-seat'); //각 금액
 
-
-        function change_txt() {
-            howmuch_btn.innerText = howmuch_seat_btn[ 0 ].innerText;
+        for (let i = 0; i < change_won.length; i++) { // 본문 박스 누르면 결제 금액 반환
+            change_won[ i ].addEventListener("click", () => {
+                howmuch_btn.innerText = howmuch_seat_btn[ i ].innerText;
+            })
         }
 
-        change_won.addEventListener("click", change_txt())
 
+        // // 버튼 하나 눌렸으면 다른 거 안 되게 < 아직 하는 중
+        // const nav_btn = document.querySelectorAll(".dep-nav-box-btn");
+
+        // function btnDisabledCheck(){
+        //     for(var i=0;i<nav_btn.length;i++){
+        //         if(nav_btn[i].disabled == false){
+        //             nav_btn[i+1].disabled = true;
+        //         }
+        //     }
+        // }
 
 
 
