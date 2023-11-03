@@ -1,0 +1,729 @@
+/* by 창수 */
+nav {
+    font-size: 13pt;
+    font-family: 'PT Sans', Arial, Sans-serif;
+    /* position: relative; */
+}
+
+nav ul {
+    padding: 0;
+    margin: 0 auto;
+    width: auto;
+}
+
+nav a {
+    line-height: 50px;
+    height: 50px;
+}
+
+nav li a {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+nav li:last-child a {
+    border-right: 0;
+}
+
+nav a:hover,
+nav a:active {}
+
+nav a#pull {
+    display: none;
+}
+
+html {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+ul {
+    /*list-style-type: none;*/
+    margin: 0;
+    padding: 0;
+    background-color: #c6f2fe;
+    text-align: center;
+    color: #000;
+}
+
+li {
+    /*position: relative;*/
+    display: inline-block;
+}
+
+li a {
+    color: #0a0005;
+    text-align: center;
+    padding: 14.5px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    /*color: #597812;*/
+    color: #FFD400;
+    font-weight: normal;
+}
+
+.menu {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    max-width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-color: #c6f2fe;
+    color: white;
+    position: fixed;
+    z-index: 1000;
+}
+
+.container>img {
+    position: absolute;
+    width: 20%;
+    /* height: 100%; */
+    top: 25px;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.util__link-inner.-login {
+    width: 85%;
+    min-width: 4.4rem;
+    margin: 0 0.2rem 0 0;
+    border: 0;
+    outline: 0;
+    display: inline-flexbox;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.7rem;
+    padding: 0.3rem 1rem 0.4rem;
+    color: #fff;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    background: #00256c;
+    word-break: break-word;
+}
+
+.util__item-area {
+    position: absolute;
+    width: 100px;
+    /* height: 100%; */
+    top: 25px;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+}
+
+/* 상단 네비 바 */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    width: 100%;
+    height: 100px;
+}
+
+.flight-nav-bgd {
+    width: 100%;
+    height: 135px;
+    background-color: #c6f2fe;
+    position: fixed;
+    z-index: 90;
+
+}
+
+.flight-nav {
+    width: 90%;
+    height: 85px;
+    background-color: white;
+    margin: 2%;
+    margin-left: 60px;
+    position: fixed;
+    top: 50px;
+    border-radius: 10px 10px;
+    box-shadow: -1px 5px 9px gray;
+    z-index: 99;
+}
+
+.flight-code {
+    width: 300px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.flight-go-code {
+    display: inline-block;
+    margin: 0.8rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.slash {
+    font-size: 20px;
+}
+
+.flight-inner-nav {
+    display: inline-block;
+    margin: 0.8rem;
+}
+
+.flight-search {
+    width: 100px;
+    height: 40px;
+    border: 1px solid #143F90;
+    border-radius: 10px 10px;
+    display: inline-block;
+    position: absolute;
+    top: 0.7rem;
+    right: 2rem;
+
+    font-size: 15px;
+    text-align: center;
+}
+
+/* 검색창 팝업 */
+.modal {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    z-index: 90;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-body {
+    position: absolute;
+    justify-content: center;
+    background-color: white;
+    top: 200px;
+    width: 70%;
+    height: 30%;
+    border-radius: 0.7rem;
+}
+
+.modal-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 30px;
+    margin-top: 30px;
+    color: #00256c;
+}
+
+.modal-close-btn {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 96%;
+}
+
+.search-form-dep {
+    width: 500px;
+    height: 25px;
+    position: relative;
+    top: 30px;
+    left: 150px;
+}
+
+.search-form-arv {
+    width: 500px;
+    height: 25px;
+    position: relative;
+    top: 40px;
+    left: 175px;
+}
+
+.search-form-btn-dep {
+    position: relative;
+    top: 30px;
+    left: 150px;
+}
+
+.search-form-btn-arv {
+    position: relative;
+    top: 40px;
+    left: 175px;
+}
+
+#caution {
+    position: relative;
+    top: 50px;
+    left: 300px;
+    font-size: 12px;
+    color: #00256c;
+}
+
+.flight-box {
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    margin-top: 70px;
+    margin-left: 190px;
+    font-size: 15px;
+    display: flex;
+}
+
+.flight-box-dep {
+    width: 50%;
+    height: 100%;
+}
+
+.flight-box-arv {
+    width: 50%;
+    height: 100%;
+}
+
+.my-flight {
+    cursor: pointer;
+}
+
+
+/* 가는편 네비 */
+.content-nav {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    top: 50px;
+    /* z-index: -99; */
+}
+
+.dep-nav {
+    margin: 30px;
+    top: 120px;
+}
+
+.dep-nav-box {
+    top: 150px;
+    width: 90%;
+    height: 85px;
+    background-color: white;
+    margin: 2% auto;
+    border: 1px solid lightgray;
+    border-radius: 10px 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dep-nav-box-btn {
+    border: 0;
+    background-color: transparent;
+    font-size: 15px;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.dep-nav-box-btn:hover {
+    border: 1px solid #002F87;
+    box-shadow: 0 0 5px 0;
+}
+
+.dep-box-change {
+    font-weight: bold;
+    color: #3F6AE8;
+}
+
+.dep-nav-seat {
+    top: 150px;
+    width: 90%;
+    height: 85px;
+    background-color: white;
+    margin: 2% auto;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.dep-seat {
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 10px 10px;
+    margin: 1%;
+    align-items: center;
+}
+
+.dep-seat:hover {
+    border: 1px solid #002F87;
+    box-shadow: 0 0 5px 0;
+}
+
+.choice-seat-change {
+    border: 0;
+    background-color: #C6F2FE;
+    font-weight: bold;
+}
+
+.form-select {
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 10px 10px;
+    cursor: pointer;
+}
+
+.form-select-1 {
+    margin-left: 60px;
+}
+
+/* 가는 편 본문 */
+.content {
+    width: 100%;
+    height: 950px;
+    position: relative;
+    top: 50px;
+    /* z-index: -99; */
+}
+
+/* 뱅기편 */
+.flight {
+    width: 90%;
+    height: 200px;
+    margin: 10px auto;
+    border: 1px solid lightgray;
+    border-radius: 10px 10px;
+    display: flex;
+}
+
+.flight-info {
+    width: 30%;
+    border-right: 1px solid lightgray;
+    background-color: transparent;
+}
+
+.dep-time {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+
+    position: relative;
+    top: 30px;
+    /* z-index: -99; */
+
+}
+
+.time {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.howlong {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+
+    position: relative;
+    top: 30px;
+
+}
+
+.whatflight {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: space-evenly;
+
+    position: relative;
+    top: 30px;
+
+}
+
+.flight-number {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    top: 80px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.info {
+    border: 1px solid lightgray;
+    border-radius: 10px 10px;
+    cursor: pointer;
+}
+
+/* 상세보기 팝업*/
+.modal-info {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    z-index: 90;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-info-close-btn {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 3px;
+    left: 96%;
+}
+
+.info-flight {
+    width: 90%;
+    background-color: #C6F2FE;
+    height: 80px;
+    margin: auto;
+    border-radius: 0.5rem;
+}
+
+.info-flight-code-what {
+    margin-left: 100px;
+    font-size: 30px;
+}
+
+.total-flight {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #00256c;
+}
+
+.dep-info {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.arrow-info {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.arv-info {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.info-howlong {
+    font-weight: bold;
+}
+
+.info-content {
+    width: 90%;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+}
+
+.info-flight-code {
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.info-dep-time {
+    width: 80%;
+    margin-left: 100px;
+}
+
+.info-arrow {
+    width: 80%;
+    margin-left: 100px;
+    color: #00256c;
+    font-weight: bold;
+}
+
+.info-arv-time {
+    width: 80%;
+    margin-left: 100px
+}
+
+.info-icon-txt {
+    position: relative;
+    z-index: 10;
+    font-size: 12px;
+    height: 10px;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+#charge {
+    background-color: #C6F2FE;
+    box-shadow: 0 6px 5px 0 lightgray;
+    height: 70px;
+    /* opacity:0;
+    visibility: hidden; */
+}
+
+/* 
+.icon-charge:hover #charge{
+    visibility: visible;
+    opacity:1;
+} */
+
+#media {
+    background-color: #C6F2FE;
+    box-shadow: 0 6px 5px 0 lightgray;
+    height: 35px;
+}
+
+#pet {
+    background-color: #C6F2FE;
+    box-shadow: 0 6px 5px 0 lightgray;
+    height: 75px;
+}
+
+
+
+/* 좌석편 */
+
+.all-seat-info {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+}
+
+.all-seat-info:hover {
+    border: 1px solid #002F87;
+    box-shadow: 0 0 5px 0;
+}
+
+.choice {
+    background-color: #C6F2FE;
+    border: 1px solid #002F87;
+    box-shadow: 0 0 6px 0;
+}
+
+.seat-info {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flight-seat {
+    width: 100%;
+}
+
+.whichclass {
+    height: 30px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.howmuch-seat {
+    height: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.howmuch-seat-won {
+    font-size: 12px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 250px;
+    bottom: 33px;
+}
+
+/* 정보편 */
+
+.change-info {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.howmanyseat {
+    font-size: 12px;
+    color: red;
+    margin-top: 33px;
+}
+
+.inform {
+    font-size: 12px;
+}
+
+/* 하단 */
+
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    box-shadow: -1px -5px 12px -4px gray;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.payment-box {
+    width: 500px;
+    height: 100%;
+    margin-left: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.change-krw {
+    background-color: transparent;
+    border: 1px solid lightgray;
+    border-radius: 0.7rem;
+    height: 30px;
+    color: #002F87;
+    font-weight: bold;
+}
+
+.howmuch {
+    font-size: 30px;
+    font-weight: bold;
+    color: #002F87;
+}
+
+.won {
+    font-weight: bold;
+    color: #002F87;
+}
+
+.next-btn {
+    width: 180px;
+    height: 50px;
+
+
+    background-color: #002F87;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 1rem;
+}

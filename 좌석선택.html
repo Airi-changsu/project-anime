@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        /* by 창수 */
+        nav {
+            font-size: 13pt;
+            font-family: 'PT Sans', Arial, Sans-serif;
+            /* position: relative; */
+        }
+
+        nav ul {
+            padding: 0;
+            margin: 0 auto;
+            width: auto;
+        }
+
+        nav a {
+            line-height: 50px;
+            height: 50px;
+        }
+
+        nav li a {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        nav li:last-child a {
+            border-right: 0;
+        }
+
+        nav a:hover,
+        nav a:active {}
+
+        nav a#pull {
+            display: none;
+        }
+
+        html {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        ul {
+            /*list-style-type: none;*/
+            margin: 0;
+            padding: 0;
+            background-color: #c6f2fe;
+            text-align: center;
+            color: #000;
+        }
+
+        li {
+            /*position: relative;*/
+            display: inline-block;
+        }
+
+        li a {
+            color: #0a0005;
+            text-align: center;
+            padding: 14.5px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            /*color: #597812;*/
+            color: #FFD400;
+            font-weight: normal;
+        }
+
+        .menu {
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            max-width: 100%;
+            background-position: center;
+            background-size: cover;
+            background-color: #c6f2fe;
+            color: white;
+            position: fixed;
+            z-index: 1000;
+        }
+
+        .container>img {
+            position: absolute;
+            width: 20%;
+            /* height: 100%; */
+            top: 25px;
+            left: 10%;
+            transform: translate(-50%, -50%);
+        }
+
+        .util__link-inner.-login {
+            width: 85%;
+            min-width: 4.4rem;
+            margin: 0 0.2rem 0 0;
+            border: 0;
+            outline: 0;
+            display: inline-flexbox;
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.7rem;
+            padding: 0.3rem 1rem 0.4rem;
+            color: #fff;
+            border-radius: 1.5rem;
+            text-decoration: none;
+            cursor: pointer;
+            background: #00256c;
+            word-break: break-word;
+        }
+
+        .util__item-area {
+            position: absolute;
+            width: 100px;
+            /* height: 100%; */
+            top: 25px;
+            left: 90%;
+            transform: translate(-50%, -50%);
+            pointer-events: auto;
+        }
+
+        /* 상단 네비 바 */
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nav {
+            width: 100%;
+            height: 100px;
+        }
+
+        .flight-nav-bgd {
+            width: 100%;
+            height: 135px;
+            background-color: #c6f2fe;
+            position: fixed;
+            z-index: 90;
+
+        }
+
+        .flight-nav {
+            width: 90%;
+            height: 85px;
+            background-color: white;
+            margin: 2%;
+            margin-left: 60px;
+            position: fixed;
+            top: 50px;
+            border-radius: 10px 10px;
+            box-shadow: -1px 5px 9px gray;
+            z-index: 99;
+        }
+
+        .flight-code {
+            width: 300px;
+            height: 50px;
+            margin-left: 20px;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        .flight-go-code {
+            display: inline-block;
+            margin: 0.8rem;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .slash {
+            font-size: 20px;
+        }
+
+        .flight-inner-nav {
+            display: inline-block;
+            margin: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 메인네비바 by 창수 -->
+    <body-LCS id="LCS" bottommargin="0" leftmargin="0" rightmargin="0" style="background-color:#F6F6F6">
+        <div class="menu">
+            <nav class="clearfix">
+                <ul class="clearfix">
+                    <div class="container"><img src="../project-anime/images/대한항공로고.png"></div>
+                    <li><a href="http://127.0.0.1:5500/git/project-anime/login.html">예약</a></li>
+                    <!--여기 부분에 URL 작성하면 됨-->
+                    <li><a href="http://www._____.com/About">공항</a></li>
+                    <li><a href="http://www._____.com/Project">기내</a></li>
+                    <li><a href="http://www._____.com/Travel">스카이패스</a></li>
+                    <li><a href="http://www._____.com/Contact">호텔</a></li>
+                    <li>
+                        <div class="util__item-area"><a class="util__link-inner -login"
+                                href="http://127.0.0.1:5500/git/project-anime/login.html">Log in</a></div>
+                    </li>
+                </ul>
+                <a id="pull" href="#"></a>
+            </nav>
+        </div>
+    </body-LCS>
+
+    <!-- 상단네비바 -->
+    <div class="nav">
+        <div class="flight-nav-bgd"></div>
+        <div class="flight-nav">
+            <div class="flight-code">
+                <span class="flight-go-code flight-dep-code">출발지</span>
+                <i class="fa-solid fa-rotate-right flight-go-code" style="cursor: pointer;"></i>
+                <span class="flight-go-code flight-arv-code">도착지</span>
+            </div>
+
+            <span class="slash">|</span>
+
+            <div class="flight-inner-nav flight-schedule">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>2023년 <span class="start-month">XX</span>월 <span class="start-date">XX</span>일
+                    ~ 2023년 <span class="end-month">XX</span>월 <span class="end-date">XX</span>일</span>
+            </div>
+
+            <span class="slash">|</span>
+
+            <div class="flight-inner-nav flight-person">
+                <i class="fa-solid fa-person"></i>
+                <span>성인 1명</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 좌석 선택 본문 -->
+    <div class="content">
+        <div class="airplane">
+            <div></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

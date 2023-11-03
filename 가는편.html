@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/project-anime/가는편.css">
+    <title>가는편</title>        
+</head>
+
+<body>
+    <!-- 메인네비바 by 창수 -->
+    <body-LCS id="LCS" bottommargin="0" leftmargin="0" rightmargin="0" style="background-color:#F6F6F6">
+        <div class="menu">
+            <nav class="clearfix">
+                <ul class="clearfix">
+                    <div class="container"><img src="../project-anime/images/대한항공로고.png"></div>
+                    <li><a href="http://127.0.0.1:5500/git/project-anime/login.html">예약</a></li>
+                    <!--여기 부분에 URL 작성하면 됨-->
+                    <li><a href="http://www._____.com/About">공항</a></li>
+                    <li><a href="http://www._____.com/Project">기내</a></li>
+                    <li><a href="http://www._____.com/Travel">스카이패스</a></li>
+                    <li><a href="http://www._____.com/Contact">호텔</a></li>
+                    <li>
+                        <div class="util__item-area"><a class="util__link-inner -login"
+                                href="http://127.0.0.1:5500/git/project-anime/login.html">Log in</a></div>
+                    </li>
+                </ul>
+                <a id="pull" href="#"></a>
+            </nav>
+        </div>
+    </body-LCS>
+
+    <!-- 상단네비바 -->
+    <div class="nav">
+        <div class="flight-nav-bgd"></div>
+        <div class="flight-nav">
+            <div class="flight-code">
+                <span class="flight-go-code flight-dep-code">출발지</span>
+                <i class="fa-solid fa-rotate-right flight-go-code" style="cursor: pointer;"></i>
+                <span class="flight-go-code flight-arv-code">도착지</span>
+            </div>
+
+            <span class="slash">|</span>
+
+            <div class="flight-inner-nav flight-schedule">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>2023년 <span class="start-month">XX</span>월 <span class="start-date">XX</span>일
+                    ~ 2023년 <span class="end-month">XX</span>월 <span class="end-date">XX</span>일</span>
+            </div>
+
+            <span class="slash">|</span>
+
+            <div class="flight-inner-nav flight-person">
+                <i class="fa-solid fa-person"></i>
+                <span>성인 1명</span>
+            </div>
+
+            <button class="flight-inner-nav flight-search" style="cursor: pointer;">항공편검색</button>
+        </div>
+    </div>
+    <!-- 검색창 -->
+    <div class="modal">
+        <div class="modal-body">
+            <div class="modal-title">항공편 검색</div>
+            <button class="modal-close-btn">&times;</button>
+
+            <input type="search" class="search-form-dep" list="searchBox-dep" placeholder="출발지 검색">
+            <input class="search-form-btn-dep" type="button" value="검색">
+            <input type="search" class="search-form-arv" list="searchBox-arv" placeholder="도착지 검색">
+            <input class="search-form-btn-arv" type="button" value="검색">
+            <div id="caution"> 출발지 / 도착지의 검색 버튼을 모두 눌러주세요 !</div>
+
+            <datalist id="searchBox-dep">
+                <option class="searchBox-value" value="ICN 인천"></option>
+                <option class="searchBox-value" value="GMP 김포"></option>
+                <option class="searchBox-value" value="TYO 도쿄"></option>
+                <option class="searchBox-value" value="SHA 상하이"></option>
+                <option class="searchBox-value" value="HKG 홍콩"></option>
+                <option class="searchBox-value" value="GUM 괌"></option>
+                <option class="searchBox-value" value="LAS 라스베이거스"></option>
+            </datalist>
+            <datalist id="searchBox-arv">
+                <option class="searchBox-value" value="SEA 시애틀"></option>
+                <option class="searchBox-value" value="WAS 워싱턴"></option>
+                <option class="searchBox-value" value="LHR 런던"></option>
+                <option class="searchBox-value" value="MAD 마드리드"></option>
+                <option class="searchBox-value" value="SYD 시드니"></option>
+                <option class="searchBox-value" value="NYC 뉴욕"></option>
+                <option class="searchBox-value" value="DXB 두바이"></option>
+            </datalist>
+            <div class="flight-box">
+                <div class="flight-box-dep">
+                    <strong>가는편</strong>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> ICN 인천</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> GMP 김포</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> TYO 도쿄</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> SHA 상하이</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> HKG 홍콩</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> GUM 괌</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> LAS 라스베이거스</p>
+                </div>
+
+                <div class="flight-box-arv">
+                    <strong>오는편</strong>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> SEA 시애틀</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> WAS 워싱턴</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> LHR 런던</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> MAD 마드리드</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> SYD 시드니</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> NYC 뉴욕</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> DXB 두바이</p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    </div>
+    <!-- 가는 편 네비 -->
+    <div class="content-nav">
+        <div class="dep-nav">
+            <span style="font-weight: bold;" class="dep-nav-text">가는 편</span>
+            <span class="dep-nav-text dep-nav-text-dep">출발지</span>
+            <span class="dep-nav-text"><i class="fa-solid fa-arrow-right"></i></span>
+            <span class="dep-nav-text dep-nav-text-arv">도착지</span>
+        </div>
+
+        <div class="dep-nav-box">
+            <button class="dep-nav-box-btn">
+                <span class="dep-btn-date">
+                    <span class="week-date">XX</span>일</span>
+                <br><span class="dep-btn-price">000,000원</span></button>
+            <button class="dep-nav-box-btn">
+                <span class="dep-btn-date">
+                    <span class="week-date">XX</span>일</span>
+                <br><span class="dep-btn-price">000,000원</span></button>
+            <button class="dep-nav-box-btn">
+                <span class="dep-btn-date">
+                    <span class="week-date">XX</span>일</span>
+                <br><span class="dep-btn-price">000,000원</span></button>
+            <button class="dep-nav-box-btn">
+                <span class="dep-btn-date">
+                    <span class="week-date">XX</span>일</span>
+                <br><span class="dep-btn-price">000,000원</span></button>
+            <button class="dep-nav-box-btn">
+                <span class="dep-btn-date">
+                    <span class="week-date">XX</span>일</span>
+                <br><span class="dep-btn-price">000,000원</span></button>
+            <button class="dep-nav-box-btn">
+                <span class="dep-btn-date">
+                    <span class="week-date">XX</span>일</span>
+                <br><span class="dep-btn-price">000,000원</span></button>
+            <button class="dep-nav-box-btn">
+                <span class="dep-btn-date">
+                    <span class="week-date">XX</span>일</span>
+                <br><span class="dep-btn-price">000,000원</span></button>
+        </div>
+
+        <div class="dep-nav-seat">
+            <div class="dep-nav-seat dep-seat seat-normal">일반석</div>
+            <div class="dep-nav-seat dep-seat seat-pre">프레스티지석</div>
+            <div class="dep-nav-seat dep-seat seat-best">일등석</div>
+        </div>
+
+        <select class="form-select form-select-1" aria-label="Default select example"> <!-- 박스 다시 만들기-->
+            <option selected>추천순 정렬</option>
+            <option value="1"> 추천 순</option>
+            <option value="2">출발 시간 순</option>
+            <option value="3">도착 시간 순</option>
+        </select>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>직항 및 경유</option>
+            <option value="1">전체</option>
+            <option value="2">직항</option>
+            <option value="3">경유</option>
+        </select>
+    </div>
+
+    <!-- 일반석 -->
+
+
+    <!-- 가는 편 본문 -->
+    <div class="content">
+        <div class="flight">
+            <div class="flight-info">
+                <div class="dep-time">
+                    <span class="time real-dep-time">1:00</span>
+                    <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    <span class="time real-arv-time">15:00</span>
+                </div>
+                <div class="howlong">14시간</div>
+                <div class="whatflight" style="font-weight: bold;">
+                    <span>ICN</span><span></span>
+                    <span>NYC</span>
+                </div>
+                <div class="flight-number">
+                    <span><i class="fa-solid fa-jet-fighter"></i> <span class="real-flight-code">FKE112</span></span>
+                    <button class="info info-btn">상세보기</button>
+                </div>
+            </div>
+
+            <div class="all-seat-info">
+                <div class="seat-info">
+                    <div class="flight-seat">
+                        <div class="whichclass">프레스티지석</div>
+                        <span class="howmuch-seat howmuch-pre">501,300</span>
+                        <p class="howmuch-seat-won">원</p>
+                    </div>
+                </div>
+
+                <div class="change-info">
+                    <p class="howmanyseat">13석</p>
+                    <p class=inform><i class="fa-solid fa-rotate"></i> 변경 가능</p>
+                    <p class=inform><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
+                    <p class=inform><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
+                    <p class=inform><i class="fa-solid fa-m"></i>13750 마일 적립</p>
+                </div>
+            </div>
+        </div>
+        <div class="flight">
+            <div class="flight-info">
+                <div class="dep-time">
+                    <span class="time real-dep-time">12:00</span>
+                    <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    <span class="time real-arv-time">02:00</span>
+                </div>
+                <div class="howlong">14시간</div>
+                <div class="whatflight" style="font-weight: bold;">
+                    <span>ICN</span><span></span>
+                    <span>NYC</span>
+                </div>
+                <div class="flight-number">
+                    <span><i class="fa-solid fa-jet-fighter"></i><span class="real-flight-code"> AAE105</span></span>
+                    <button class="info info-btn">상세보기</button>
+                </div>
+            </div>
+            <div class="all-seat-info">
+                <div class="seat-info">
+                    <div class="flight-seat">
+                        <div class="whichclass">프레스티지석</div>
+                        <span class="howmuch-seat howmuch-pre">490,100</span>
+                        <p class="howmuch-seat-won">원</p>
+
+                    </div>
+                </div>
+
+                <div class="change-info">
+                    <p class="howmanyseat">26석</p>
+                    <p class=inform><i class="fa-solid fa-rotate"></i> 변경 가능</p>
+                    <p class=inform><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
+                    <p class=inform><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
+                    <p class=inform><i class="fa-solid fa-m"></i>13750 마일 적립</p>
+                </div>
+            </div>
+        </div>
+        <div class="flight">
+            <div class="flight-info">
+                <div class="dep-time">
+                    <span class="time real-dep-time">15:00</span>
+                    <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    <span class="time real-arv-time">05:00</span>
+                </div>
+                <div class="howlong">14시간</div>
+                <div class="whatflight" style="font-weight: bold;">
+                    <span>ICN</span><span></span>
+                    <span>NYC</span>
+                </div>
+                <div class="flight-number">
+                    <span><i class="fa-solid fa-jet-fighter"></i><span class="real-flight-code"> GGP090</span></span>
+                    <button class="info info-btn">상세보기</button>
+                </div>
+            </div>
+            <div class="all-seat-info ">
+                <div class="seat-info">
+                    <div class="flight-seat">
+                        <div class="whichclass">프레스티지석</div>
+                        <span class="howmuch-seat howmuch-pre">499,020</span>
+                        <p class="howmuch-seat-won">원</p>
+
+                    </div>
+                </div>
+
+                <div class="change-info">
+                    <p class="howmanyseat">8석</p>
+                    <p class=inform><i class="fa-solid fa-rotate"></i> 변경 가능</p>
+                    <p class=inform><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
+                    <p class=inform><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
+                    <p class=inform><i class="fa-solid fa-m"></i>13750 마일 적립</p>
+                </div>
+            </div>
+        </div>
+        <div class="flight">
+            <div class="flight-info">
+                <div class="dep-time">
+                    <span class="time real-dep-time">07:00</span>
+                    <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    <span class="time real-arv-time">21:00</span>
+                </div>
+                <div class="howlong">14시간</div>
+                <div class="whatflight" style="font-weight: bold;">
+                    <span>ICN</span><span></span>
+                    <span>NYC</span>
+                </div>
+                <div class="flight-number">
+                    <span><i class="fa-solid fa-jet-fighter"></i><span class="real-flight-code"> HYL095</span></span>
+                    <button class="info info-btn">상세보기</button>
+                </div>
+            </div>
+            <div class="all-seat-info">
+                <div class="seat-info">
+                    <div class="flight-seat">
+                        <div class="whichclass">프레스티지석</div>
+                        <span class="howmuch-seat howmuch-pre">510,290</span>
+                        <p class="howmuch-seat-won">원</p>
+
+                    </div>
+                </div>
+
+                <div class="change-info">
+                    <p class="howmanyseat">6석</p>
+                    <p class=inform><i class="fa-solid fa-rotate"></i> 변경 가능</p>
+                    <p class=inform><i class="fa-solid fa-sack-dollar"></i>환불 가능</p>
+                    <p class=inform><i class="fa-solid fa-chair"></i>좌석배정 가능</p>
+                    <p class=inform><i class="fa-solid fa-m"></i>13750 마일 적립</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 상세보기 팝업 -->
+    <div class="modal modal-info">
+        <div class="modal-body modal-info-body">
+            <div class="modal-title model-info">여정 정보 상세보기</div>
+            <button class="modal-info-close-btn">&times;</button>
+
+            <div class="info-flight">
+                <div class="total-flight">
+                    <div class="info-where">
+                        <span class="dep-nav-text dep-nav-text-dep dep-info">출발지</span>
+                        <span class="dep-nav-text"><i class="fa-solid fa-arrow-right arrow-info"></i></span>
+                        <span class="dep-nav-text dep-nav-text-arv arv-info">도착지</span>
+                    </div>
+                    <div class="info-howlong">
+                        <span class="info-total">총 14시간 0분 여정</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-content">
+                <div class="info-flight-code">
+                    <div class="info-flight-code-what" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        뱅기코드..~</div>
+                    <div class="info-icon">
+                        <span><i class="fa-solid fa-battery-half icon-charge"
+                                style="cursor: pointer;"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span><i class="fa-solid fa-photo-film icon-media"
+                                style="cursor: pointer;"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span><i class="fa-solid fa-dog icon-dog"
+                                style="cursor: pointer;"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+
+                <div class="info-icon-txt">
+                    <span id="charge">기내 <br>전원<br> 공급 <br>장치</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span id="media">기내 <br> 엔터테인먼트</span>&nbsp;&nbsp;
+                    <span id="pet">기내 <br>동반<br> 가능 <br>*사전
+                        접수시</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+
+                <div class="info-dep-time">
+                    <p class="info-dep-where" style="font-weight: bold;">출발지</p>
+                    <p class="info-dep-when">2023년 <span class="start-month">XX</span>월 <span
+                            class="start-date">XX</span>일 <span class="real-dep-when">1:00</span> | 터미널2</p>
+                </div>
+                <div class="info-arrow"><i class="fa-solid fa-arrow-down-long"></i> 14시간 0분</div>
+                <div class="info-arv-time">
+                    <p class="info-arv-where" style="font-weight: bold;">도착지</p>
+                    <p class="info-arv-when">2023년 <span class="start-month">XX</span>월 <span
+                            class="start-date">XX</span>일 <span class="real-arv-when">1:00</span> | 터미널4</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 하단 -->
+    <div class="footer">
+        <div class="payment-box">
+            <span>총액</span>
+            <button class="change-krw"><i class="fa-solid fa-sack-dollar"></i>통화 KRW</button>
+            <span><span class="howmuch">000,000</span><span class="won">원</span></span>
+            <button class="next-btn" style="cursor: pointer;">다음 여정</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="/project-anime/가는편.js?ver=1"></script>
+
+</body>
+</html>
