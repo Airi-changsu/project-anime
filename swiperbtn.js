@@ -1,30 +1,23 @@
-const imagePaths = [
-    '../project-anime/images/여행 1.jpg',
-    '../project-anime/images/여행 2.jpg',
-    '../project-anime/images/여행 3.jpg',
-    '../project-anime/images/여행 4.jpg',
-    '../project-anime/images/여행 5.jpg',
-    // 추가 이미지 경로 계속 추가
-];
+let currentIndex = 0;
+const totalImages = 5; 
 
-let currentImageIndex = 0;
-
-const prevButton = document.getElementById('prevButton');
-const nextButton = document.getElementById('nextButton');
-const image = document.getElementById('myImage');
-
-prevButton.addEventListener('click', () => changeImage(-1));
-nextButton.addEventListener('click', () => changeImage(1));
-
-function changeImage(step) {
-    currentImageIndex += step;
-
-    if (currentImageIndex < 0) {
-        currentImageIndex = imagePaths.length - 1;
-    } else if (currentImageIndex >= imagePaths.length) {
-        currentImageIndex = 0;
-    }
-
-    const newImageSrc = imagePaths[currentImageIndex];
-    image.src = newImageSrc;
+function nextImage() {
+    currentIndex = (currentIndex + 1) % totalImages;
+    updateSlider();
 }
+
+function prevImage() {
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+    updateSlider();
+}
+
+function updateSlider() {
+    const container = document.querySelector(".top_img_wrapper");
+    const slideWidth = 20; 
+    const transformValue = -currentIndex * slideWidth;
+    container.style.transform = `translateX(${transformValue}%)`;
+}
+
+document.getElementById("prevButton").addEventListener("click", prevImage);
+
+document.getElementById("nextButton").addEventListener("click", nextImage);

@@ -221,7 +221,7 @@ html {
 
 .title_step {
     width: 100%;
-    height: 100px;
+    height: 50px;
     margin-top: 25px;
     font-size: 1.2rem;
 }
@@ -463,3 +463,9 @@ th {
 @import url("https://font.elice.io/css?family=Elice+DX+Neolli");
 
 html, body , li ,table ,option ,select,button { font-family: "Elice DX Neolli", sans-serif; }
+
+@media only screen and (max-width:1000px){
+    body, div{
+        width: 100%;
+    }
+}

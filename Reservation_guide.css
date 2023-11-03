@@ -54,7 +54,7 @@
     width: 120px;
     height: 40px;
     cursor: pointer;
-    border: 0px;
+    border: 1px solid #00256c;
     border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
     top: 50px;
     left: 10px;
@@ -80,6 +80,7 @@
 .cls_seat:hover {
     border: 1px solid #0064de;
 }
+
 /* 밑부터 창수 상단 타이틀 */
 
 nav{
@@ -118,7 +119,7 @@ nav a#pull{
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    text-align: center;
+    
     color: #000;
     border-bottom: 1px solid #d9dbe1;
   }
@@ -219,7 +220,7 @@ html {
 
 .title_step {
     width: 100%;
-    height: 100px;
+    height: 50px;
     margin-top: 25px;
     font-size: 1.2rem;
 }
@@ -433,3 +434,9 @@ th {
 @import url("https://font.elice.io/css?family=Elice+DX+Neolli");
 
 html, body , li ,table ,option ,select,button{ font-family: "Elice DX Neolli", sans-serif; }
+
+@media only screen and (max-width:1000px){
+    body, div{
+        width: 100%;
+    }
+}
