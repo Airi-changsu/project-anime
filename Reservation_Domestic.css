@@ -398,18 +398,46 @@ th {
     height: 70px;
     background-size: contain;
 }
-.ft_container_box {
+.ft_container_box1 {
     width: 92%;
-    height: 600px;
+    height: 400px;
+    margin-left: 50px;
+    margin-top: 90px;
+    border-collapse: collapse;
+}
+.ft_container_box2 {
+    width: 92%;
+    
+    margin-left: 50px;
+    margin-top: 90px;
+    border-collapse: collapse;
+}
+.ft_container_box3 {
+    width: 92%;
+    
+    margin-left: 50px;
+    margin-top: 90px;
+    border-collapse: collapse;
+}
+.ft_container_box4 {
+    width: 92%;
+    
+    margin-left: 50px;
+    margin-top: 90px;
+    border-collapse: collapse;
+}
+.ft_container_box5 {
+    width: 92%;
+    
     margin-left: 50px;
     margin-top: 90px;
     border-collapse: collapse;
 }
 .ft_wn_box {
-    width: 92%;
+    width: 100%;
     height: 150px;
+    margin: 0 auto;
     margin-left: 50px;
-    margin-top: 40px;
     background-color: #f8f9fc;
 }
 .ft_ctn_wid1{
@@ -420,7 +448,18 @@ th {
     padding-top: 20px;
     padding-left: 40px;
 }
+.ft_wn_container {
+    width: 92%;
+    height: 200px;
+    background-color: #ffffff;
+}
+.ft_wn_container2 {
+    width: 92%;
+    height: 200px;
+    background-color: #ffffff;
+}
+
 
 @import url("https://font.elice.io/css?family=Elice+DX+Neolli");
 
-html, body , li ,table ,option ,select,button{ font-family: "Elice DX Neolli", sans-serif; }
+html, body , li ,table ,option ,select,button { font-family: "Elice DX Neolli", sans-serif; }

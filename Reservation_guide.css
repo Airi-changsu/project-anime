@@ -54,7 +54,7 @@
     width: 120px;
     height: 40px;
     cursor: pointer;
-    border: 1px solid #00256c;
+    border: 0px;
     border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
     top: 50px;
     left: 10px;
@@ -63,8 +63,8 @@
     text-align: center;
 }
 .ot_bt:hover{
-    border-style: double;
     border: 1px solid #0064de;
+    outline-offset: -4px;
 }
 
 .cls_seat {
@@ -381,6 +381,14 @@ th {
 }
 .ft_th {
     padding: 1rem;
+}
+.ft_bt {
+    cursor: pointer;
+    border-radius: 50%;
+}
+.ft_bt:hover{
+    border: 1px solid #0064de;
+    outline-offset: -4px;
 }
 .ft_pd {
     padding: 0.4rem;

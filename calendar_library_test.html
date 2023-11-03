@@ -31,7 +31,7 @@
             <li><a href="http://www._____.com/Project">기내</a></li>
             <li><a href="http://www._____.com/Travel">스카이패스</a></li>
             <li><a href="http://www._____.com/Contact">호텔</a></li>
-            <li><div class="util__item-area"><a class="util__link-inner -login" href="./login.html">Log in</a></div></li>
+            <li><div class="util__item-area"><a class="util__link-inner -login" href="./login.html">로그인</a></div></li>
         </ul>
         <a id="pull" href="#"></a>
     </nav>
@@ -48,16 +48,15 @@
         </div>
         <div class="calendar2"><input type="text" name="daterange2" /></div>
         <div class="line2"></div>
-        <button id="clrbt" class="clrbt" type="button" onclick="location.href='승객정보.html'" disabled="disabled" >확인</button>
+        <button id="clrbt" class="clrbt" type="button" onclick="location.href='좌석등급가는편.html'" disabled="disabled" >확인</button>
     </div>
     
 </form>
 
 
     <script>
-
 document.getElementById('clrbt').addEventListener('click', function() {
-    location.href = '승객정보.html';
+    location.href = '좌석등급가는편.html';
 });
 
 $('input[name="daterange2"]').daterangepicker({
@@ -88,8 +87,11 @@ $('input[name="daterange2"]').daterangepicker({
     
     
 }, function(start, end, label) {
-  console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
-  $('#clrbt').prop('disabled', false);
+    var selectedDate = start.format('YYYY-MM-DD');
+    var selectedEndDate = end.format('YYYY-MM-DD');
+    localStorage.setItem('selectedDate', selectedDate);
+    localStorage.setItem('selectedEndDate', selectedEndDate);
+    $('#clrbt').prop('disabled', false);
 
 });
 $('input[name="rdtrip"]').change(function() {
@@ -122,6 +124,10 @@ minDate: moment(),
 
 
 }, function(start, end, label) {
+    var selectedDate = start.format('YYYY-MM-DD');
+    var selectedEndDate = end.format('YYYY-MM-DD');
+    localStorage.setItem('selectedDate', selectedDate);
+    localStorage.setItem('selectedEndDate', selectedEndDate);
 console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
 $('#clrbt').prop('disabled', false);
 // 편도 캘린더
@@ -155,8 +161,11 @@ minDate: moment(),
 
 
 }, function(start, end, label) {
-console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
-$('#clrbt').prop('disabled', false);
+    var selectedDate = start.format('YYYY-MM-DD');
+    var selectedEndDate = end.format('YYYY-MM-DD');
+    localStorage.setItem('selectedDate', selectedDate);
+    localStorage.setItem('selectedEndDate', selectedEndDate);
+    $('#clrbt').prop('disabled', false);
             });
         }
     });
