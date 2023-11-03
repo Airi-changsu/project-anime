@@ -1,5 +1,24 @@
 /* top css */
 
+.image-container_top {
+    text-align: center;
+    margin: 20px;
+    max-width: 900px; 
+    margin: 0 auto; 
+    overflow: hidden;
+}
+
+.top_img_wrapper {
+    display: flex;
+    width: 500%;
+    transition: transform 0.5s ease
+}
+
+.img {
+    flex: 0 0 20%;
+    height: auto;
+}
+
 .top_info {
     position: relative;
     top: -105px;
@@ -14,29 +33,10 @@
     box-shadow: 0 20px 10px 0 rgba(5, 5, 5, 0.15)
 }
 
-.image-container_top {
-    text-align: center;
-    margin: 20px;
-    max-width: 900px; 
-    margin: 0 auto; 
-    overflow: hidden;
-}
-
 .image-container_top img {
     width: 900px; 
     height: 500px; 
     margin-top: 90px;
-}
-
-.top_img_wrapper {
-    display: flex;
-    width: 500%;
-    transition: transform 0.5s ease
-}
-
-.img {
-    flex: 0 0 20%;
-    height: auto;
 }
 
 #prevButton {
