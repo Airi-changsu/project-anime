@@ -1,14 +1,42 @@
+/* top css */
+
+.top_info {
+    position: relative;
+    top: -105px;
+    width: 100%;
+    min-height: 100px;
+    padding: 10px 20px 10px 20px;
+    z-index: 2;
+    color: #fff;
+    background: rgba(0,0,0,.7);
+    text-align: left;
+    box-sizing: border-box;
+    box-shadow: 0 20px 10px 0 rgba(5, 5, 5, 0.15)
+}
+
 .image-container_top {
     text-align: center;
     margin: 20px;
     max-width: 900px; 
     margin: 0 auto; 
+    overflow: hidden;
 }
 
 .image-container_top img {
     width: 900px; 
     height: 500px; 
-    margin-top: 75px; 
+    margin-top: 90px;
+}
+
+.top_img_wrapper {
+    display: flex;
+    width: 500%;
+    transition: transform 0.5s ease
+}
+
+.img {
+    flex: 0 0 20%;
+    height: auto;
 }
 
 #prevButton {
@@ -40,15 +68,38 @@
     background-color: #00568C; 
 }
 
+.slide {
+    transform: translateX(-20%); 
+    transition: transform 0.5s ease; 
+}
+
+/* top css */
+
+
+
+/* center css */
+
 .center {
     display: flex;
     justify-content: space-around;
+    position: relative;
+    top: -10px;
 }
 
 .title {
     position: absolute; 
-    top: 740px; 
-    left: 90px; 
+    top: 150px; 
+    left: 70px; 
+}
+
+.info_wrap {
+    position: relative;
+    width: 272px;
+}
+
+.image {
+    width: 100%;
+    display: block;
 }
 
 .center img {
@@ -59,15 +110,67 @@
     margin-top: 290px; 
 }
 
+.info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100px;
+    padding: 10px 20px 10px 20px;
+    z-index: 2;
+    color: #fff;
+    background: rgba(0,0,0,.7);
+    text-align: left;
+    box-sizing: border-box;
+    box-shadow: 0 20px 10px 0 rgba(5, 5, 5, 0.15)
+}
+
+.info_title {
+    position: absolute;
+    top: -12px;
+    left: 15px;
+}
+
+.info_a {
+    position: absolute;
+    top: 15px;
+}
+
+.info_b {
+    position: absolute;
+    top: 40px;
+    left: 15px;
+}
+
+.info_c {
+    position: absolute;
+    top: 30px;
+    left: 90px;
+    color: red;
+}
+
+.info_d {
+    position: absolute;
+    top: 35px;
+    left: 240px;
+}
+
+/* center css */
+
+
+
+/* Last css */
+
 .Last {
     display: flex;
     justify-content: space-around;
+    position: relative;
 }
 
 .title_L {
     position: absolute; 
-    top: 1440px; 
-    left: 90px; 
+    top: 160px; 
+    left: 70px; 
 }
 
 .Last img {
@@ -77,3 +180,22 @@
     margin: 0 auto; 
     margin-top: 310px; 
 }
+
+.Last_info_wrap {
+    position: relative;
+    width: 400px;
+}
+
+.Last_info {
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    padding: 10px 20px 10px 20px;
+    color: #fff;
+    background: rgb(87, 86, 86);
+    text-align: left;
+    box-sizing: border-box;
+    box-shadow: 0 20px 10px 0 rgba(5, 5, 5, 0.15)
+}
+
+/* Last css */
