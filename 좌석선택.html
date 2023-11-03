@@ -5,186 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>Document</title>
-    <style>
-        /* by 창수 */
-        nav {
-            font-size: 13pt;
-            font-family: 'PT Sans', Arial, Sans-serif;
-            /* position: relative; */
-        }
+    <link rel="stylesheet" href="/project-anime/좌석선택.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-        nav ul {
-            padding: 0;
-            margin: 0 auto;
-            width: auto;
-        }
+    <title>좌석선택</title>
 
-        nav a {
-            line-height: 50px;
-            height: 50px;
-        }
-
-        nav li a {
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-        }
-
-        nav li:last-child a {
-            border-right: 0;
-        }
-
-        nav a:hover,
-        nav a:active {}
-
-        nav a#pull {
-            display: none;
-        }
-
-        html {
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        }
-
-        ul {
-            /*list-style-type: none;*/
-            margin: 0;
-            padding: 0;
-            background-color: #c6f2fe;
-            text-align: center;
-            color: #000;
-        }
-
-        li {
-            /*position: relative;*/
-            display: inline-block;
-        }
-
-        li a {
-            color: #0a0005;
-            text-align: center;
-            padding: 14.5px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover {
-            /*color: #597812;*/
-            color: #FFD400;
-            font-weight: normal;
-        }
-
-        .menu {
-            width: 100%;
-            height: 50px;
-            text-align: center;
-            max-width: 100%;
-            background-position: center;
-            background-size: cover;
-            background-color: #c6f2fe;
-            color: white;
-            position: fixed;
-            z-index: 1000;
-        }
-
-        .container>img {
-            position: absolute;
-            width: 20%;
-            /* height: 100%; */
-            top: 25px;
-            left: 10%;
-            transform: translate(-50%, -50%);
-        }
-
-        .util__link-inner.-login {
-            width: 85%;
-            min-width: 4.4rem;
-            margin: 0 0.2rem 0 0;
-            border: 0;
-            outline: 0;
-            display: inline-flexbox;
-            font-size: 1.1rem;
-            font-weight: 700;
-            line-height: 1.7rem;
-            padding: 0.3rem 1rem 0.4rem;
-            color: #fff;
-            border-radius: 1.5rem;
-            text-decoration: none;
-            cursor: pointer;
-            background: #00256c;
-            word-break: break-word;
-        }
-
-        .util__item-area {
-            position: absolute;
-            width: 100px;
-            /* height: 100%; */
-            top: 25px;
-            left: 90%;
-            transform: translate(-50%, -50%);
-            pointer-events: auto;
-        }
-
-        /* 상단 네비 바 */
-
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .nav {
-            width: 100%;
-            height: 100px;
-        }
-
-        .flight-nav-bgd {
-            width: 100%;
-            height: 135px;
-            background-color: #c6f2fe;
-            position: fixed;
-            z-index: 90;
-
-        }
-
-        .flight-nav {
-            width: 90%;
-            height: 85px;
-            background-color: white;
-            margin: 2%;
-            margin-left: 60px;
-            position: fixed;
-            top: 50px;
-            border-radius: 10px 10px;
-            box-shadow: -1px 5px 9px gray;
-            z-index: 99;
-        }
-
-        .flight-code {
-            width: 300px;
-            height: 50px;
-            margin-left: 20px;
-            margin-top: 1rem;
-            display: inline-block;
-        }
-
-        .flight-go-code {
-            display: inline-block;
-            margin: 0.8rem;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .slash {
-            font-size: 20px;
-        }
-
-        .flight-inner-nav {
-            display: inline-block;
-            margin: 0.8rem;
-        }
-    </style>
 </head>
 
 <body>
@@ -240,9 +66,320 @@
     <!-- 좌석 선택 본문 -->
     <div class="content">
         <div class="airplane">
-            <div></div>
+            <div class="airplane-nav">
+                <div></div>
+                <div class="toilet"><i class="fa-solid fa-restroom"></i></div>
+                <div class="gate"><i class="fa-solid fa-door-closed"></i></div>
+                <div class="gate"><i class="fa-solid fa-door-closed"></i></div>
+                <div class="toilet"><i class="fa-solid fa-restroom"></i></div>
+                <div></div>
+            </div>
+            <div class="airplane-content">
+                <div class="seat-number">
+                    <p class="seat seat-10">10</p>
+                    <p class="seat seat-11">11</p>
+                    <p class="seat seat-12">12</p>
+                    <p class="seat seat-13">13</p>
+                    <p class="seat seat-14">14</p>
+                    <p class="seat seat-15">15</p>
+                    <p class="seat seat-16">16</p>
+                    <p class="seat seat-17">17</p>
+                    <p class="seat seat-18">18</p>
+                    <p class="seat seat-19">19</p>
+                    <p class="seat seat-20">20</p>
+                    <p class="seat seat-21">21</p>
+                    <p class="seat seat-22">22</p>
+                    <p class="seat seat-23">23</p>
+                    <p class="seat seat-24">24</p>
+                    <p class="seat seat-25">25</p>
+                </div>
+
+                <div class="airplane-main">
+                    <div class="window-seat">
+                        <div class="window window-10">
+                            <div class="left a10 no-seat"></div>
+                            <div class="left b10 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-11">
+                            <div class="left a11 no-seat"></div>
+                            <div class="left b11 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-12">
+                            <div class="left a12 yes-seat"></div>
+                            <div class="left b12 yes-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-13">
+                            <div class="left a13 yes-seat"></div>
+                            <div class="left b13 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-14">
+                            <div class="left a14 yes-seat"></div>
+                            <div class="left b14 yes-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-15">
+                            <div class="left a15 no-seat"></div>
+                            <div class="left b15 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-16">
+                            <div class="left a16 no-seat"></div>
+                            <div class="left b16 yes-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-17">
+                            <div class="left a17 yes-seat"></div>
+                            <div class="left b17 yes-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-18">
+                            <div class="left a18 yes-seat"></div>
+                            <div class="left b18 yes-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-19">
+                            <div class="left a19 no-seat"></div>
+                            <div class="left b19 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-20">
+                            <div class="left a20 yes-seat"></div>
+                            <div class="left b20 yes-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-21">
+                            <div class="left a21 yes-seat"></div>
+                            <div class="left b21 yes-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-22">
+                            <div class="left a22 no-seat"></div>
+                            <div class="left b22 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-23">
+                            <div class="left a23 yes-seat"></div>
+                            <div class="left b23 yes-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-23">
+                            <div class="a24 toilet"><i class="fa-solid fa-restroom"></i></div>
+                            <div class="b24"></div>
+                        </div>&nbsp;
+                        <div class="window window-23">
+                            <div class="a25 ">|<i class="fa-solid fa-person-running"></i></div>
+                            <div class="b25 yes-seat"></div>
+                        </div>&nbsp;
+                    </div>
+
+                    <div class="middle-seat">
+                        <div class="middle middle-10">
+                            <div class="m c10 no-seat"></div>
+                            <div class="m d10 no-seat"></div>
+                            <div class="m e10 no-seat"></div>
+                            <div class="m f10 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="middle middle-11">
+                            <div class="m c11 yes-seat"></div>
+                            <div class="m d11 yes-seat"></div>
+                            <div class="m e11 no-seat"></div>
+                            <div class="m f11 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="middle middle-12">
+                            <div class="m c12"></div>
+                            <div class="m d12 no-seat"></div>
+                            <div class="m e12 no-seat"></div>
+                            <div class="m f12 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="middle middle-13">
+                            <div class="m c13 yes-seat"></div>
+                            <div class="m d13 yes-seat"></div>
+                            <div class="m e13 yes-seat"></div>
+                            <div class="m f13 yes-seat"></div>
+                        </div>&nbsp;
+                        <div class="middle middle-14">
+                            <div class="m c14 no-seat"></div>
+                            <div class="m d14 yes-seat"></div>
+                            <div class="m e14 yes-seat"></div>
+                            <div class="m f14 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="middle middle-15">
+                            <div class="m c15 yes-seat"></div>
+                            <div class="m d15 yes-seat"></div>
+                            <div class="m e15 yes-seat"></div>
+                            <div class="m f15 yes-seat"></div>
+                        </div>&nbsp;
+                        <div class="middle middle-16">
+                            <div class="m c16 yes-seat"></div>
+                            <div class="m d16 yes-seat"></div>
+                            <div class="m e16 no-seat"></div>
+                            <div class="m f16 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="middle middle-17">
+                            <div class="m c17 no-seat"></div>
+                            <div class="m d17 no-seat"></div>
+                            <div class="m e17 yes-seat"></div>
+                            <div class="m f17 yes-seat"></div>
+                        </div>&nbsp;
+                        <div class="middle middle-18">
+                            <div class="m c18 no-seat"></div>
+                            <div class="m d18 no-seat"></div>
+                            <div class="m e18 no-seat"></div>
+                            <div class="m f18 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="middle middle-19">
+                            <div class="m c19 no-seat"></div>
+                            <div class="m d19 yes-seat"></div>
+                            <div class="m e19 yes-seat"></div>
+                            <div class="m f19 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="middle middle-20">
+                            <div class="m c20 yes-seat"></div>
+                            <div class="m d20 yes-seat"></div>
+                            <div class="m e20 no-seat"></div>
+                            <div class="m f20 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="middle middle-21">
+                            <div class="m c21 yes-seat"></div>
+                            <div class="m d21 no-seat"></div>
+                            <div class="m e21 no-seat"></div>
+                            <div class="m f21 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="middle middle-22">
+                            <div class="m c22 yes-seat"></div>
+                            <div class="m d22 yes-seat"></div>
+                            <div class="m e22 no-seat"></div>
+                            <div class="m f22 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="middle middle-23">
+                            <div class="m c23 no-seat"></div>
+                            <div class="m d23 yes-seat"></div>
+                            <div class="m e23 yes-seat"></div>
+                            <div class="m f23 yes-seat"></div>
+                        </div>&nbsp;
+                        <div class="middle middle-24">
+                            <div class="m c24 yes-seat"></div>
+                            <div class="m d24 yes-seat"></div>
+                            <div class="m e24 yes-seat"></div>
+                            <div class="m f24 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="middle middle-25">
+                            <div class="c25 toilet"><i class="fa-solid fa-restroom"></i></div>
+                            <div class="d25 yes-seat"></div>
+                            <div class="e25 yes-seat"></div>
+                            <div class="f25 toilet"><i class="fa-solid fa-restroom"></i></div>
+                        </div>&nbsp;
+                    </div>
+
+                    <div class="window-seat">
+                        <div class="window window-10">
+                            <div class="right g10 no-seat"></div>
+                            <div class="right h10 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-11">
+                            <div class="right g11 yes-seat"></div>
+                            <div class="right h11 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-12">
+                            <div class="right g12 yes-seat"></div>
+                            <div class="right h12 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-13">
+                            <div class="right g13 yes-seat"></div>
+                            <div class="right h13 yes-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-14">
+                            <div class="right g14 yes-seat"></div>
+                            <div class="right h14 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-15">
+                            <div class="right g15 no-seat"></div>
+                            <div class="right h15 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-16">
+                            <div class="right g16 no-seat"></div>
+                            <div class="right h16 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-17">
+                            <div class="right g17 no-seat"></div>
+                            <div class="right h17 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-18">
+                            <div class="right g18 yes-seat"></div>
+                            <div class="right h18 yes-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-19">
+                            <div class="right g19 no-seat"></div>
+                            <div class="right h19 yes-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-20">
+                            <div class="right g20 yes-seat"></div>
+                            <div class="right h20 yes-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-21">
+                            <div class="right g21 no-seat"></div>
+                            <div class="right h21 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-22">
+                            <div class="right g22 yes-seat"></div>
+                            <div class="right h22 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-23">
+                            <div class="right g23 yes-seat"></div>
+                            <div class="right h23 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-24">
+                            <div class="right g24 no-seat"></div>
+                            <div class="right h24 no-seat"></div>
+                        </div>&nbsp;
+                        <div class="window window-25">
+                            <div class="g25"></div>
+                            <div class="food h25"><i class="fa-solid fa-utensils"></i></div>
+                        </div>&nbsp;
+                    </div>
+                </div>
+                <div class="seat-number">
+                    <p class="seat seat-10">10</p>
+                    <p class="seat seat-11">11</p>
+                    <p class="seat seat-12">12</p>
+                    <p class="seat seat-13">13</p>
+                    <p class="seat seat-14">14</p>
+                    <p class="seat seat-15">15</p>
+                    <p class="seat seat-16">16</p>
+                    <p class="seat seat-17">17</p>
+                    <p class="seat seat-18">18</p>
+                    <p class="seat seat-19">19</p>
+                    <p class="seat seat-20">20</p>
+                    <p class="seat seat-21">21</p>
+                    <p class="seat seat-22">22</p>
+                    <p class="seat seat-23">23</p>
+                    <p class="seat seat-24">24</p>
+                    <p class="seat seat-25">25</p>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <!-- 탑승색 정보창 -->
+        <div class="passenger-box">
+            <div class="box-info">승객 정보</div>
+            <div class="line">====================================</div>
+            <div class="name-box">HYUN YOOLIM</div>
+
+            <!-- 좌석 정보창 -->
+        <div class="select-box">
+                <div class="box-info">좌석 안내</div>
+                <div class="line">====================================</div>
+                <div class="seat-content">
+                    <div class="info-icon"><i class="fa-solid fa-restroom"> </i> 화장실</div>
+                    <div class="info-icon"><i class="fa-solid fa-door-closed"> </i> 게이트</div>
+                    <div class="info-icon"><i class="fa-solid fa-utensils"> </i> 식사 준비실</div>
+                    <div class="info-icon"><i class="fa-solid fa-person-running"></i> 탈출구</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 좌석 선택 결과 창 -->
+        <div class="result-box">
+            <div class="box-info">승객 정보</div>
+            <div class="line">====================================</div>
+            <div class="name-box choice-seat-box">선택한 좌석</div>
+        </div>
+        <button class="next-btn" style="cursor: pointer;">다음 여정</button>
+
+
+        
+
+        <script src="/project-anime/좌석선택.js"></script>
 
 </body>
 
