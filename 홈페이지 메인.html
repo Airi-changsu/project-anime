@@ -4,23 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>항공권 예약 | 대한항공</title>
-    <link rel="stylesheet" type="text/css" href="../project-anime/hompage css/boxes.css"/>
     <link rel="stylesheet" type="text/css" href="../project-anime/hompage css/nav.css"/>
-    <link rel="stylesheet" type="text/css" href="../project-anime/hompage css/swiper.css"/>
-    <link rel="stylesheet" type="text/css" href="../project-anime/hompage css/titles.css"/>
+    <link rel="stylesheet" type="text/css" href="../project-anime/hompage css/hompage.css"/>
 </head>
 <link rel="shortcut icon" type="image/x-icon" href="../project-anime/images/아이콘.ico"/>
 <body>
-
-<!-- 전체 묶음 시작 -->
-<div class="conatain_er">
 
 <!-- 상단바 -->
     <div class="menu">
         <nav class="clearfix">
             <ul class="clearfix">
                 <div class="container-Logo"><img src="../project-anime/images/대한항공로고.png"></div>
-                <li><a href="http://127.0.0.1:5500/git/project-anime/login.html">예약</a></li> <!--""<-여기 부분에 URL 작성하면 됨-->
+                <li><a href="http://127.0.0.1:5500/git/project-anime/login.html">예약</a></li>
                 <li><a href="http://www._____.com/About">공항</a></li>
                 <li><a href="http://www._____.com/Project">기내</a></li>
                 <li><a href="http://www._____.com/Travel">스카이패스</a></li>
@@ -32,32 +27,42 @@
     </div>
 <!-- 상단바 끝 -->
 
-<!-- 사진 묶음 시작 -->
 
-    <div class="container_photo_list">
-
-<!-- top 시작 -->
-    <div class="top_photo">
-        <div class="move_box">
-            <img src="../project-anime/images/여행 5.jpg" width="900px" height="500px"/>
-        </div>
-        
-        <div class="swiper_box">
-            <div class="swip_left">
-            <a link href="../project-anime/images/여행 2.jpg" width="900px" height="500px">
-                <img src="../project-anime/images/버튼 왼.png" width="100px" height="100px"/>
-            </a>
-            </div>
-            <div class="swip_right"><img src="../project-anime/images/버튼 오.png" width="100px" height="100px"/></div>
-        </div>
+<!-- 맨위 시작 -->
+    <div class="image-container_top">
+    <img id="myImage" src="../project-anime/images/여행 1.jpg" alt="사진">
     </div>
-<!-- top 끝 -->
 
+    <button id="prevButton" class="arrow-button">&lt; 이전</button>
+    <button id="nextButton" class="arrow-button">다음 &gt;</button>
+
+    <script src="swiperbtn.js"></script>
+<!-- 맨위 끝 -->
+
+
+<!-- 중간 시작 -->
+<div class="center">
+    <div class="title">
+        <h1>추천 여행지</h1><p>대한항공이 추천하는 여행지의 항공편을 간편하게 조회하실수 있습니다.</p>
     </div>
-<!-- 사진 묶음 끝 -->
-
+    <img src="../project-anime/images/중간 1.jpg">
+    <img src="../project-anime/images/중간 2.jpg">
+    <img src="../project-anime/images/중간 3.jpg">
+    <img src="../project-anime/images/중간 4.jpg">
 </div>
-<!-- 전체 묶음 끝 -->
+<!-- 중간 끝 -->
+
+
+<!-- 맨 아래 시작 -->
+<div class="Last">
+    <div class="title_L">
+        <h1>이벤트</h1><p>대한항공만의 특별한 혜택을 누려보세요</p>
+    </div>
+    <img src="../project-anime/images/아래 1.jpg">
+    <img src="../project-anime/images/아래 2.jpg">
+    <img src="../project-anime/images/아래 3.webp">
+</div>
+<!-- 맨 아래 끝 -->
 
 </body>
 </html>
