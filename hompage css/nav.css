@@ -35,7 +35,6 @@ html {
 }
 
 ul{
-    /*list-style-type: none;*/
     margin: 0;
     padding: 0;
     background-color: white;
@@ -44,7 +43,6 @@ ul{
 }
 
 li{
-    /*position: relative;*/
     display: inline-block;
 }
 
@@ -56,26 +54,21 @@ li a{
 }
 
 li a:hover{
-    /*color: #597812;*/
     color: #00aeff;
     font-weight:normal;
 }
 
 .menu {
-    width: 5000px;
-    height: 50px;
-    text-align: center;
-    max-width: 100%;
-    background-position: center;
-    background-size: cover;
-    background-color: white;color: white;
-    position: absolute;z-index: 1;
+    width: 100%; 
+    background-color: #333; 
+    position: fixed; 
+    top: 0; 
+    z-index: 100; 
 }
 
 .container-Logo > img {
     position: absolute;
     width: 20%;
-  /* height: 100%; */
     top: 25px;
     left: 10%;
     transform: translate(-50%, -50%);
@@ -103,7 +96,6 @@ li a:hover{
 .util__item-area {
     position: absolute;
     width: 100px;
-  /* height: 100%; */
     top: 25px;
     left: 90%;
     transform: translate(-50%, -50%);
