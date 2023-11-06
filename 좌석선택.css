@@ -4,15 +4,19 @@
     font-weight: normal;
     font-style: normal;
 }
-html,body,.menu{
-  font-family: 'SUIT-Regular';
+
+html,
+body,
+.menu {
+    font-family: 'SUIT-Regular';
 }
 
 /* by 창수 */
-body{
+body {
     padding: 0;
     box-sizing: border-box;
 }
+
 nav {
     font-size: 13pt;
     font-family: 'PT Sans', Arial, Sans-serif;
@@ -198,7 +202,7 @@ body {
     top: 10px;
 }
 
-.airplane{
+.airplane {
     width: 55%;
     height: 1350px;
     position: relative;
@@ -206,50 +210,50 @@ body {
     left: 100px;
 }
 
-.airplane-nav{
+.airplane-nav {
     display: flex;
     font-size: 30px;
     justify-content: space-around;
 }
 
-.airplane-content{
+.airplane-content {
     display: flex;
     margin-top: 20px;
     height: 100%;
 }
 
-.seat-number{
+.seat-number {
     width: 10%;
     font-weight: bold;
-    text-align: center; 
+    text-align: center;
 }
 
-.seat{
+.seat {
     margin-bottom: 50px;
 }
 
-.airplane-main{
+.airplane-main {
     width: 80%;
     display: flex;
     justify-content: space-around;
 }
 
-.window-seat{
+.window-seat {
     width: 20%;
 }
 
-.middle-seat{
+.middle-seat {
     width: 50%;
 }
 
-.window{
+.window {
     width: 100%;
     height: 50px;
     display: flex;
     justify-content: space-between;
 }
 
-.left{
+.left {
     width: 45%;
     height: 50px;
     background-color: lightgray;
@@ -258,12 +262,12 @@ body {
     cursor: pointer;
 }
 
-.yes-seat:hover{
+.yes-seat:hover {
     border: 1px solid #002F87;
     box-shadow: 0 0 5px 0;
 }
 
-.right{
+.right {
     width: 45%;
     height: 50px;
     background-color: lightgray;
@@ -272,14 +276,14 @@ body {
     cursor: pointer;
 }
 
-.middle{
+.middle {
     width: 100%;
     height: 50px;
     display: flex;
     justify-content: space-evenly;
 }
 
-.m{
+.m {
     width: 50px;
     height: 50px;
     background-color: lightgray;
@@ -288,52 +292,57 @@ body {
     cursor: pointer;
     transition: all 0.2s;
 }
-.change-seat{
+
+.change-seat {
     background-color: #c6f2fe;
     border: 2px solid #002F87;
     box-shadow: 0 0 5px 0;
 }
 
-.toilet{
+.toilet {
     font-size: 30px;
 }
 
-.no-seat{
+.no-seat {
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="100%" y2="100%" stroke="gray" /></svg>');
     border: 2px solid gray;
     cursor: default;
 }
 
-.a24{
+.a24 {
     margin-left: 5px;
 }
 
-.a25{
+.a25 {
     font-size: 30px;
 }
 
-.d25{
+.d25 {
     margin-left: 50px;
 }
 
-.food{
-    font-size:30px;
+.food {
+    font-size: 30px;
     margin-right: 6px;
 }
 
+.num {
+    display: none;
+}
+
 /* 탑승객 정보창 */
-.passenger-box{
+.passenger-box {
     border: 1px solid lightgray;
     border-radius: 0.5rem;
     width: 400px;
-    height: 130px;
+    height: 120px;
     position: absolute;
     top: 160px;
     right: 50px;
     transition: all 0.2s;
 }
 
-.box-info{
+.box-info {
     width: 100%;
     height: 25px;
     font-size: 20px;
@@ -344,47 +353,47 @@ body {
 
 }
 
-.line{
+.line {
     margin-top: 10px;
     color: lightgray;
 }
 
-.name-box{
+.name-box {
     width: 100%;
     height: 30px;
     font-weight: bold;
     font-size: 20px;
     text-align: center;
-    
+
 }
 
-.btn{
+.btn {
     width: 100%;
 }
 
 /* 좌석 정보창 */
-.select-box{
+.select-box {
     border: 1px solid lightgray;
     border-radius: 0.5rem;
     width: 400px;
-    height: 200px;
+    height: 170px;
     position: absolute;
     top: 150px;
 }
 
-.info-icon{
+.info-icon {
     margin-left: 60px;
     font-size: 17px;
 }
 
 /* 좌석 선택 결과 창 */
-.result-box{
+.result-box {
     border: 1px solid lightgray;
     border-radius: 0.5rem;
     width: 400px;
-    height: 130px;
+    height: 120px;
     position: absolute;
-    top: 530px;
+    top: 510px;
     left: 813px;
 }
 
@@ -402,7 +411,7 @@ body {
 }
 
 .payment-box {
-    width: 500px;
+    width: 100%;
     height: 100%;
     margin-left: 500px;
     display: flex;
@@ -433,7 +442,8 @@ body {
 .next-btn {
     width: 180px;
     height: 50px;
-
+    margin-right: 50px;
+    margin-top: 5px;
 
     background-color: #002F87;
     color: white;
@@ -443,93 +453,115 @@ body {
     border-radius: 1rem;
 }
 
-        /* 하단바 css */
-        *[class]._center {
-            text-align: center !important;
-        }
-  
-          .footer {
-            width: 100%;
-            height: 250px;
-            padding: 1.6rem;
-            text-align: center;
-            background-color: #f8f9fc;
-            align-items: center;
-        }
-        .footer_tb {
-            width: 70%;
-            height: 80%;
-            text-align: center;
-            border-right: 1px solid #dee0e2;
-            float: left;
-        }
-        .footer_box{
-            width: 30%;
-            height: 100%;
-            float: left;
-            
-        }
-        .im_link {
-            width: 120px;
-            height: 35px;
-            display: inline-block;
-        }
-        .ft_th {
-            padding: 1rem;
-        }
-        .ft_bt {
-            cursor: pointer;
-            border-radius: 50%;
-        }
-        .ft_bt:hover{
-            border: 1px solid #0064de;
-            outline-offset: -4px;
-        }
-        .ft_pd {
-            padding: 0.4rem;
-        }
-        .im_link3 {
-            padding: 1.5rem;
-        }
-        .ft_contact{
-            width: 50%;
-            height: 80px;
-            background-color: white;
-            float: left;
-        }
-        .contact_item{
-            padding-left: 50px;
-            padding-top: 20px;
-            font-size: 1.2rem;
-            color: #00256c;
-            display: inline-block;
-        }
-        .ft_contact2{
-            width: 50%;
-            height: 120px;
-            background-color: white;
-            float: left;
-            display: flex;
-            align-items: center;
-            justify-content:flex-end;
-            
-        }
-        .ft_img1{
-            width: 70px;
-            height: 42px;
-            background-size: contain;
-        }
-        .ft_img2{
-            width: 70px;
-            height: 70px;
-            background-size: contain;
-        }
-        table, .ft_contact, .ft_contact2,.ft_th,.footer_box,.contact_item,.ft_span{
-          font-size: 70%;
-        }
-        .bt_sidebox{
-          height: 150px;
-        }
-        th {
-          width: 400px;
-        }
+/* 하단바 css */
+*[class]._center {
+    text-align: center !important;
+}
+
+.footer {
+    width: 100%;
+    height: 250px;
+    padding: 1.6rem;
+    text-align: center;
+    background-color: #f8f9fc;
+    align-items: center;
+}
+
+.footer_tb {
+    width: 70%;
+    height: 80%;
+    text-align: center;
+    border-right: 1px solid #dee0e2;
+    float: left;
+}
+
+.footer_box {
+    width: 30%;
+    height: 100%;
+    float: left;
+    padding: 0;
+}
+
+.im_link {
+    width: 120px;
+    height: 35px;
+    display: inline-block;
+}
+
+.ft_th {
+    padding: 1rem;
+}
+
+.ft_bt {
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.ft_bt:hover {
+    border: 1px solid #0064de;
+    outline-offset: -4px;
+}
+
+.ft_pd {
+    padding: 0.4rem;
+}
+
+.im_link3 {
+    padding: 1.5rem;
+}
+
+.ft_contact {
+    width: 50%;
+    height: 80px;
+    background-color: white;
+    float: left;
+}
+
+.contact_item {
+    padding-left: 50px;
+    padding-top: 20px;
+    font-size: 1.2rem;
+    color: #00256c;
+    display: inline-block;
+}
+
+.ft_contact2 {
+    width: 50%;
+    height: 120px;
+    background-color: white;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.ft_img1 {
+    width: 70px;
+    height: 42px;
+    background-size: contain;
+}
+
+.ft_img2 {
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+}
+
+table,
+.ft_contact,
+.ft_contact2,
+.ft_th,
+.footer_box,
+.contact_item,
+.ft_span {
+    font-size: 70%;
+}
+
+.bt_sidebox {
+    height: 150px;
+}
+
+th {
+    width: 400px;
+}
