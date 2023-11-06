@@ -337,6 +337,9 @@
             font-size: 11px;
             border-bottom: 1px solid navy;
         }
+        #money-icon:hover{
+            cursor: pointer;
+        }
 
 
         /* 여기부터 승객정보 */
