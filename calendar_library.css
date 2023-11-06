@@ -576,7 +576,7 @@ html, body , li { font-family: "Elice DX Neolli", sans-serif; }
             /*list-style-type: none;*/
             margin: 0;
             padding: 0;
-            background-color: #ffff;
+            background-color: #c6f2fe;
             text-align: center;
             color: #000;
           }
@@ -594,7 +594,7 @@ html, body , li { font-family: "Elice DX Neolli", sans-serif; }
             /*color: #597812;*/
             /* color: #FFD400; */
             font-weight:normal;
-            border-bottom: 2px solid #014a94;
+            border-bottom: 3px solid #014a94;
         }
         .menu {
         width: 5000px;
@@ -640,15 +640,57 @@ html, body , li { font-family: "Elice DX Neolli", sans-serif; }
     -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
     }      */
 
-    .containercs1 > img {
-        position: absolute;
-        width: 20%;
-        /* height: 100%; */
-        top: 25px;
-        left: 10%;
-        transform: translate(-50%, -50%);
-        }
+    .container-Logo > img {
+      position: absolute;
+      width: 20%;
+      top: 25px;
+      left: 10%;
+      transform: translate(-50%, -50%);
+  }
 
+  .menu-item {
+    position: static;
+}
+
+.menu-item:hover {
+    border-bottom: 3px solid #00256c;
+}
+
+.menu-item:hover .sub-menu {
+    display: block;
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 100%; /* 아래에 배치되도록 설정 */
+    left: 50%; /* 가운데로 이동 */
+    transform: translateX(-50%); /* 수평 가운데 정렬 */
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+li:hover .sub-menu {
+  display: block;
+  text-align: left; 
+}
+
+.sub-menu a {
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.sub-menu a:hover {
+  background-color: white;
+} 
 
         /* 하단바 css */
         *[class]._center {
