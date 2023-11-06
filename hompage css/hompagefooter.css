@@ -1,5 +1,5 @@
 .footer {
-    width: 1220px;
+    width: 100%;
     height: 250px;
     padding: 1.6rem;
     text-align: center;
@@ -26,6 +26,14 @@
 }
 .ft_th {
     padding: 1rem;
+}
+.ft_bt {
+    cursor: pointer;
+    border-radius: 50%;
+}
+.ft_bt:hover{
+    border: 1px solid #0064de;
+    outline-offset: -4px;
 }
 .ft_pd {
     padding: 0.4rem;
@@ -66,79 +74,11 @@
     height: 70px;
     background-size: contain;
 }
-.ft_container_box1 {
-    width: 92%;
-    height: 400px;
-    margin-left: 50px;
-    margin-top: 90px;
-    border-collapse: collapse;
-}
-.ft_container_box2 {
-    width: 92%;
-    
-    margin-left: 50px;
-    margin-top: 90px;
-    border-collapse: collapse;
-}
-.ft_container_box3 {
-    width: 92%;
-    
-    margin-left: 50px;
-    margin-top: 90px;
-    border-collapse: collapse;
-}
-.ft_container_box4 {
-    width: 92%;
-    
-    margin-left: 50px;
-    margin-top: 90px;
-    border-collapse: collapse;
-}
-.ft_container_box5 {
-    width: 92%;
-    
-    margin-left: 50px;
-    margin-top: 90px;
-    border-collapse: collapse;
-}
-.ft_wn_box {
-    width: 100%;
-    height: 150px;
-    margin: 0 auto;
-    margin-left: 50px;
-    background-color: #f8f9fc;
-}
-.ft_ctn_wid1{
-    padding-top: 20px;
-    padding-left: 30px;
-}
-.ft_ctn_wid{
-    padding-top: 20px;
-    padding-left: 40px;
-}
-.ft_wn_container {
-    width: 92%;
-    height: 200px;
-    background-color: #ffffff;
-}
-.ft_wn_container2 {
-    width: 92%;
-    height: 200px;
-    background-color: #ffffff;
-}
-.ft_bt {
-    cursor: pointer;
-    border-radius: 50%;
-}
-.ft_bt:hover{
-    border: 1px solid #0064de;
-    outline-offset: -4px;
-}
 
 
 /* @import url("https://font.elice.io/css?family=Elice+DX+Neolli");
 
-html, body , li ,table ,option ,select,button, .ft_li { font-family: "Elice DX Neolli", sans-serif; } */
+html, body , li ,table ,option ,select,button, .ft_li{ font-family: "Elice DX Neolli", sans-serif; } */
 
 @media only screen and (max-width:1000px){
     body, div{
