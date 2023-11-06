@@ -175,16 +175,23 @@ for (let i = 0; i < change_won.length; i++) { // 본문 박스 누르면 결제 
 }
 
 
-// // 버튼 하나 눌렸으면 다른 거 안 되게 < 아직 하는 중
-// const nav_btn = document.querySelectorAll(".dep-nav-box-btn");
+// 버튼 하나 눌렸으면 다른 거 안 되게 < 아직 하는 중
+const nav_btn = document.querySelectorAll(".dep-nav-box-btn"); // 날짜 박스
 
-// function btnDisabledCheck(){
-//     for(var i=0;i<nav_btn.length;i++){
-//         if(nav_btn[i].disabled == false){
-//             nav_btn[i+1].disabled = true;
-//         }
-//     }
-// }
+nav_btn.forEach((item)=>{
+    item.addEventListener("click",(e)=>{
+        nonActiveBtn(e.target);
+        e.target.classList.toggle('active');
+        
+    })
+})
+
+function nonActiveBtn(e){
+    nav_btn.forEach((item)=>{
+        if(item != e)
+        item.classList.remove('active');
+    });
+}
 
 
 
