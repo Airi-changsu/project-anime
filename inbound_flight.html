@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="/project-anime/가는편.css">
-    <title>가는편 | 대한항공</title>  
-    <link href="./images/대한항공타이틀아이콘.png" rel="shortcut icon" type="image/x-icon">      
+    <link rel="stylesheet" href="/project-anime/bound_flight.css">
+    <title>오는편 | 대한항공</title>
+    <link href="./images/대한항공타이틀아이콘.png" rel="shortcut icon" type="image/x-icon">
 </head>
 
 <body>
@@ -39,7 +39,7 @@
         <div class="flight-nav">
             <div class="flight-code">
                 <span class="flight-go-code flight-dep-code">출발지</span>
-                <i class="fa-solid fa-rotate-right flight-go-code" style="cursor: pointer;"></i>
+                <i class="fa-solid fa-arrow-right"></i>
                 <span class="flight-go-code flight-arv-code">도착지</span>
             </div>
 
@@ -55,7 +55,7 @@
 
             <div class="flight-inner-nav flight-person">
                 <i class="fa-solid fa-person"></i>
-                <span>성인 1명</span>
+                <span>성인 X명</span>
             </div>
 
             <button class="flight-inner-nav flight-search" style="cursor: pointer;">항공편검색</button>
@@ -73,7 +73,7 @@
             <input class="search-form-btn-arv" type="button" value="검색">
             <div id="caution"> 출발지 / 도착지의 검색 버튼을 모두 눌러주세요 !</div>
 
-            <datalist id="searchBox-dep">
+            <datalist id="searchBox-arv">
                 <option class="searchBox-value" value="ICN 인천"></option>
                 <option class="searchBox-value" value="GMP 김포"></option>
                 <option class="searchBox-value" value="TYO 도쿄"></option>
@@ -82,7 +82,7 @@
                 <option class="searchBox-value" value="GUM 괌"></option>
                 <option class="searchBox-value" value="LAS 라스베이거스"></option>
             </datalist>
-            <datalist id="searchBox-arv">
+            <datalist id="searchBox-dep">
                 <option class="searchBox-value" value="SEA 시애틀"></option>
                 <option class="searchBox-value" value="WAS 워싱턴"></option>
                 <option class="searchBox-value" value="LHR 런던"></option>
@@ -93,17 +93,6 @@
             </datalist>
             <div class="flight-box">
                 <div class="flight-box-dep">
-                    <strong>가는편</strong>
-                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> ICN 인천</p>
-                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> GMP 김포</p>
-                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> TYO 도쿄</p>
-                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> SHA 상하이</p>
-                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> HKG 홍콩</p>
-                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> GUM 괌</p>
-                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> LAS 라스베이거스</p>
-                </div>
-
-                <div class="flight-box-arv">
                     <strong>오는편</strong>
                     <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> SEA 시애틀</p>
                     <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> WAS 워싱턴</p>
@@ -113,6 +102,17 @@
                     <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> NYC 뉴욕</p>
                     <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> DXB 두바이</p>
                 </div>
+
+                <div class="flight-box-arv">
+                    <strong>오는편</strong>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> ICN 인천</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> GMP 김포</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> TYO 도쿄</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> SHA 상하이</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> HKG 홍콩</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> GUM 괌</p>
+                    <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> LAS 라스베이거스</p>
+                </div>
             </div>
 
 
@@ -121,10 +121,10 @@
 
     </div>
     </div>
-    <!-- 가는 편 네비 -->
+    <!-- 오는 편 네비 -->
     <div class="content-nav">
         <div class="dep-nav">
-            <span style="font-weight: bold;" class="dep-nav-text">가는 편</span>
+            <span style="font-weight: bold;" class="dep-nav-text">오는 편</span>
             <span class="dep-nav-text dep-nav-text-dep">출발지</span>
             <span class="dep-nav-text"><i class="fa-solid fa-arrow-right"></i></span>
             <span class="dep-nav-text dep-nav-text-arv">도착지</span>
@@ -160,7 +160,6 @@
                     <span class="week-date">XX</span>일</span>
                 <br><span class="dep-btn-price">000,000원</span></button>
         </div>
-
         <div class="dep-nav-seat">
             <div class="dep-nav-seat dep-seat seat-normal">일반석</div>
             <div class="dep-nav-seat dep-seat seat-pre">프레스티지석</div>
@@ -181,25 +180,22 @@
         </select>
     </div>
 
-    <!-- 일반석 -->
-
-
-    <!-- 가는 편 본문 -->
+    <!-- 오는 편 본문 -->
     <div class="content">
         <div class="flight">
             <div class="flight-info">
                 <div class="dep-time">
-                    <span class="time real-dep-time">1:00</span>
+                    <span class="time real-dep-time">08:00</span>
                     <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
-                    <span class="time real-arv-time">15:00</span>
+                    <span class="time real-arv-time">22:00</span>
                 </div>
                 <div class="howlong">14시간</div>
                 <div class="whatflight" style="font-weight: bold;">
-                    <span>ICN</span><span></span>
-                    <span>NYC</span>
+                    <span>NYC</span><span></span>
+                    <span>ICN</span>
                 </div>
                 <div class="flight-number">
-                    <span><i class="fa-solid fa-jet-fighter"></i> <span class="real-flight-code">FKE112</span></span>
+                    <span><i class="fa-solid fa-jet-fighter"></i> <span class="real-flight-code">BDP102</span></span>
                     <button class="info info-btn">상세보기</button>
                 </div>
             </div>
@@ -208,8 +204,9 @@
                 <div class="seat-info">
                     <div class="flight-seat">
                         <div class="whichclass">프레스티지석</div>
-                        <span class="howmuch-seat howmuch-pre">501,300</span>
-                        <p class="howmuch-seat-won">원</p>
+                        <span class="howmuch-seat">610,100</span>
+                        <span class="howmuch-seat-won">원</span>
+
                     </div>
                 </div>
 
@@ -225,17 +222,17 @@
         <div class="flight">
             <div class="flight-info">
                 <div class="dep-time">
-                    <span class="time real-dep-time">12:00</span>
+                    <span class="time real-dep-time">21:00</span>
                     <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
-                    <span class="time real-arv-time">02:00</span>
+                    <span class="time real-arv-time">13:00</span>
                 </div>
                 <div class="howlong">14시간</div>
                 <div class="whatflight" style="font-weight: bold;">
-                    <span>ICN</span><span></span>
-                    <span>NYC</span>
+                    <span>NYC</span><span></span>
+                    <span>ICN</span>
                 </div>
                 <div class="flight-number">
-                    <span><i class="fa-solid fa-jet-fighter"></i><span class="real-flight-code"> AAE105</span></span>
+                    <span><i class="fa-solid fa-jet-fighter"></i><span class="real-flight-code"> IID194</span></span>
                     <button class="info info-btn">상세보기</button>
                 </div>
             </div>
@@ -243,7 +240,7 @@
                 <div class="seat-info">
                     <div class="flight-seat">
                         <div class="whichclass">프레스티지석</div>
-                        <span class="howmuch-seat howmuch-pre">490,100</span>
+                        <span class="howmuch-seat">620,300</span>
                         <p class="howmuch-seat-won">원</p>
 
                     </div>
@@ -261,17 +258,17 @@
         <div class="flight">
             <div class="flight-info">
                 <div class="dep-time">
-                    <span class="time real-dep-time">15:00</span>
+                    <span class="time real-dep-time">03:00</span>
                     <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
-                    <span class="time real-arv-time">05:00</span>
+                    <span class="time real-arv-time">17:00</span>
                 </div>
                 <div class="howlong">14시간</div>
                 <div class="whatflight" style="font-weight: bold;">
-                    <span>ICN</span><span></span>
-                    <span>NYC</span>
+                    <span>NYC</span><span></span>
+                    <span>ICN</span>
                 </div>
                 <div class="flight-number">
-                    <span><i class="fa-solid fa-jet-fighter"></i><span class="real-flight-code"> GGP090</span></span>
+                    <span><i class="fa-solid fa-jet-fighter"></i><span class="real-flight-code"> WFK662</span></span>
                     <button class="info info-btn">상세보기</button>
                 </div>
             </div>
@@ -279,7 +276,7 @@
                 <div class="seat-info">
                     <div class="flight-seat">
                         <div class="whichclass">프레스티지석</div>
-                        <span class="howmuch-seat howmuch-pre">499,020</span>
+                        <span class="howmuch-seat">600,910</span>
                         <p class="howmuch-seat-won">원</p>
 
                     </div>
@@ -297,17 +294,17 @@
         <div class="flight">
             <div class="flight-info">
                 <div class="dep-time">
-                    <span class="time real-dep-time">07:00</span>
+                    <span class="time real-dep-time">11:00</span>
                     <span class="time"><i class="fa-solid fa-arrow-right-long"></i></span>
-                    <span class="time real-arv-time">21:00</span>
+                    <span class="time real-arv-time">01:00</span>
                 </div>
                 <div class="howlong">14시간</div>
                 <div class="whatflight" style="font-weight: bold;">
-                    <span>ICN</span><span></span>
-                    <span>NYC</span>
+                    <span>NYC</span><span></span>
+                    <span>ICN</span>
                 </div>
                 <div class="flight-number">
-                    <span><i class="fa-solid fa-jet-fighter"></i><span class="real-flight-code"> HYL095</span></span>
+                    <span><i class="fa-solid fa-jet-fighter"></i><span class="real-flight-code"> LKL618</span></span>
                     <button class="info info-btn">상세보기</button>
                 </div>
             </div>
@@ -315,7 +312,7 @@
                 <div class="seat-info">
                     <div class="flight-seat">
                         <div class="whichclass">프레스티지석</div>
-                        <span class="howmuch-seat howmuch-pre">510,290</span>
+                        <span class="howmuch-seat">601,820</span>
                         <p class="howmuch-seat-won">원</p>
 
                     </div>
@@ -399,7 +396,8 @@
         </div>
     </div>
 
-<!-- container_page 끝부분 -->
+    <!-- container_page 끝부분 -->
+<!-- 아래 하단바 -->
 <footer class="footer">
     <div class="footer_tb">
 <table>
@@ -475,10 +473,9 @@
 </div><div class="ft_img2" style="background-image: url(./images/대한항고오스타렉스5성.png);"></div>
 </div>
 
-
-
-
-    <script type="text/javascript" src="/project-anime/가는편.js?ver=1"></script>
+    
+    <script src="/project-anime/inbound_flight.js"></script>
 
 </body>
+
 </html>
