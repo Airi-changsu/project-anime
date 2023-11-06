@@ -1,4 +1,3 @@
-/* CSS 코드 */
 nav {
     font-size: 13pt;
     font-family: 'PT Sans', Arial, Sans-serif;
@@ -105,11 +104,19 @@ li a:hover {
 }
 
 .menu-item {
-    position: relative;
+    position: static;
+}
+
+.menu-item:hover {
+    border-bottom: 3px solid #00256c;
 }
 
 .menu-item:hover .sub-menu {
     display: block;
+    position: absolute;
+    top: 100%; 
+    left: 50%; 
+    transform: translateX(-50%); 
 }
 
 .sub-menu {
@@ -119,7 +126,8 @@ li a:hover {
     left: 50%;
     transform: translateX(-50%);
     background-color: white;
-    width: 200px;
+    width: 100%;
+    height: 400px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
