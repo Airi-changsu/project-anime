@@ -88,11 +88,6 @@ nav{
     font-family: 'PT Sans', Arial, Sans-serif;
     position: relative;
 }
-nav ul{
-    padding: 0;
-    margin: 0 auto;
-    width: auto;
-}
 nav a{
     line-height: 50px;
   height: 50px;
@@ -145,7 +140,7 @@ nav a#pull{
   max-width: 100%;
   background-position: center;
   background-size: cover;
-  background-color: #c6f2fe;color: white;
+
   position: relative; 
   z-index: 1;
 }
@@ -353,7 +348,7 @@ th {
 #ref2-1 {
     cursor: pointer;
 }
-
+/* 아래 부분 하단바 css */
 .footer {
     width: 100%;
     height: 250px;
@@ -431,12 +426,23 @@ th {
     background-size: contain;
 }
 
-@import url("https://font.elice.io/css?family=Elice+DX+Neolli");
 
-html, body , li ,table ,option ,select,button{ font-family: "Elice DX Neolli", sans-serif; }
+/* @import url("https://font.elice.io/css?family=Elice+DX+Neolli");
+
+html, body , li ,table ,option ,select,button, .ft_li{ font-family: "Elice DX Neolli", sans-serif; } */
 
 @media only screen and (max-width:1000px){
     body, div{
         width: 100%;
     }
+}
+
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+html,body,.menu{
+  font-family: 'SUIT-Regular';
 }

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    .login-wrapper{
+    padding: 40px;
+    height: 700px;
+    background: linear-gradient(#d0e7f6, white);
+}
+
+.title-container{
+    width: auto;
+    height: 100px;
+    /* border: 1px solid black; */
+}
+
+.title-container > h1{
+    color:#014A94;
+    margin-top: 25px;
+}
+
+.title-container > img{
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-top: -70px;
+}
+
+.container{
+    /* border: 1px solid black; */
+    width: 60%;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#d0e7f6;
+    margin-top: -30px;
+    border-radius: 30px;
+    box-shadow: 0 0 16px 3px rgba(0 0 0 / 15%);
+}
+
+.d-day{
+    /* border: 1px solid blue; */
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.photo{
+    width: 80%;
+    height: 300px;
+    /* border: 1px solid black; */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 60px;
+
+}
+
+.paris{
+    /* border: 1px solid purple; */
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+}
+
+.date{
+    /* border: 1px solid purple; */
+    font-size: 20px;
+    /* font-weight: bolder; */
+    margin-bottom: 0px;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+.check-in{
+    background-color: #fff;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+}
+
+.check-in:hover{
+    border: 1px solid navy;
+    cursor: pointer;
+}
+
+.main{
+    background-color: skyblue;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 30%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    box-shadow: 0 0 16px 3px rgba(0 0 0 / 15%);
+}
+
+.main:hover{
+    border: 1px solid navy;
+    cursor: pointer;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="login-wrapper">
+    <div class="title-container">
+        <img src="../project-anime/images/대한항공로고.png">
+        <h1>예약완료</h1>
+    </div>
+        <div class="container">
+            <div class="d-day"> D-70 </div>
+            <img src="./paris.avif"class="photo" >
+            <div class="paris">서울/인천 -> 파리</div>
+            <div class="date">2023년 10월 30일 (월) 09:00</div>
+            <div class="check-in"> 체크인</div>
+        </div>
+
+        <div class="main" onclick="location.href='홈페이지 메인.html'">메인으로 돌아가기</div>
+
+    </div>
+
+
+
+
+</body>
+</html>

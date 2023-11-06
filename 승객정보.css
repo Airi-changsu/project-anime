@@ -1,0 +1,971 @@
+<!-- Bootstrap CSS 라이브러리 https://getbootstrap.com/ -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>승객정보</title>
+
+    <link rel="stylesheet" href="/project-anime/승객정보.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+    
+
+        /* 창수 */
+        nav {
+            font-size: 13pt;
+            font-family: 'PT Sans', Arial, Sans-serif;
+            position: relative;
+        }
+
+        nav ul {
+            padding: 0;
+            margin: 0 auto;
+            width: auto;
+        }
+
+        nav li {}
+
+        nav a {
+            line-height: 50px;
+            height: 50px;
+        }
+
+        nav li a {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        nav li:last-child a {
+            border-right: 0;
+        }
+
+        nav a:hover,
+        nav a:active {}
+
+        nav a#pull {
+            display: none;
+        }
+
+        html {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        ul {
+            /*list-style-type: none;*/
+            margin: 0;
+            padding: 0;
+            background-color: #c6f2fe;
+            text-align: center;
+            color: #000;
+        }
+
+        li {
+            /*position: relative;*/
+            display: inline-block;
+        }
+
+        li a {
+            color: #0a0005;
+            text-align: center;
+            padding: 14.5px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            /*color: #597812;*/
+            color: #FFD400;
+            font-weight: normal;
+        }
+
+        .menu {
+            width: 5000px;
+            height: 50px;
+            text-align: center;
+            max-width: 100%;
+            background-position: center;
+            background-size: cover;
+            background-color: #c6f2fe;
+            color: white;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .container>img {
+            position: absolute;
+            width: 20%;
+            /* height: 100%; */
+            top: 25px;
+            left: 10%;
+            transform: translate(-50%, -50%);
+        }
+
+        .util__link-inner.-login {
+            width: 85%;
+            min-width: 4.4rem;
+            margin: 0 0.2rem 0 0;
+            border: 0;
+            outline: 0;
+            display: inline-flexbox;
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.7rem;
+            padding: 0.3rem 1rem 0.4rem;
+            color: #fff;
+            border-radius: 1.5rem;
+            text-decoration: none;
+            cursor: pointer;
+            background: #00256c;
+            word-break: break-word;
+        }
+
+        .util__item-area {
+            position: absolute;
+            width: 100px;
+            /* height: 100%; */
+            top: 25px;
+            left: 90%;
+            transform: translate(-50%, -50%);
+            pointer-events: auto;
+        }
+
+        /* 창수 끝나고 밑은 유림 */
+
+        .flight-nav-bgd {
+            width: 100%;
+            height: 85px;
+            background-color: #c6f2fe;
+            position: fixed;
+        }
+
+        .flight-nav {
+            width: 90%;
+            height: 85px;
+            background-color: white;
+            margin: 2%;
+            position: fixed;
+            border-radius: 10px 10px;
+            box-shadow: 0 8px 4px -4px gray;
+
+
+        }
+
+        .flight-code {
+            width: 240px;
+            height: 50px;
+            margin-left: 20px;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        .flight-go-code {
+            display: inline-block;
+            margin: 0.8rem;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .slash {
+            font-size: 20px;
+        }
+
+        .flight-inner-nav {
+            display: inline-block;
+            margin: 0.8rem;
+        }
+
+        .flight-search {
+            width: 100px;
+            height: 40px;
+            border: 1px solid #143F90;
+            border-radius: 10px 10px;
+            display: inline-block;
+            position: absolute;
+            top: 0.7rem;
+            right: 2rem;
+
+            font-size: 15px;
+            text-align: center;
+        }
+
+
+
+        /* 위에까진 미미 스타일 
+
+        여기서부터 내가하는거 여정정보 스타일 */
+
+        #cart-icon,
+        #share-icon {
+            font-size: 14px;
+            padding: 0px 5px 0px 28px;
+            display: inline-block;
+        }
+
+        .travel-info {
+            display: block;
+            margin: 1.5rem;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .trip-info-container {
+            width: 90%;
+            height: 210px;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container-inner {
+            flex: 3.7;
+            height: 200px;
+        }
+
+        .trip-info-go {
+            width: 100%;
+            height: 100px;
+            border: 1px solid gray;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .trip-to-go {
+            width: 15%;
+            height: 100px;
+            text-align: center;
+            font-size: 16px;
+            padding: 30px 0;
+        }
+
+        .trip-to-go-body {
+            width: 70%;
+            height: 100px;
+            font-size: 18px;
+            padding: 30px 20px;
+        }
+
+        .trip-info-come {
+            width: 100%;
+            height: 100px;
+            border: 1px solid gray;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: row;
+            margin-top: 10px;
+        }
+
+        .trip-to-go-date {
+            font-size: 13px;
+            color: gray;
+        }
+
+        .trip-to-go-date>strong {
+            color: black;
+        }
+
+        .trip-to-go-details-btn {
+            padding: 2px 9px;
+            font-size: 13px;
+            border: 1px solid gray;
+            color: gray;
+            border-radius: 20px;
+        }
+
+        .trip-to-go-details-box {
+            margin-top: 20px;
+        }
+
+        .total-price-ul {
+            list-style: none;
+            background-color: white
+        }
+
+
+        .total-price {
+            flex: 1.3;
+            height: 210px;
+            border: 1px solid gray;
+            border-radius: 20px;
+            margin-left: 10px;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        .air-transportation-fee {
+            margin-left: 30px;
+            margin-top: 15px;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        .fee-list {
+            font-size: 13px;
+        }
+
+        .fee-line {
+            color: gray;
+        }
+
+        .total-price-blue {
+            color: blue;
+        }
+
+        #money-icon {
+            color: #00256c;
+            font-size: 11px;
+            border-bottom: 1px solid navy;
+        }
+
+
+        /* 여기부터 승객정보 */
+
+        #passenger-info {
+            display: block;
+            margin: 1.5rem;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #essential {
+            display: inline-block;
+            margin-left: 1.5rem;
+            font-size: 15px;
+        }
+
+        #change-info {
+            display: block;
+            margin: 13px 0 0;
+            padding: 15px 50px;
+            font-size: 17px;
+            margin-top: 5px;
+        }
+
+        .remark-positive {
+            font-style: normal;
+            color: blue;
+
+        }
+
+
+        #accordionExample {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+        }
+
+        input[type=text] {
+            width: 100%;
+            height: 35px;
+            font-size: 20px;
+            border: none;
+            border-bottom: 1.5px solid #143F90;
+            padding: 20px;
+        }
+
+        input[type=date] {
+            width: 100%;
+            height: 35px;
+            font-size: 20px;
+            border: none;
+            border-bottom: 1.5px solid #143F90;
+            padding: 20px;
+        }
+
+        input[type=email] {
+            width: 100%;
+            height: 35px;
+            font-size: 20px;
+            border: none;
+            border-bottom: 1.5px solid #143F90;
+            padding: 20px;
+        }
+
+        .submit {
+            width: 100%;
+            height: 45px;
+            background-color: #c6f2fe;
+            border: none;
+            padding: 10px;
+        }
+
+        .material-symbols-outlined {
+            width: 90%;
+            height: 100px;
+            border: none;
+            text-align: center;
+            margin: 0;
+            font-size: 48px;
+            color: #143F90;
+            margin-left: 60px
+        }
+
+        .material-symbols-outlined:hover {
+            border: 1px solid #143F90;
+            border-radius: 20px;
+        }
+
+        select {
+            width: 100%;
+            height: 35px;
+            font-size: 20px;
+            border: none;
+            border-bottom: 1.5px solid #143F90;
+        }
+
+        .accordion-body>div {
+            display: inline-block;
+
+        }
+
+        .form-box {
+            margin-bottom: 30px;
+        }
+
+        .accordion-button:hover {
+            border: 0.7px solid #143F90;
+        }
+
+
+        /* 확인 및 동의 */
+        
+        #check-and-agree {
+            display: block;
+            margin: 1.5rem;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .check {
+            display: block;
+            border: 1px solid gray;
+            width: 90%;
+            height: auto;
+            border-radius: 20px;
+            font-size: 15px;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+        }
+
+        .inner-margintop-change {
+            margin-top: 0px;
+        }
+
+        .inner-marginbottom-change {
+            margin-bottom: 5px;
+        }
+
+        .check-agree {
+            font-size: 20px;
+            width: 70px;
+            height: 30px;
+            color: #555;
+            border: 1px solid #767676;
+            position: relative;
+            text-align: center;
+            border-radius: 20px;
+            margin: 10px;
+        }
+
+        .check-agree:visited {
+            background-color: skyblue;
+        }
+    
+    .document-box{
+            display: block;
+            border: 1px solid gray;
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+            font-size: 15px;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+    }
+
+
+        .document-info {
+            font-weight: bold;
+        }
+
+
+        #shyli {
+            list-style-type: none;
+        }
+
+        #document {
+            position: fixed;
+            left: -9999px;
+        }
+
+        .document-info-click {
+            cursor: pointer;
+            color: blue;
+        }
+
+        .document-info-body {
+            display: none;
+            list-style: none;
+            width: 100%;
+            background-color: white;
+            text-align: left;
+        }
+
+        #document:checked~.document-info-body {
+            display: block;
+            margin: 10px;
+            margin-right: 16px;
+        }
+
+
+        /* 결제 */
+
+        #payment{
+            display: block;
+            margin: 1.5rem;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .togglebox{
+            display: flex;
+            border: 1px solid gray;
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+            font-size: 15px;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            
+            
+        }
+
+        .toggleSwitch {
+            width: 40px;
+            height: 20px;
+            display: block;
+            position: relative;
+            border-radius: 30px;
+            background-color: #fff;
+            border: solid skyblue;
+            cursor: pointer;
+            margin-top: 2px;
+        }
+
+        .toggleSwitch .toggleButton {
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 50%;
+            left: 4px;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            background: pink;
+        }
+
+        #toggle:checked~.toggleSwitch {
+            background: skyblue;
+        }
+
+        #toggle:checked~.toggleSwitch .toggleButton {
+            left: calc(65%);
+            background: pink;
+        }
+
+        .toggleSwitch,
+        .toggleButton {
+            transition: all 0.2s ease-in;
+        }
+
+        .cashMileage{
+            margin: 1px;
+            margin-left: auto;
+            margin-left: 3px;
+        }
+
+        .payway{
+            margin-right: auto;
+            text-align: center;
+        }
+/* 쿠 폰 */
+
+.coupon-discount{
+    display: block;
+    border: 1px solid gray;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+#coupon {
+position: fixed;
+left: -9999px;
+display: flex;
+width: 100%;
+}
+
+.coupon-click {
+cursor: pointer;
+color: black;
+margin-right: auto;
+width: 100%;
+
+}
+
+.coupon-body {
+display:none;
+list-style: none;
+/* border: 1px solid black; */
+width: 90%;
+height: 300px;
+text-align: center;
+margin-left: 50px;
+background-color: rgba(0, 0, 0, 0);
+}
+
+#coupon:checked ~ .coupon-body {
+display: block;
+margin-left: -35px;
+margin-top: 0px;
+}
+
+
+#nope-icon{
+align-items: center;
+margin: 100px;
+font-size: 50px;
+}
+
+#chevron{
+margin-left: auto;
+display: flex;
+margin-left: auto;
+}
+
+.coupon-container{
+    display: block;
+    border: 1px solid gray;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.coupon-flex{
+display: flex;
+justify-content: space-between;
+}
+
+
+
+
+        .giftcard{
+            display: block;
+            border: 1px solid gray;
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+            font-size: 15px;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+        }
+                /* 결제수단 */
+
+                .payment-card{
+                    border: 1px solid gray;
+                    width: 90%;
+                    height: 300px;
+                    border-radius: 10px;
+                    font-size: 15px;
+                    padding: 10px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 10px;
+                }
+        
+                .payment-title{
+                    /* border: 1px solid black; */
+                    display: inline-block;
+                    width: 100%;
+                    height: 10%;
+                    margin-bottom: 20px;
+                }
+        
+                .payment-box{
+                    /* border: 1px solid black; */
+                    width: 100%;
+                    height: 90%;
+                    display: flex;
+                }
+        
+                .payment-box1{
+                    /* border: 1px solid red; */
+                    width: 50%;
+        
+                }
+        
+                .payment-box2{
+                    /* border: 1px solid blue; */
+                    width: 50%;
+                }
+        
+                .payment-service {
+                    border: 1px solid lightgray;
+                    border-radius: 10px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-align: center;
+                    font-size: 17px;
+                    padding: 15px;
+                    margin: 10px;
+                    position: relative;
+                    overflow: hiddlen;
+                    white-space: nowrap;
+                }
+        
+                .payment-service:hover{
+                    cursor: pointer;
+                    border: 1px solid navy;
+                    background-color: rgba(0, 0, 0, 0.2);
+                }
+
+
+
+        /* 유의사항 */
+
+
+        .precautions{
+            display: block;
+            border: 1px solid gray;
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+            font-size: 15px;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            background-color: white;
+        }
+
+        .precautions-body{
+            background-color:#F6F6F6;
+            text-align: left;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+
+/* footer!! */
+.footer-fix{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    position:absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    /* border: 1px solid black; */
+    box-shadow: 0 0 16px 3px rgba(0 0 0 / 20%);
+}
+
+.payment-box {
+    width: 500px;
+    height: 80px;
+    margin-left: 500px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+.realtotal-price {
+    font-size: 30px;
+    font-weight: bold;
+    color: navy;
+}
+
+.payment-completed {
+    width: 180px;
+    height: 50px;
+    background-color: navy;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 30px;
+    padding-top:  10px;
+    /* padding-bottom: 10px; */
+}
+
+
+/* 모달창 */
+
+.trevel-info-box1{
+    width: 580px;
+    height: 60px;
+    padding: 10px;
+    display: block;
+    text-align: left;
+    display: flex;
+    background-color: white;
+    
+}
+
+.trevel-info-box2{
+    width: 400px;
+    height: 50px;
+    font-size: 18px;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.trevel-info-box3{
+    width: 30%;
+    height: 50px;
+    font-size: 18px;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.trevel-info-box4{
+    width: 580px;
+    height: 40px;
+    padding: 10px;
+    display: block;
+    text-align: left;
+    display: flex;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.trevel-info-box5{
+    width: 400px;
+    height: 50px;
+    font-size: 18px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.trevel-info-small{
+    font-size: 15px;
+    color: gray;
+    border-bottom: 1px solid navy;
+}
+
+.trevel-info-small:hover{
+    border: 1px solid skyblue;
+    cursor: pointer;
+}
+
+    .help-tip {
+        display: inline;
+        text-align: center;
+        background-color: white;
+        width: auto;
+        height: auto;
+        font-size: 15px;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .help-tip:hover{
+        border: 1px solid navy;
+    }
+
+    .help-tip:hover p {
+        display: block;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .help-tip p {
+        display: none;
+        text-align: left;
+        background-color: lightblue;
+        padding: 15px;
+        width: auto;
+        height: 18px;
+        position: absolute;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        color: white;
+        font-size: 14px;
+    }
+
+
+    .trevel-info-box7{
+    width: 97%;
+    height: 50%;
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+.trevel-info-box8{
+    width: 300px;
+    height: 30px;
+    margin-top: 30px;
+}
+
+.trevel-info-time{
+    font-size: 15px;
+    height: auto;
+    margin-top: 20px;
+}
+
+    #modalOpenButton,
+    #modalCloseButton {
+        cursor: pointer;
+    }
+
+    #modalContainer {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    #modalContent {
+    width: 600px;
+    height: 500px;
+    background-color: #c6f2fe;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    }
+
+    #modalContainer.hidden {
+        display: none;
+    }
+
+
