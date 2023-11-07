@@ -490,7 +490,7 @@ th {
 html, body , li ,table ,option ,select,button, .ft_li{ font-family: "Elice DX Neolli", sans-serif; } */
 
 @media only screen and (max-width:1000px){
-    body, div{
+    .menu, .container_page{
         width: 100%;
     }
 }
