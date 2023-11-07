@@ -48,6 +48,54 @@ searchBoxArv.addEventListener("click", () => { // 검색버튼 누르면 도착�
     toBtn.style.color ="black";
 })
 
+// 수화물 조회 결과창
+const dep = document.querySelector('.result-dep');
+const arv = document.querySelector(".result-arv");
+const seat = document.querySelector('.result-seat');
+const grade = document.querySelector('.result-grade');
+const resultBtn = document.querySelector(".lug-btn"); // 조회 버튼
+const modalResult = document.querySelector('.modal-result'); //조회 팝업
+const modalResultClose = document.querySelector(".modal-result-close"); // 닫기 버튼
+
+resultBtn.addEventListener('click', ()=>{
+    modalResult.style.display='flex';
+    dep.innerText = searchFlight[ 0 ].innerText;
+    arv.innerText = searchFlight[ 12 ].innerText;
+    
+})
+
+modalResultClose.addEventListener("click", ()=>{
+    modalResult.style.display="none";
+})
+
+
+const selectSeat = document.getElementByName('seat-seat');
+const seatValue = selectSeat.value;
+
+
+
+
+
+
+// 라디오 선택지 > 안 됨 ㅜㅜ
+const volume1 = document.querySelector("#volunme1"); // 라디오 선택지
+const volume2 = document.querySelector("#volunme2");
+const volume3 = document.querySelector("#volunme3");
+const howmuch = document.querySelector(".result-howmuch"); // 선택에 따른 금액
+
+if(volume1.checked){
+    howmuch.innerText = "0";
+}
+
+if(volume2.checked){
+    howmuch.innerText = "400,000";
+}
+
+if(volume3.checked){
+    howmuch.innerText = "600,000";
+}
+
+
 // 가로 세로 높이 계산
 const calculateBtn= document.querySelector(".calculate-btn"); // 계산 결과 조회 버튼
 
@@ -63,9 +111,8 @@ calculateBtn.addEventListener("click",()=>{
     }
     else{
         let question = confirm("수화물 규정 통과입니다 ~ 해당 수화물로 체크인을 진행하시겠습니까?");
-        if(question == true){
-            modalResult.style.display="flex";
-        }
+        // if(question == true){ // 버튼이랑 연동
+        // }
     }
 })
 
