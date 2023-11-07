@@ -69,31 +69,31 @@ modalResultClose.addEventListener("click", ()=>{
 })
 
 
-const selectSeat = document.getElementByName('seat-seat');
-const seatValue = selectSeat.value;
+// const selectSeat = document.getElementByName('seat-seat');
+// const seatValue = selectSeat.value;
 
 
 
 
 
 
-// 라디오 선택지 > 안 됨 ㅜㅜ
-const volume1 = document.querySelector("#volunme1"); // 라디오 선택지
-const volume2 = document.querySelector("#volunme2");
-const volume3 = document.querySelector("#volunme3");
-const howmuch = document.querySelector(".result-howmuch"); // 선택에 따른 금액
+// // 라디오 선택지 > 안 됨 ㅜㅜ
+// const volume1 = document.querySelector("#volunme1"); // 라디오 선택지
+// const volume2 = document.querySelector("#volunme2");
+// const volume3 = document.querySelector("#volunme3");
+// const howmuch = document.querySelector(".result-howmuch"); // 선택에 따른 금액
 
-if(volume1.checked){
-    howmuch.innerText = "0";
-}
+// if(volume1.checked){
+//     howmuch.innerText = "0";
+// }
 
-if(volume2.checked){
-    howmuch.innerText = "400,000";
-}
+// if(volume2.checked){
+//     howmuch.innerText = "400,000";
+// }
 
-if(volume3.checked){
-    howmuch.innerText = "600,000";
-}
+// if(volume3.checked){
+//     howmuch.innerText = "600,000";
+// }
 
 
 // 가로 세로 높이 계산
@@ -103,6 +103,7 @@ const width = document.querySelector("#width"); //가로
 const height = document.querySelector("#height"); //세로
 const tall = document.querySelector('#tall'); //높이
 
+
 calculateBtn.addEventListener("click",()=>{
     if((Number(width.value) + Number(height.value) + Number(tall.value)) > 158){
         alert("수화물 규정에서 벗어났습니다 ㅜ.ㅜ")
@@ -111,8 +112,9 @@ calculateBtn.addEventListener("click",()=>{
     }
     else{
         let question = confirm("수화물 규정 통과입니다 ~ 해당 수화물로 체크인을 진행하시겠습니까?");
-        // if(question == true){ // 버튼이랑 연동
-        // }
+        if(question == true){ // 버튼이랑 연동
+            window.location.href = "http://127.0.0.1:5500/project-anime/%EC%8A%B9%EA%B0%9D%EC%A0%95%EB%B3%B4.html"
+        }
     }
 })
 

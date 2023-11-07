@@ -351,7 +351,7 @@ body {
     border: 1px solid lightgray;
     border-radius: 0.5rem;
     width: 400px;
-    height: 140px;
+    height: 150px;
     position: absolute;
     top: 160px;
     right: 50px;
@@ -392,7 +392,7 @@ body {
     border: 1px solid lightgray;
     border-radius: 0.5rem;
     width: 400px;
-    height: 230px;
+    height: 250px;
     position: absolute;
     top: 160px;
 }
@@ -421,7 +421,7 @@ body {
     width: 400px;
     height: 120px;
     position: absolute;
-    top: 570px;
+    top: 580px;
     left: 813px;
 }
 
