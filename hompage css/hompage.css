@@ -237,6 +237,11 @@
     width: 272px;
 }
 
+.info_wrap:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 .image {
     width: 100%;
     display: block;
@@ -326,6 +331,12 @@
     position: relative;
     width: 400px;
 }
+
+.Last_info_wrap:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 
 .Last_info {
     position: relative;
