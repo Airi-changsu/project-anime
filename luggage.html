@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/project-anime/luggage.css">
+    <title>수화물 | 대한항공</title>
+    <link href="./images/대한항공타이틀아이콘.png" rel="shortcut icon" type="image/x-icon">
+
+</head>
+
+<body>
+    <!-- 메인네비바 by 창수 -->
+    <body-LCS id="LCS" bottommargin="0" leftmargin="0" rightmargin="0" style="background-color:#F6F6F6">
+        <div class="menu">
+            <nav class="clearfix">
+                <ul class="clearfix">
+                    <div class="container"><img src="../project-anime/images/대한항공로고.png"></div>
+                    <li><a href="http://127.0.0.1:5500/git/project-anime/login.html">예약</a></li>
+                    <!--여기 부분에 URL 작성하면 됨-->
+                    <li><a href="http://www._____.com/About">공항</a></li>
+                    <li><a href="http://www._____.com/Project">기내</a></li>
+                    <li><a href="http://www._____.com/Travel">스카이패스</a></li>
+                    <li><a href="http://www._____.com/Contact">호텔</a></li>
+                    <li>
+                        <div class="util__item-area"><a class="util__link-inner -login"
+                                href="http://127.0.0.1:5500/git/project-anime/login.html">Log in</a></div>
+                    </li>
+                </ul>
+                <a id="pull" href="#"></a>
+            </nav>
+        </div>
+    </body-LCS>
+
+    <!-- 상단네비바 -->
+    <div class="nav">
+        <div class="lug-nav-bgd"></div>
+        <div class="lug-nav">
+            <div class="lug-info">
+                <span class="lug">위탁 수화물</span>
+            </div>
+            <button class="lug-inner-nav lug-search" style="cursor: pointer;">
+                위탁 수화물 허용 범위 측정 안내</button>
+        </div>
+    </div>
+
+    <!-- 검색창 -->
+    <div class="modal">
+        <div class="modal-body">
+            <div class="modal-title">위탁수화물 허용 범위 안내</div>
+            <button class="modal-close-btn">&times;</button>
+            <div class="lug-free">
+                <div class="lug-free-title">무료 위탁 수하물 규격</div>
+                <div class="lug-inch">3면의 합이 158cm(62in) 이내</div>
+                <div class="lug-img" style="background-image:url(/project-anime/images/수화물규정.png);"></div>
+
+                <div class="lug-free-title">유소아 무료 위탁 수하물 허용량 안내</div>
+                <div class="lug-inch"><br>
+                    <div>▷ 소아: 성인과 동일 + 접이식 유모차 1개+ 카시트 1개</div>
+                    <div>▷ 유아 : 접이식 유모차 1개 + 카시트 1개</div>
+                </div>
+
+                <div class="lug-free-title">특수 수화물</div>
+                <table class="lug-table">
+                    <tr class="lug-tr">
+                        <th class="lug-th">품목</th>
+                        <th class="lug-th">기준</th>
+                    </tr>
+                    <tr class="lug-tr">
+                        <td class="lug-td">악기</td>
+                        <td class="lug-td">세 변의 합이 115cm(45in) 이하 무료 기내 반입 가능 <br>
+                            (초과하는 악기는 별도 좌서 구매 + 별도 예약 필요)
+                        </td>
+                    </tr>
+                    <tr class="lug-tr">
+                        <td class="lug-td">스포츠 장비</td>
+                        <td class="lug-td">세 변의 합 292cm(115in) 이하 + 32kg 이하 무료 기내 반입 가능
+                    </tr>
+                    <tr class="lug-tr">
+                        <td class="lug-td">전동휠체어</td>
+                        <td class="lug-td">배터리 분리 불가 시 : 위탁 가능<br>
+                            배터리 분리 가능 시 : 휴대 가능 / 위탁 불가</td>
+                    </tr>
+                </table>
+
+                <div class="lug-caution">
+                    <div class="lug-caution-title">유의사항</div>
+                    <div>
+                        <ol>
+                            <li>&middot;조회 결과는 조회 구간에 대한 일반 규정으로, 경유지가 포함되어 있을 수 있으며 실제 운항 여부는 확인이 필요합니다.</li>
+                            <li>&middot;이 정보는 참고용으로 공항에서 지불시 제시되는 금액입니다.</li> <br>
+                            <li>&middot;스카이패스 회원 등급은 탑승일에도 자격이 유효한 경우에만 적용됩니다.</li>
+                            <li>&middot;위탁수하물 개수가 4개를 초과할 경우 또는 다구간 여정일 경우 대한항공 서비스센터로 문의하여 주시기 바랍니다. <br>
+                                (추가 위탁 가능한 수하물 개수는 항공기의 운항 상황에 따라 제한될 수 있습니다.)</li>
+                            <li>&middot;개수/무게/사이즈 초과에 부과되는 요금은 수하물 각각에 부과됩니다.</li>
+                            <li>&middot;사이즈 초과를 지정하지 않은 경우, 158cm 이내(가로+세로+높이) 사이즈 기준으로 요금이 제공됩니다.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--금지품목  -->
+        <div class="cannot">
+            <div class="cannot-title">항공지 금지 품목</div>
+            <div>아래 품목은 휴대와 위탁 수하물로 운송하는 것이 금지되어 있습니다.</div>
+        </div>
+    
+        <div class="cannot-content">
+            <div class="cannot-box">
+                <div class="cannot-item">
+                    <span class="cannot-icon"><i class="fa-solid fa-spray-can"></i></span>
+                    <span class="cannot-title">발화성/인화성 물질</span>
+                    <div>휘발유, 페인트, 라이터용 연료 등 발화성/인화성 물질</div>
+                </div>
+                <div class="cannot-item">
+                    <span class="cannot-icon"><i class="fa-solid fa-fire-flame-simple"></i></span>
+                    <span class="cannot-title">고압가스 용기</span>
+                    <div>부탄가스캔 등 고압가스 용기</div>
+                </div>
+                <div class="cannot-item">
+                    <span class="cannot-icon"><i class="fa-solid fa-bomb"></i></span>
+                    <span class="cannot-title">무기 및 폭발물 종류</span>
+                    <div>총기, 폭죽 등 무기 및 폭발물 종류</div>
+                </div>
+                <div class="cannot-item">
+                    <span class="cannot-icon"><i class="fa-solid fa-spray-can"></i></span>
+                    <span class="cannot-title">리튬 배터리 장착 전자기기</span>
+                    <div>배터리 용량 160Wh 초과 전자기기</div>
+                </div>
+            </div>
+        </div>
+
+    <!-- 수화물 계산기 -->
+        <div class="lug-content">
+        <div class="lug-calculate">
+            <div class="lug-cal-title">위탁 수화물 계산기</div>
+            <div>내 여정과 수하물에 얼마의 요금이 부과되는지 직접 조회해 보세요!</div>
+
+            <div class="real-cal">
+                <div style="font-weight: bold;">직접 계산하기</div>
+                <div class="cal-box">
+                    <div class="cal-inch">가로<input type="text" id="width" class="cal-howlong" placeholder="가로 길이를 입력하세요 (cm)"></div>
+                    <div class="cal-inch">세로<input type="text" id="height" class="cal-howlong" placeholder="세로 길이를 입력하세요 (cm)"></div>
+                    <div class="cal-inch">높이<input type="text" id="tall" class="cal-howlong" placeholder="높이를 입력하세요 (cm)"></div>
+                    <div id="cal-caution">*가로 + 세로 + 높이 = 158cm(62in) 이내 </div>
+                </div>
+            </div>
+            <button class="calculate-btn">조회</button>
+
+            <div class="lug-cal-main">
+                <div style="font-weight: bold;">여정 선택해서 계산하기</div>
+                <div class="calculator">
+                    <div class="cal-where">
+                            <button class="cal-where-btn from-btn">FROM</button>
+                            <div><span class="time"><i class="fa-solid fa-arrow-right-long"></i></span></div>
+                            <button class="cal-where-btn to-btn">TO</button>
+                    </div>                        
+        
+                    <div class="cal-when">
+                        <div class="cal-when-title">탑승일</div>
+                        <div class="cal-when-search"><i class="fa-solid fa-calendar-days">
+                            <span class="search-date">탑승일 검색</span></i>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+<!-- 선택창 -->
+<div class="select">
+    <div class="select-item select-seat">
+        <div class="select-title" style="font-weight: bold;">좌석 등급</div>
+        <select name="seat-seat">
+            <option  selected="선택">선택</option>
+            <option name="seat" value="일반석">일반석</option>
+            <option name="seat" value="프레스티지석">프레스티지석</option>
+            <option name="seat" value="우등석">우등석</option>
+        </select>
+    </div>
+
+    <div class="select-item select-lug">
+        <div class="select-title" style="font-weight: bold;">수화물 개수</div>
+        <select name="seat-lug">
+            <option selected="선택">선택</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4개 이상</option>
+        </select>
+    </div>
+
+    <div class="select-item select-grade">
+        <div class="select-title" style="font-weight: bold;">회원 등급</div>
+        <select name="seat-grade">
+            <option selected="선택">선택</option>
+            <option value="일반회원">일반회원</option>
+            <option value="베스트 클럽">베스트 클럽</option>
+            <option value="프리미엄 클럽">프리미엄 클럽</option>
+        </select>
+    </div>
+</div>
+<button class="lug-btn">조회</button>
+</div>
+
+
+
+
+
+
+    <!-- 조회 결과창 -->
+    <div class="modal modal-result">
+        <div class="modal-body modal-body-result">
+            <div class="result-title">
+                <span class="result-dep result">출발지</span>
+                <span></span>
+                <span class="result-arv result">도착지</span>
+                <span class="result">|</span>
+                <span class="result-seat result">좌석</span>
+                <span class="result">|</span>
+                <span class="result-grade result">등급 </span>
+                회원의 조회 결과는 아래와 같습니다.
+            </div>
+            <button class="modal-result-close">&times;</button>
+
+            <div class="result-box">
+                <div class="result-box-title">수하물</div>
+                <hr style="border: 0.5px solid lightgrey;" />
+                <div class="result-weight">무게
+                    <input type="radio" disabled>23kg 이하
+                    <input type="radio" checked disabled> 24kg ~ 32kg
+                </div>
+                <div class="result-volume">부피
+                    <input type="radio" id="volume1" name="volue" checked > 158cm 이하
+                    <input type="radio" id="volume2" name="volue"> 159cm ~ 203cm 이하
+                    <input type="radio" id="volume3" name="volue"> 204cm ~ 292cm 이하
+                </div>
+            </div>
+
+            <div class="result-cash" style="font-weight: bold;">예상요금
+
+                <div><span class="result-howmuch">0</span>원</div>
+
+            </div>
+                
+
+        </div>
+    </div>
+
+<!-- 캘린더 -->
+    <div class="modal modal-calender">
+        <div class="modal-body modal-body-calender">
+            <div class="modal-title modal-title-calender">일정 검색</div>
+            <table class="Calendar">
+                <thead>
+                    <tr class="cal-tr">
+                        <td onClick="prevCalendar();" style="cursor:pointer;" class="cal-td-2" >&#60;</td>
+                        <td colspan="5" class="cal-td">
+                            <span id="calYear" ></span>년
+                            <span id="calMonth"></span>월
+                        </td>
+                        <td onClick="nextCalendar();" style="cursor:pointer;" class="cal-td-2">&#62;</td>
+                    </tr>
+                    <tr class="cal-tr">
+                        <td class="cal-td-3">일</td>
+                        <td class="cal-td-3">월</td>
+                        <td class="cal-td-3">화</td>
+                        <td class="cal-td-3">수</td>
+                        <td class="cal-td-3">목</td>
+                        <td class="cal-td-3">금</td>
+                        <td class="cal-td-3">토</td>
+                    </tr>
+                </thead>
+
+                <tbody class="cal-tbody">
+                </tbody>
+            </table>
+            <div class="cal-caution">*어떤 날짜를 선택해도 현재 날짜가 입력됩니다!</div>
+            <button class="cal-btn">일정 선택</button>
+
+        </div>
+    </div>
+
+<!-- 검색창 -->
+<div class="modal modal-from">
+    <div class="modal-body modal-body-from">
+        <div class="modal-title">여정 검색</div>
+        <button class="modal-close">&times;</button>
+
+        <input type="search" class="search-form-dep" list="searchBox-dep" placeholder="출발지 검색">
+        <input class="search-form-btn-dep" type="button" value="검색">
+        <input type="search" class="search-form-arv" list="searchBox-arv" placeholder="도착지 검색">
+        <input class="search-form-btn-arv" type="button" value="검색">
+        <div id="caution"> 출발지 / 도착지의 검색 버튼을 모두 눌러주세요 !</div>
+
+        <datalist id="searchBox-dep">
+            <option class="searchBox-value" value="ICN 인천"></option>
+            <option class="searchBox-value" value="GMP 김포"></option>
+            <option class="searchBox-value" value="TYO 도쿄"></option>
+            <option class="searchBox-value" value="SHA 상하이"></option>
+            <option class="searchBox-value" value="HKG 홍콩"></option>
+            <option class="searchBox-value" value="GUM 괌"></option>
+            <option class="searchBox-value" value="LAS 라스베이거스"></option>
+        </datalist>
+        <datalist id="searchBox-arv">
+            <option class="searchBox-value" value="SEA 시애틀"></option>
+            <option class="searchBox-value" value="WAS 워싱턴"></option>
+            <option class="searchBox-value" value="LHR 런던"></option>
+            <option class="searchBox-value" value="MAD 마드리드"></option>
+            <option class="searchBox-value" value="SYD 시드니"></option>
+            <option class="searchBox-value" value="NYC 뉴욕"></option>
+            <option class="searchBox-value" value="DXB 두바이"></option>
+        </datalist>
+        <div class="flight-box">
+            <div class="flight-box-dep">
+                <strong>가는편</strong>
+                <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> ICN 인천</p>
+                <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> GMP 김포</p>
+                <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> TYO 도쿄</p>
+                <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> SHA 상하이</p>
+                <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> HKG 홍콩</p>
+                <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> GUM 괌</p>
+                <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> LAS 라스베이거스</p>
+            </div>
+
+            <div class="flight-box-arv">
+                <strong>오는편</strong>
+                <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> SEA 시애틀</p>
+                <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> WAS 워싱턴</p>
+                <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> LHR 런던</p>
+                <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> MAD 마드리드</p>
+                <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> SYD 시드니</p>
+                <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> NYC 뉴욕</p>
+                <p class="my-flight"><i class="fa-solid fa-jet-fighter"></i> DXB 두바이</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- 하단 -->
+    <div class="footer-foot">
+        <div class="payment-box">
+            <button class="next-btn" style="cursor: pointer;" onclick="location.href='승객정보.html'">다음 여정</button>
+        </div>
+    </div>
+
+<!-- container_page 끝부분 -->
+<footer class="footer">
+    <div class="footer_tb">
+<table>
+    <thead>
+        <tr style="font-size: 1.5rem;">
+            <th class="ft_th foot-th">회사소개</th>
+            <th class="ft_th foot-th">고객지원</th>
+            <th class="ft_th foot-th">약관 및 규정</th>
+            <th class="ft_th foot-th">기타 안내</th>
+        </tr>
+    </thead>
+    <tbody class="foot-tbody" style="color:#979999">
+        <tr>
+            <td class="_center ft_pd">대한항공에 대하여</td>
+            <td class="_center ft_pd">공지사항</td>
+            <td class="_center ft_pd">개인정보 처리방침</td>
+            <td class="_center ft_pd">기업 출장 여행</td>
+        </tr>
+        <tr>
+            <td class="_center ft_pd">기업지배구조</td>
+            <td class="_center ft_pd">고객의 말씀</td>
+            <td class="_center ft_pd">이용 약관</td>
+            <td class="_center ft_pd">고객 안내 서비스</td>
+        </tr>
+        <tr>
+            <td class="_center ft_pd">투자정보</td>
+            <td class="_center ft_pd">서비스 센터</td>
+            <td class="_center ft_pd">운송약관 및 고지사항</td>
+            <td class="_center ft_pd">항공교통이용자 서비스 계획</td>
+        </tr>
+        <tr>
+            <td class=" _center ft_pd">지속가능경영</td>
+            <td class="_center ft_pd">e-서식함</td>
+            <td class="_center ft_pd">소비자 안전 관련 정보</td>
+            <td class="_center ft_pd">항공교통이용자 피해 구제</td>
+        </tr>
+        <tr>
+            <td class="_center ft_pd">뉴스룸</td>
+            <td class="_center ft_pd">웹 접근성</td>
+            <td class="_center ft_pd">운임 및 서비스 요금표</td>
+            <td class="_center ft_pd">관련 사이트</td>
+        </tr>
+        <tr>
+            <td class="_center ft_pd"></td>
+            <td class="_center ft_pd"></td>
+            <td class="_center ft_pd"></td>
+            <td class="_center ft_pd">사이트맵</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div class="footer_box ft_th">
+    <i class="fa-brands fa-youtube ft_th" style="font-size: 3rem; color: gray;"></i>
+    <i class="fa-brands fa-instagram ft_th" style="font-size: 3rem; color: gray;"></i>
+    <i class="fa-brands fa-facebook ft_th" style="font-size: 3rem; color: gray;"></i>
+    <i class="fa-brands fa-twitter ft_th" style="font-size: 3rem; color: gray;"></i>
+    <div class="im_link"><a href="https://play.google.com/store/apps/details?id=com.koreanair.passenger"><img src="./images/GET IT ON 구글플레이 검정박스.png"></a></div>
+    <div class="im_link"><a href="https://apps.apple.com/us/app/korean-air-my/id1512918989"><img src="./images/AppStore 이미지.png"></a></div>
+    <div class="im_link3"><img src="./images/세계박람회대한항공응원.png"></div>
+</div>
+</footer>
+<div class="ft_contact">
+    <div class="contact_item">(주) 대한항공  </div>
+    <span style="font-size: 0.9rem; color: #979999;">대표 : 우기홍 외 1명 | 주소 : 서울특별시 강서구 하늘길 260 | 전화 : 1588-2001 / 02-2656-2001</span><br>
+    <span style="padding-left: 50px; font-size: 0.9rem; color: #979999;">사업자등록번호 : 110-81-14794 | 통신판매업신고 : 강서 제 16-3010 | 개인정보보호책임자 : 장성현 대한항공 부사장</span>
+    <br><br><br>
+    <span style="padding-left: 50px; font-size: 0.9rem; color: #979999;">© 1997-2023 KOREAN AIR</span>
+</div>
+<div class="ft_contact2">
+<div class="ft_img1" style="background-image: url(./images/정보통신접근성real.jfif);">
+</div><div class="ft_img2" style="background-image: url(./images/정보보호관리체계인증.png);">
+</div><div class="ft_img2" style="background-image: url(./images/소비자중심.png);">
+</div><div class="ft_img2" style="background-image: url(./images/대한항고오스타렉스5성.png);"></div>
+</div>
+
+    
+
+
+
+
+    <script src="/project-anime/luggage.js"></script>
+</body>
+
+</html>

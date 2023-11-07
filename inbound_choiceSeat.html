@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="/project-anime/좌석선택.css">
+    <link rel="stylesheet" href="/project-anime/choiceSeat.css">
     <title>좌석선택 | 오는 편 | 대한항공</title>
     <link href="./images/대한항공타이틀아이콘.png" rel="shortcut icon" type="image/x-icon">
 
@@ -42,21 +42,21 @@
                 <span class="flight-go-code flight-dep-code">NYC 뉴욕</span>
                 <i class="fa-solid fa-arrow-right"></i>                
                 <span class="flight-go-code flight-arv-code">ICN 인천</span>
+                <span>오는 편</span>
             </div>
 
             <span class="slash">|</span>
 
             <div class="flight-inner-nav flight-schedule">
                 <i class="fa-solid fa-calendar-days"></i>
-                <span>2023년 <span class="start-month">XX</span>월 <span class="start-date">XX</span>일
-                    ~ 2023년 <span class="end-month">XX</span>월 <span class="end-date">XX</span>일</span>
-            </div>
+                <span>2023년 <span class="start-month">11</span>월 <span class="start-date">25</span>일            </div>
 
             <span class="slash">|</span>
 
             <div class="flight-inner-nav flight-person">
                 <i class="fa-solid fa-person"></i>
-                <span>성인 <span class="person-count">0</span>명</span>
+                <span>성인 <span class="adult-count">0</span>명</span> |
+                <span>유아 <span class="child-count">0</span>명</span>
             </div>
         </div>
     </div>
@@ -95,7 +95,7 @@
                 <div class="airplane-main">
                     <div class="window-seat">
                         <div class="window window-10">
-                            <div class="left a10 no-seat"></div>
+                            <div class="left a10 yes-seat"><span class="num">a10</span></div>
                             <div class="left b10 no-seat"></div>
                         </div>&nbsp;
                         <div class="window window-11">
@@ -103,28 +103,28 @@
                             <div class="left b11 no-seat"></div>
                         </div>&nbsp;
                         <div class="window window-12">
-                            <div class="left a12 yes-seat"><span class="num">a12</span></div>
-                            <div class="left b12 yes-seat"><span class="num">b12</span></div>
+                            <div class="left a12 no-seat"></div>
+                            <div class="left b12 no-seat"></div>
                         </div>&nbsp;
                         <div class="window window-13">
-                            <div class="left a13 yes-seat"><span class="num">a13</span></div>
+                            <div class="left a13 no-seat"></div>
                             <div class="left b13 no-seat"></div>
                         </div>&nbsp;
                         <div class="window window-14">
-                            <div class="left a14 yes-seat"><span class="num">a14</span></div>
-                            <div class="left b14 yes-seat"><span class="num">b14</span></div>
+                            <div class="left a14 yes-child-seat child-seat"><span class="num">a14</span></div>
+                            <div class="left b14 yes-child-seat child-seat"><span class="num">b14</span></div>
                         </div>&nbsp;
                         <div class="window window-15">
-                            <div class="left a15 no-seat"></div>
-                            <div class="left b15 no-seat"></div>
+                            <div class="left a15 yes-child-seat child-seat"><span class="num">a15</span></div>
+                            <div class="left b15 yes-seat child-seat"><span class="num">b15</span></div>
                         </div>&nbsp;
                         <div class="window window-16">
-                            <div class="left a16 no-seat"></div>
-                            <div class="left b16 yes-seat"><span class="num">b16</span></div>
+                            <div class="left a16 no-seat child-seat"></div>
+                            <div class="left b16 yes-child-seat child-seat"><span class="num">b16</span></div>
                         </div>&nbsp;
                         <div class="window window-17">
-                            <div class="left a17 yes-seat"><span class="num">a17</span></div>
-                            <div class="left b17 yes-seat"><span class="num">b17</span></div>
+                            <div class="left a17 yes-child-seat child-seat"><span class="num">a17</span></div>
+                            <div class="left b17 yes-child-seat child-seat"><span class="num">b17</span></div>
                         </div>&nbsp;
                         <div class="window window-18">
                             <div class="left a18 yes-seat"><span class="num">a18</span></div>
@@ -140,7 +140,7 @@
                         </div>&nbsp;
                         <div class="window window-21">
                             <div class="left a21 yes-seat"><span class="num">a21</span></div>
-                            <div class="left b21 yes-seat"><span class="num">b21</span></div>
+                            <div class="left b21 no-seat"></div>
                         </div>&nbsp;
                         <div class="window window-22">
                             <div class="left a22 no-seat"></div>
@@ -162,19 +162,19 @@
 
                     <div class="middle-seat">
                         <div class="middle middle-10">
-                            <div class="m c10 no-seat"></div>
-                            <div class="m d10 no-seat"></div>
-                            <div class="m e10 no-seat"></div>
+                            <div class="m c10 yes-seat"><span class="num">c10</span></div>
+                            <div class="m d10 yes-seat"><span class="num">d10</span></div>
+                            <div class="m e10 yes-seat"><span class="num">e10</span></div>
                             <div class="m f10 no-seat"></div>
                         </div>&nbsp;
                         <div class="middle middle-11">
                             <div class="m c11 yes-seat"><span class="num">c11</span></div>
-                            <div class="m d11 yes-seat"><span class="num">d11</span></div>
+                            <div class="m d11 no-seat"></div>
                             <div class="m e11 no-seat"></div>
                             <div class="m f11 no-seat"></div>
                         </div>&nbsp;
                         <div class="middle middle-12">
-                            <div class="m c12"></div>
+                            <div class="m c12 no-seat"></div>
                             <div class="m d12 no-seat"></div>
                             <div class="m e12 no-seat"></div>
                             <div class="m f12 no-seat"></div>
@@ -182,32 +182,32 @@
                         <div class="middle middle-13">
                             <div class="m c13 yes-seat"><span class="num">c13</span></div>
                             <div class="m d13 yes-seat"><span class="num">d13</span></div>
-                            <div class="m e13 yes-seat"><span class="num">e13</span></div>
-                            <div class="m f13 yes-seat"><span class="num">f13</span></div>
+                            <div class="m e13 no-seat"></div>
+                            <div class="m f13 no-seat"></div>
                         </div>&nbsp;
                         <div class="middle middle-14">
-                            <div class="m c14 no-seat"><span class="num">c14</span></div>
-                            <div class="m d14 yes-seat"><span class="num">d14</span></div>
-                            <div class="m e14 yes-seat"><span class="num">e14</span></div>
-                            <div class="m f14 no-seat"></div>
+                            <div class="m c14 no-seat child-seat"><span class="num">c14</span></div>
+                            <div class="m d14 yes-child-seat child-seat"><span class="num">d14</span></div>
+                            <div class="m e14 yes-child-seat child-seat"><span class="num">e14</span></div>
+                            <div class="m f14 yes-child-seat child-seat"><span class="num">f14</span></div>
                         </div>&nbsp;
                         <div class="middle middle-15">
-                            <div class="m c15 yes-seat"><span class="num">c15</span></div>
-                            <div class="m d15 yes-seat"><span class="num">d15</span></div>
-                            <div class="m e15 yes-seat"><span class="num">e15</span></div>
-                            <div class="m f15 yes-seat"><span class="num">f15</span></div>
+                            <div class="m c15 yes-child-seat child-seat"><span class="num">c15</span></div>
+                            <div class="m d15 yes-child-seat child-seat"><span class="num">d15</span></div>
+                            <div class="m e15 yes-child-seat child-seat"><span class="num">e15</span></div>
+                            <div class="m f15 yes-child-seat child-seat"><span class="num">f15</span></div>
                         </div>&nbsp;
                         <div class="middle middle-16">
-                            <div class="m c16 yes-seat"><span class="num">c16</span></div>
-                            <div class="m d16 yes-seat"><span class="num">d16</span></div>
-                            <div class="m e16 no-seat"></div>
-                            <div class="m f16 no-seat"></div>
+                            <div class="m c16 yes-child-seat child-seat"><span class="num">c16</span></div>
+                            <div class="m d16 yes-child-seat child-seat"><span class="num">d16</span></div>
+                            <div class="m e16 no-seat child-seat"></div>
+                            <div class="m f16 no-seat child-seat"></div>
                         </div>&nbsp;
                         <div class="middle middle-17">
                             <div class="m c17 no-seat"></div>
                             <div class="m d17 no-seat"></div>
-                            <div class="m e17 yes-seat"><span class="num">e17</span></div>
-                            <div class="m f17 yes-seat"><span class="num">f17</span></div>
+                            <div class="m e17 yes-child-seat child-seat"><span class="num">e17</span></div>
+                            <div class="m f17 yes-child-seat child-seat"><span class="num">f17</span></div>
                         </div>&nbsp;
                         <div class="middle middle-18">
                             <div class="m c18 no-seat"></div>
@@ -225,6 +225,7 @@
                             <div class="m c20 yes-seat"><span class="num">c20</span></div>
                             <div class="m e20 no-seat"></div>
                             <div class="m f20 no-seat"></div>
+                            <div class="m f20 no-seat"></div>
                         </div>&nbsp;
                         <div class="middle middle-21">
                             <div class="m c21 yes-seat"><span class="num">c21</span></div>
@@ -234,7 +235,7 @@
                         </div>&nbsp;
                         <div class="middle middle-22">
                             <div class="m c22 yes-seat"><span class="num">c22</span></div>
-                            <div class="m d22 yes-seat"><span class="num">d22</span></div>
+                            <div class="m d22 no-seat"></div>
                             <div class="m e22 no-seat"></div>
                             <div class="m f22 no-seat"></div>
                         </div>&nbsp;
@@ -247,7 +248,7 @@
                         <div class="middle middle-24">
                             <div class="m c24 yes-seat"><span class="num">c24</span></div>
                             <div class="m d24 yes-seat"><span class="num">d24</span></div>
-                            <div class="m e24 yes-seat"><span class="num">e24</span></div>
+                            <div class="m e24 no-seat"></div>
                             <div class="m f24 no-seat"></div>
                         </div>&nbsp;
                         <div class="middle middle-25">
@@ -261,11 +262,11 @@
                     <div class="window-seat">
                         <div class="window window-10">
                             <div class="right g10 no-seat"></div>
-                            <div class="right h10 no-seat"></div>
+                            <div class="right h10 yes-seat"><span class="num">h10</span></div>
                         </div>&nbsp;
                         <div class="window window-11">
                             <div class="right g11 yes-seat"><span class="num">g11</span></div>
-                            <div class="right h11 no-seat"></div>
+                            <div class="right h11 yes-seat"><span class="num">h11</span></div>
                         </div>&nbsp;
                         <div class="window window-12">
                             <div class="right g12 yes-seat"><span class="num">g12</span></div>
@@ -276,16 +277,16 @@
                             <div class="right h13 yes-seat"><span class="num">h13</span></div>
                         </div>&nbsp;
                         <div class="window window-14">
-                            <div class="right g14 yes-seat"><span class="num">g14</span></div>
-                            <div class="right h14 no-seat"></div>
+                            <div class="right g14 yes-child-seat child-seat"><span class="num">g14</span></div>
+                            <div class="right h14 no-seat child-seat"></div>
                         </div>&nbsp;
                         <div class="window window-15">
-                            <div class="right g15 no-seat"></div>
-                            <div class="right h15 no-seat"></div>
+                            <div class="right g15 yes-child-seat child-seat"><span class="num">g15</span></div>
+                            <div class="right h15 yes-child-seat child-seat"><span class="num">h15</span></div>
                         </div>&nbsp;
                         <div class="window window-16">
-                            <div class="right g16 no-seat"></div>
-                            <div class="right h16 no-seat"></div>
+                            <div class="right g16 no-seat child-seat"></div>
+                            <div class="right h16 no-seat child-seat"></div>
                         </div>&nbsp;
                         <div class="window window-17">
                             <div class="right g17 no-seat"></div>
@@ -293,7 +294,7 @@
                         </div>&nbsp;
                         <div class="window window-18">
                             <div class="right g18 yes-seat"><span class="num">g18</span></div>
-                            <div class="right h18 yes-seat"><span class="num">h18</span></div>
+                            <div class="right h18 no-seat"></div>
                         </div>&nbsp;
                         <div class="window window-19">
                             <div class="right g19 no-seat"></div>
@@ -313,7 +314,7 @@
                         </div>&nbsp;
                         <div class="window window-23">
                             <div class="right g23 yes-seat"><span class="num">g23</span></div>
-                            <div class="right h23 no-seat"></div>
+                            <div class="right h23 yes-seat"><span class="num">h23</span></div>
                         </div>&nbsp;
                         <div class="window window-24">
                             <div class="right g24 no-seat"></div>
@@ -350,7 +351,9 @@
         <div class="passenger-box">
             <div class="box-info">승객 정보</div>
             <div class="line">====================================</div>
-            <div class="name-box">HYUN YOOLIM</div>
+            <div class="name-box">성인 <span class="adult-count">0</span>명</div>
+            <div class="name-box">유아 <span class="child-count">0</span>명</div>
+
 
             <!-- 좌석 정보창 -->
         <div class="select-box">
@@ -361,6 +364,8 @@
                     <div class="info-icon"><i class="fa-solid fa-door-closed"> </i> 게이트</div>
                     <div class="info-icon"><i class="fa-solid fa-utensils"> </i> 식사 준비실</div>
                     <div class="info-icon"><i class="fa-solid fa-person-running"></i> 탈출구</div>
+                    <i class="fa-solid fa-person info-icon for-child"></i> 유아석(~ 5세 이하)
+                    <div class="info-child">*유아석은 보호자의 동반 하에 이용하실 수 있습니다.</div>
                 </div>
             </div>
         </div>
@@ -375,7 +380,7 @@
     <!-- 하단 -->
     <div class="footer-foot">
         <div class="payment-box">
-            <button class="next-btn" style="cursor: pointer;" onclick="location.href='좌석선택.html'">다음 여정</button>
+            <button class="next-btn" style="cursor: pointer;" onclick="location.href='luggage.html'">다음 여정</button>
         </div>
     </div>
 
@@ -456,7 +461,7 @@
 </div><div class="ft_img2" style="background-image: url(./images/대한항고오스타렉스5성.png);"></div>
 </div>
 
-    <script src="/project-anime/좌석선택.js"></script>
+    <script src="/project-anime/choiceSeat.js"></script>
 
 </body>
 
