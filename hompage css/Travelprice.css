@@ -204,3 +204,22 @@
     justify-content: space-around;
 }
 
+.pppp_5_A {
+    padding-left: 10px;
+    position: absolute;
+    left: 365px;
+    font-size: 14.5px;
+    font-weight: bold;
+    color: gray;
+    border-left: 1px solid rgb(202, 197, 197);
+}
+
+.pppp_5_B {
+    padding-left: 10px;
+    position: absolute;
+    left: 333px;
+    font-size: 14.5px;
+    font-weight: bold;
+    color: gray;
+    border-left: 1px solid rgb(202, 197, 197);
+}
