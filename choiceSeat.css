@@ -267,6 +267,11 @@ body {
     box-shadow: 0 0 5px 0;
 }
 
+.yes-child-seat:hover{
+    border: 1px solid #fa027e;
+    box-shadow: 0 0 5px 0;
+}
+
 .right {
     width: 45%;
     height: 50px;
@@ -283,6 +288,7 @@ body {
     justify-content: space-evenly;
 }
 
+
 .m {
     width: 50px;
     height: 50px;
@@ -293,9 +299,19 @@ body {
     transition: all 0.2s;
 }
 
+.child-seat{
+    background-color: lightpink;
+}
+
 .change-seat {
     background-color: #c6f2fe;
     border: 2px solid #002F87;
+    box-shadow: 0 0 5px 0;
+}
+
+.change-seat-child {
+    background-color: lightcoral;
+    border: 2px solid #fa027e;
     box-shadow: 0 0 5px 0;
 }
 
@@ -335,7 +351,7 @@ body {
     border: 1px solid lightgray;
     border-radius: 0.5rem;
     width: 400px;
-    height: 120px;
+    height: 140px;
     position: absolute;
     top: 160px;
     right: 50px;
@@ -376,14 +392,26 @@ body {
     border: 1px solid lightgray;
     border-radius: 0.5rem;
     width: 400px;
-    height: 170px;
+    height: 230px;
     position: absolute;
-    top: 150px;
+    top: 160px;
 }
 
 .info-icon {
+    margin:5px;
     margin-left: 60px;
     font-size: 17px;
+}
+
+.for-child{
+    color: lightpink;
+}
+
+.info-child{
+    text-align: center;
+    color: #00256c;
+    font-size: 13px;
+    background-color: lightpink;
 }
 
 /* 좌석 선택 결과 창 */
@@ -393,7 +421,7 @@ body {
     width: 400px;
     height: 120px;
     position: absolute;
-    top: 510px;
+    top: 570px;
     left: 813px;
 }
 
@@ -415,35 +443,14 @@ body {
     height: 100%;
     margin-left: 500px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
-}
-
-.change-krw {
-    background-color: transparent;
-    border: 1px solid lightgray;
-    border-radius: 0.7rem;
-    height: 30px;
-    color: #002F87;
-    font-weight: bold;
-}
-
-.howmuch {
-    font-size: 30px;
-    font-weight: bold;
-    color: #002F87;
-}
-
-.won {
-    font-weight: bold;
-    color: #002F87;
 }
 
 .next-btn {
     width: 180px;
     height: 50px;
     margin-right: 50px;
-    margin-top: 5px;
 
     background-color: #002F87;
     color: white;
@@ -461,7 +468,7 @@ body {
 .footer {
     width: 100%;
     height: 250px;
-    padding: 1.6rem;
+    /* padding: 1.6rem; */
     text-align: center;
     background-color: #f8f9fc;
     align-items: center;
@@ -473,13 +480,6 @@ body {
     text-align: center;
     border-right: 1px solid #dee0e2;
     float: left;
-}
-
-.footer_box {
-    width: 30%;
-    height: 100%;
-    float: left;
-    padding: 0;
 }
 
 .im_link {
@@ -548,7 +548,7 @@ body {
     background-size: contain;
 }
 
-table,
+tbody,
 .ft_contact,
 .ft_contact2,
 .ft_th,
