@@ -88,6 +88,7 @@
 
 .naver-login:hover {
     cursor: pointer;
+    border: 1px solid navy;
 }
 
 .findId:hover {
