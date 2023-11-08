@@ -12,19 +12,6 @@ let child = 0;
 let seatCount = 0;
 let seatArr = []; // 누른 좌석 정보를 저장하는 배열 생성
 
-// for(let i=0;i<seatCount.length; i++){
-
-// }
-
-function ifChild(e) {
-    choiceSeat.forEach(
-        (item)=>{
-            if(item=e)
-            item.classList.toggle('change-seat-child');
-        }
-    )
-}
-
 choiceSeat.forEach(
     (item)=>{
         item.addEventListener("click",function(e){
