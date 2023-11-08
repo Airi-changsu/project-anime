@@ -130,18 +130,18 @@ html {
     border-bottom: 1px solid #d9dbe1;
 }
 
-li {
+.lic {
     display: inline-block;
 }
 
-li a {
+.lic a {
     color: #0a0005;
     text-align: center;
     padding: 14.5px 16px;
     text-decoration: none;
 }
 
-li a:hover {
+.lic a:hover {
     color: #00aeff;
     font-weight: normal;
 }
@@ -256,20 +256,7 @@ li:hover .sub-menu {
   
 }
 
-body {
-    overflow-y: scroll;
-    margin: 0;
-    height: 100%;
-    
-    line-height: 1.5;
-    word-break: break-word;
-    -webkit-text-size-adjust: none;
-}
 
-html {
-    height: 100%;
-    -webkit-text-size-adjust: 100%;
-}
 
 .title_step {
     width: 100%;
@@ -291,7 +278,7 @@ html {
     border-left: 1px solid #dee0e2;
 }
 
-thead {
+.theads {
     display: table-header-group;
     vertical-align: middle;
 }
@@ -347,7 +334,7 @@ thead {
     font-size: 70%;
 }
 
-th {
+.tb_th {
     background-color: #f8f9fc ;
     width: 400px;
 }
@@ -446,6 +433,7 @@ th {
 }
 .ft_pd {
     padding: 0.4rem;
+    width: 400px;
 }
 .im_link3 {
     padding: 1.5rem;

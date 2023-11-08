@@ -130,18 +130,18 @@ html {
     border-bottom: 1px solid #d9dbe1;
 }
 
-li {
+.lic {
     display: inline-block;
 }
 
-li a {
+.lic a {
     color: #0a0005;
     text-align: center;
     padding: 14.5px 16px;
     text-decoration: none;
 }
 
-li a:hover {
+.lic a:hover {
     color: #00aeff;
     font-weight: normal;
 }
@@ -260,10 +260,6 @@ body {
     -webkit-text-size-adjust: none;
 }
 
-html {
-    height: 100%;
-    -webkit-text-size-adjust: 100%;
-}
 
 .title_step {
     width: 100%;
@@ -285,7 +281,7 @@ html {
     border-left: 1px solid #dee0e2;
 }
 
-thead {
+.theads {
     display: table-header-group;
     vertical-align: middle;
 }
@@ -297,6 +293,7 @@ thead {
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.58;
+    width: 400px;
 }
 
 .tbody__th {
@@ -308,6 +305,7 @@ thead {
     font-size: 1.4rem;
     line-height: 1.58;
     text-align: left;
+    width: 400px;
 }
 
 .nm_table table {
@@ -316,7 +314,31 @@ thead {
     border-spacing: 0;
     empty-cells: show;
 }
-.ft_container_box table {
+.ft_container_box1 table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+}
+.ft_container_box2 table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+}
+.ft_container_box3 table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+}
+.ft_container_box4 table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+}
+.ft_container_box5 table {
     table-layout: fixed;
     border-collapse: collapse;
     border-spacing: 0;
@@ -335,7 +357,7 @@ thead {
     font-size: 70%;
 }
 
-th {
+.tb_th {
     background-color: #f8f9fc ;
     width: 400px;
 }
@@ -407,6 +429,7 @@ th {
 }
 .ft_pd {
     padding: 0.4rem;
+    width: 400px;
 }
 .im_link3 {
     padding: 1.5rem;
@@ -512,6 +535,12 @@ th {
     border: 1px solid #0064de;
     outline-offset: -4px;
 }
+.ft_tb_th{
+    border-top:1px solid #506a9b;
+    border-collapse : collapse;
+}
+
+
 
 
 /* @import url("https://font.elice.io/css?family=Elice+DX+Neolli");
