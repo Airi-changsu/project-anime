@@ -117,9 +117,9 @@ li a:hover {
     position: absolute;
     width: 400px;
     height: 300px;
-    top: 100%; /* 아래에 배치되도록 설정 */
-    left: 50%; /* 가운데로 이동 */
-    transform: translateX(-50%); /* 수평 가운데 정렬 */
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%); 
 }
 
 .sub-menu {
