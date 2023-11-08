@@ -113,7 +113,7 @@ calculateBtn.addEventListener("click",()=>{
     else{
         let question = confirm("수화물 규정 통과입니다 ~ 해당 수화물로 체크인을 진행하시겠습니까?");
         if(question == true){ // 버튼이랑 연동
-            window.location.href = "http://127.0.0.1:5500/project-anime/%EC%8A%B9%EA%B0%9D%EC%A0%95%EB%B3%B4.html"
+            window.location.href = "http://127.0.0.1:5500/project-anime/projecthtmlall/%EC%8A%B9%EA%B0%9D%EC%A0%95%EB%B3%B4.html"
         }
     }
 })
