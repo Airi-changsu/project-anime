@@ -10,20 +10,7 @@ let adult = 0; // 인원 수 카운트
 let child = 0;
 
 let seatCount = 0;
-let seatArr = []; // 누른 좌석 정보를 저장하는 배열 생성
-
-// for(let i=0;i<seatCount.length; i++){
-
-// }
-
-function ifChild(e) {
-    choiceSeat.forEach(
-        (item)=>{
-            if(item=e)
-            item.classList.toggle('change-seat-child');
-        }
-    )
-}
+let seatArr = []; // 누른 좌석 정보를 저장하는 배열 생성 > 실패
 
 choiceSeat.forEach(
     (item)=>{
@@ -36,9 +23,9 @@ choiceSeat.forEach(
                 adult ++;
                 adultCount[0].innerText = adult; // 성인 인원 수 반영
                 adultCount[1].innerText = adult; // 인원 수 반영
+                
             } else{
                 this.classList.remove('change-seat'); // 취소 누르면 색 삭제
-                add --; 
             }
         }
     )}
@@ -58,8 +45,11 @@ childSeat.forEach( // 유아석
                 childCount[1].innerText = child;
             } else{
                 this.classList.remove('change-seat-child');
-                add --;
             }
         })
     }
 )
+
+for(let i=0;i<seatCount.length; i++){
+
+}
